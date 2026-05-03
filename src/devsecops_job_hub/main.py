@@ -58,9 +58,20 @@ async def lifespan(app: FastAPI):
         scheduler.shutdown(wait=False)
 
 
+def _humanize_revenue(amount: int | None) -> str:
+    if amount is None:
+        return ""
+    if amount >= 1_000_000_000:
+        return f"${amount / 1_000_000_000:.1f}B"
+    if amount >= 1_000_000:
+        return f"${amount // 1_000_000}M"
+    return f"${amount // 1_000}K"
+
+
 app = FastAPI(title="DevSecOps Job Hub", version="0.1.0", lifespan=lifespan)
 app.mount("/static", StaticFiles(directory=_STATIC_DIR), name="static")
 templates = Jinja2Templates(directory=_TEMPLATES_DIR)
+templates.env.filters["humanize_revenue"] = _humanize_revenue
 
 
 @app.get("/healthz")

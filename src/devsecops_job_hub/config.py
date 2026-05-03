@@ -24,5 +24,10 @@ class Settings(BaseSettings):
     fit_remote_only: bool = False
     fit_allow_oconus: bool = False
 
+    # SEC EDGAR enrichment. Their fair-use policy requires a real contact
+    # email in the User-Agent header; without one, requests may be rate-
+    # limited or 403'd. Set EDGAR_CONTACT_EMAIL in .env.
+    edgar_contact_email: str = ""
+
 
 settings = Settings()

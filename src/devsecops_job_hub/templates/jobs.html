@@ -79,8 +79,9 @@
         {% for job, company, fit in rows %}
         <article class="job-card{% if fit.is_fit %} job-card--fit{% endif %}">
             <div class="job-card__header">
-                <span class="job-card__company">{{ company.name }}</span>
+                <span class="job-card__company">{{ company.name }}{% if company.ticker %} <span class="job-card__ticker">{{ company.ticker }}</span>{% endif %}</span>
                 {% if company.hq_location %}<span class="job-card__hq">{{ company.hq_location }}</span>{% endif %}
+                {% if company.annual_revenue_usd %}<span class="job-card__revenue" title="Source: SEC 10-K filing">{{ company.annual_revenue_usd|humanize_revenue }} FY{{ company.revenue_fiscal_year }}</span>{% endif %}
             </div>
             <h3 class="job-card__title">{{ job.title }}</h3>
             <div class="job-card__meta">

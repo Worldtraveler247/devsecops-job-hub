@@ -21,6 +21,7 @@ from sqlmodel import Session, select
 from devsecops_job_hub.adapters import greenhouse, lever
 from devsecops_job_hub.db import engine
 from devsecops_job_hub.models import ATSProvider, CareerStage, Company, Job
+from devsecops_job_hub.services.enrich import enrich_companies
 
 logger = logging.getLogger(__name__)
 
@@ -100,6 +101,8 @@ async def refresh_all() -> int:
             total += count
     _soft_delete_stale()
     _purge_senior()
+    enriched = await enrich_companies()
+    logger.info("EDGAR enriched %d companies", enriched)
     return total
 
 
