@@ -49,6 +49,23 @@ _ROLE_RULES: list[tuple[re.Pattern[str], RoleFamily]] = [
         RoleFamily.SYS_SECURITY_ENG,
     ),
     (re.compile(r"\blinux\b.*\b(admin\w*|engineer\w*|sysadmin)\b", re.I), RoleFamily.LINUX_ADMIN),
+    # Catch-all for generic IT roles. Must stay LAST so all specialized
+    # patterns above match first. Captures roles The Muse and similar
+    # broad sources surface that don't fit a security-specific family.
+    (
+        re.compile(
+            r"\b(software engineer|software developer|"
+            r"backend engineer|back[- ]end engineer|"
+            r"frontend engineer|front[- ]end engineer|"
+            r"full[- ]?stack(?: engineer)?|"
+            r"data engineer|data scientist|"
+            r"machine learning engineer|ml engineer|"
+            r"platform engineer|infrastructure engineer|"
+            r"systems engineer|software development engineer|sde\b)\b",
+            re.I,
+        ),
+        RoleFamily.SOFTWARE_ENGINEER,
+    ),
 ]
 
 _ENTRY_HINTS = re.compile(

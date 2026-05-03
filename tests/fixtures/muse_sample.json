@@ -1,0 +1,41 @@
+{
+  "page": 0,
+  "page_count": 1,
+  "items_per_page": 20,
+  "total": 3,
+  "results": [
+    {
+      "id": 1001,
+      "name": "Software Engineer",
+      "publication_date": "2026-04-25T00:00:00.000000",
+      "contents": "<p>Join our cloud security team. 2-3 years of experience.</p>",
+      "locations": [{ "name": "Flexible / Remote" }],
+      "categories": [{ "name": "Software Engineering" }],
+      "levels": [{ "name": "Mid Level" }],
+      "company": { "name": "Stripe" },
+      "refs": { "landing_page": "https://www.themuse.com/jobs/stripe/software-engineer" }
+    },
+    {
+      "id": 1002,
+      "name": "Junior DevOps Engineer",
+      "publication_date": "2026-04-26T00:00:00.000000",
+      "contents": "<p>Junior role, 0-2 years of experience required. New grads welcome.</p>",
+      "locations": [{ "name": "New York, NY" }],
+      "categories": [{ "name": "Software Engineering" }],
+      "levels": [{ "name": "Entry Level" }],
+      "company": { "name": "MongoDB" },
+      "refs": { "landing_page": "https://www.themuse.com/jobs/mongodb/junior-devops" }
+    },
+    {
+      "id": 1003,
+      "name": "Cloud Security Engineer",
+      "publication_date": "2026-04-27T00:00:00.000000",
+      "contents": "<p>Cloud security at our Berlin office. Active Secret clearance not required.</p>",
+      "locations": [{ "name": "Berlin, Germany" }],
+      "categories": [{ "name": "Software Engineering" }],
+      "levels": [{ "name": "Mid Level" }],
+      "company": { "name": "Datadog" },
+      "refs": { "landing_page": "https://www.themuse.com/jobs/datadog/cloud-security" }
+    }
+  ]
+}

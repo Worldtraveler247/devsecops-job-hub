@@ -17,6 +17,18 @@ from devsecops_job_hub.models import ATSProvider, Company
 
 def _build_seed() -> list[Company]:
     return [
+        # ── General IT aggregator (The Muse) ──
+        # Fills the "regular IT" gap. Each Muse posting carries its own
+        # employer (e.g. Stripe, Atlassian, MongoDB) — the actual employer
+        # is appended to the job title so it's visible on the card.
+        Company(
+            name="The Muse — Tech Jobs",
+            careers_url="https://www.themuse.com/jobs",
+            ats_provider=ATSProvider.MUSE,
+            ats_company_slug="muse-tech",
+            primary_agencies=["civilian"],
+            hq_location="(aggregator)",
+        ),
         # ── Federal civilian (USAJobs Search API) ──
         # The hub's audience overlaps heavily with the GS-9 to GS-12 federal
         # IT/security pipeline. The USAJobs adapter pulls IT (2210), Security

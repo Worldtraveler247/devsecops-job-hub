@@ -46,6 +46,20 @@ class TestRoleFamily:
     def test_cybersecurity_engineer(self):
         assert classify_role_family("Cybersecurity Engineer") == RoleFamily.SYS_SECURITY_ENG
 
+    def test_generic_software_engineer_catch_all(self):
+        # Lands in the catch-all so Muse / generic IT sources surface.
+        assert classify_role_family("Software Engineer") == RoleFamily.SOFTWARE_ENGINEER
+        assert classify_role_family("Senior Software Developer") == RoleFamily.SOFTWARE_ENGINEER
+        assert classify_role_family("Backend Engineer, Payments") == RoleFamily.SOFTWARE_ENGINEER
+        assert classify_role_family("Full-Stack Engineer") == RoleFamily.SOFTWARE_ENGINEER
+        assert classify_role_family("Data Engineer") == RoleFamily.SOFTWARE_ENGINEER
+        assert classify_role_family("ML Engineer") == RoleFamily.SOFTWARE_ENGINEER
+
+    def test_specific_role_wins_over_software_engineer(self):
+        # The catch-all must lose to specialized matchers.
+        assert classify_role_family("DevSecOps Software Engineer") == RoleFamily.DEVSECOPS_ENG
+        assert classify_role_family("Cloud Security Software Engineer") == RoleFamily.CLOUD_SECURITY_ENG
+
     def test_role_falls_back_to_description(self):
         # Title says "Engineer" — vague — but description names the role family.
         assert (

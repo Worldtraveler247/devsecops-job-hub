@@ -13,6 +13,7 @@ class ATSProvider(str, Enum):
     WORKDAY = "workday"
     ICIMS = "icims"
     USAJOBS = "usajobs"
+    MUSE = "muse"
     CUSTOM = "custom"
     UNKNOWN = "unknown"
 
@@ -46,6 +47,7 @@ class RoleFamily(str, Enum):
     DEVOPS_ENG = "devops_eng"
     DEVSECOPS_ENG = "devsecops_eng"
     SECURITY_OFFICER = "security_officer"  # ISSO/ISSM/SSO/CSSO/FSO — Eddie's pivot point
+    SOFTWARE_ENGINEER = "software_engineer"  # generic SWE / data / ML / platform — least specific
 
 
 class ClearanceLevel(str, Enum):
