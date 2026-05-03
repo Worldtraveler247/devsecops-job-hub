@@ -35,6 +35,14 @@ class _LeverCategories(BaseModel):
     commitment: str | None = None
 
 
+class _LeverSalaryRange(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    currency: str | None = None
+    interval: str | None = None  # "year-salary", "month-salary", "hour-salary", etc.
+    min: int | float | None = None
+    max: int | float | None = None
+
+
 class _LeverPosting(BaseModel):
     model_config = ConfigDict(extra="ignore")
     id: str
@@ -46,6 +54,23 @@ class _LeverPosting(BaseModel):
     country: str | None = None
     descriptionPlain: str | None = None
     descriptionBodyPlain: str | None = None
+    salaryRange: _LeverSalaryRange | None = None
+
+
+def _annual_usd_salary(sr: _LeverSalaryRange | None) -> tuple[int | None, int | None]:
+    """Return (min, max) annualized USD if we trust the data, else (None, None).
+
+    We only take year-salary USD ranges. Hourly/monthly conversions and non-USD
+    currencies are skipped — better to show "not disclosed" than to publish a
+    misleading number.
+    """
+    if sr is None or sr.min is None or sr.max is None:
+        return None, None
+    if (sr.currency or "").upper() != "USD":
+        return None, None
+    if sr.interval and not sr.interval.startswith("year"):
+        return None, None
+    return int(sr.min), int(sr.max)
 
 
 def _workplace_to_remote(workplace: str | None, location: str | None) -> RemoteEligibility:
@@ -98,6 +123,9 @@ async def fetch_jobs(company: Company, client: httpx.AsyncClient) -> list[Job]:
         # account configuration. Prefer the longer one.
         description = p.descriptionBodyPlain or p.descriptionPlain
 
+        salary_min, salary_max = _annual_usd_salary(p.salaryRange)
+        salary_source = SalarySource.POSTING if salary_min and salary_max else SalarySource.UNKNOWN
+
         jobs.append(
             Job(
                 company_id=company.id or 0,
@@ -108,9 +136,9 @@ async def fetch_jobs(company: Company, client: httpx.AsyncClient) -> list[Job]:
                 clearance_sponsorship_available=False,
                 remote_eligible=_workplace_to_remote(p.workplaceType, location),
                 location=location,
-                salary_min=None,
-                salary_max=None,
-                salary_source=SalarySource.UNKNOWN,
+                salary_min=salary_min,
+                salary_max=salary_max,
+                salary_source=salary_source,
                 apply_url=p.hostedUrl,
                 posted_at=posted_at,
                 last_seen_at=now,

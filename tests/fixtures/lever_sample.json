@@ -36,6 +36,50 @@
     "hostedUrl": "https://example.com/lever/ghi-789",
     "createdAt": 1714694400000,
     "workplaceType": "remote",
-    "country": "United States"
+    "country": "United States",
+    "salaryRange": {
+      "currency": "USD",
+      "interval": "year-salary",
+      "min": 130000,
+      "max": 175000
+    }
+  },
+  {
+    "id": "jkl-012",
+    "text": "DevOps Engineer (Hourly)",
+    "categories": {
+      "location": "Remote",
+      "team": "Infrastructure",
+      "commitment": "Contract"
+    },
+    "hostedUrl": "https://example.com/lever/jkl-012",
+    "createdAt": 1714780800000,
+    "workplaceType": "remote",
+    "country": "United States",
+    "salaryRange": {
+      "currency": "USD",
+      "interval": "hour-salary",
+      "min": 80,
+      "max": 120
+    }
+  },
+  {
+    "id": "mno-345",
+    "text": "Cloud Security Engineer",
+    "categories": {
+      "location": "Berlin, Germany",
+      "team": "Security",
+      "commitment": "Full-time"
+    },
+    "hostedUrl": "https://example.com/lever/mno-345",
+    "createdAt": 1714867200000,
+    "workplaceType": "on-site",
+    "country": "Germany",
+    "salaryRange": {
+      "currency": "EUR",
+      "interval": "year-salary",
+      "min": 80000,
+      "max": 110000
+    }
   }
 ]

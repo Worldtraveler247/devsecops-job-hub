@@ -27,6 +27,7 @@ from devsecops_job_hub.classify import (
     classify_role_family,
 )
 from devsecops_job_hub.models import Company, Job, SalarySource
+from devsecops_job_hub.services.salary_parse import parse_salary_from_text
 
 _BASE_URL = "https://boards-api.greenhouse.io/v1/boards"
 
@@ -37,8 +38,13 @@ _WHITESPACE = re.compile(r"\s+")
 def _strip_html(raw: str | None) -> str | None:
     if not raw:
         return None
-    text = _HTML_TAG.sub(" ", raw)
-    text = html.unescape(text)
+    # Greenhouse double-encodes: `content` arrives as HTML-entity-escaped HTML
+    # (e.g. `&lt;div&gt;` not `<div>`), and the inner content has its own
+    # entities (`&amp;mdash;` not `&mdash;`). Unescape twice to fully decode,
+    # then strip the real tags. unescape is idempotent on already-decoded
+    # text, so the second pass is a no-op on clean strings.
+    text = html.unescape(html.unescape(raw))
+    text = _HTML_TAG.sub(" ", text)
     return _WHITESPACE.sub(" ", text).strip() or None
 
 
@@ -86,6 +92,8 @@ async def fetch_jobs(company: Company, client: httpx.AsyncClient) -> list[Job]:
     for g in parsed.jobs:
         location_name = g.location.name if g.location else None
         description = _strip_html(g.content)
+        salary_min, salary_max = parse_salary_from_text(description)
+        salary_source = SalarySource.POSTING if salary_min and salary_max else SalarySource.UNKNOWN
         jobs.append(
             Job(
                 company_id=company.id or 0,
@@ -96,9 +104,9 @@ async def fetch_jobs(company: Company, client: httpx.AsyncClient) -> list[Job]:
                 clearance_sponsorship_available=False,
                 remote_eligible=classify_remote(location_name),
                 location=location_name,
-                salary_min=None,
-                salary_max=None,
-                salary_source=SalarySource.UNKNOWN,
+                salary_min=salary_min,
+                salary_max=salary_max,
+                salary_source=salary_source,
                 apply_url=g.absolute_url,
                 posted_at=g.updated_at,
                 last_seen_at=now,

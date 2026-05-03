@@ -37,8 +37,10 @@ def _slim_response_body(response: dict) -> dict:
     except (TypeError, ValueError):
         return response
 
-    # Slice 3 will add salaryRange parsing — re-record cassettes then by
-    # removing salaryRange from this set.
+    # Description fields are stripped because the adapter unit tests don't
+    # exercise classifier behavior — we test classification with hand-crafted
+    # strings in test_classify.py. salaryRange is NOT stripped: Slice 3 parses
+    # it, and the cassette test verifies the structured field round-trips.
     lever_heavy_keys = {
         "description",
         "descriptionPlain",
@@ -49,7 +51,6 @@ def _slim_response_body(response: dict) -> dict:
         "lists",
         "additional",
         "additionalPlain",
-        "salaryRange",
     }
     greenhouse_heavy_keys = {"content"}
 

@@ -75,6 +75,11 @@ async def refresh_company(company: Company, client: httpx.AsyncClient) -> int:
                 existing.clearance_required = incoming.clearance_required
                 existing.remote_eligible = incoming.remote_eligible
                 existing.location = incoming.location
+                existing.salary_min = incoming.salary_min
+                existing.salary_max = incoming.salary_max
+                existing.salary_source = incoming.salary_source
+                existing.is_oconus = incoming.is_oconus
+                existing.country = incoming.country
                 existing.posted_at = incoming.posted_at
                 existing.last_seen_at = incoming.last_seen_at
                 existing.is_active = True
