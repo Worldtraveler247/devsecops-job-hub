@@ -1,0 +1,47 @@
+# Keep build context small + avoid leaking secrets/state into images.
+
+.git/
+.gitignore
+.github/
+
+# Local env, virtualenvs, caches
+.env
+.envrc
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local databases — runtime must use a real DSN, not a baked-in SQLite.
+*.db
+*.sqlite
+*.sqlite3
+
+# Tests + their fixtures don't belong in production images.
+tests/
+.coverage
+htmlcov/
+
+# Build artifacts, IDE noise
+dist/
+build/
+*.egg-info/
+.DS_Store
+.idea/
+.vscode/
+
+# Terraform state never goes in images.
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Pre-commit + local config
+.pre-commit-config.yaml
+
+# Docs / examples
+README.md
+.env.example
