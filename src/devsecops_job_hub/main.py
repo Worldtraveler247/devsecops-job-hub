@@ -11,6 +11,7 @@ from fastapi import Depends, FastAPI, Query, Request
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from pydantic import BeforeValidator
 from sqlmodel import Session, select
 
 from devsecops_job_hub.config import settings
@@ -73,6 +74,24 @@ def _humanize_revenue(amount: int | None) -> str:
     return f"${amount // 1_000}K"
 
 
+def _empty_to_none[T](v: T) -> T | None:
+    # The filter form submits empty strings ("clearance=") for "Any" options.
+    # Without this, pydantic rejects "" against ClearanceLevel/CareerStage/int
+    # and the route 422s. Coerce empty/whitespace strings to None before the
+    # enum/int validator runs.
+    if isinstance(v, str) and not v.strip():
+        return None
+    return v
+
+
+# FastAPI Query types that tolerate empty-string values from HTML forms.
+_OptStage = Annotated[CareerStage | None, BeforeValidator(_empty_to_none)]
+_OptClearance = Annotated[ClearanceLevel | None, BeforeValidator(_empty_to_none)]
+_OptRemote = Annotated[RemoteEligibility | None, BeforeValidator(_empty_to_none)]
+_OptInt = Annotated[int | None, BeforeValidator(_empty_to_none)]
+_OptStr = Annotated[str | None, BeforeValidator(_empty_to_none)]
+
+
 app = FastAPI(title="DevSecOps Job Hub", version="0.1.0", lifespan=lifespan)
 app.mount("/static", StaticFiles(directory=_STATIC_DIR), name="static")
 templates = Jinja2Templates(directory=_TEMPLATES_DIR)
@@ -90,11 +109,11 @@ def index(
     request: Request,
     session: Annotated[Session, Depends(get_session)],
     role: list[RoleFamily] | None = Query(default=None),
-    stage: CareerStage | None = None,
-    clearance: ClearanceLevel | None = None,
-    remote: RemoteEligibility | None = None,
-    location_scope: str | None = Query(default=None, description="conus | oconus | any"),
-    min_salary: int | None = None,
+    stage: _OptStage = None,
+    clearance: _OptClearance = None,
+    remote: _OptRemote = None,
+    location_scope: _OptStr = Query(default=None, description="conus | oconus | any"),
+    min_salary: _OptInt = None,
     fit_only: bool = False,
 ) -> HTMLResponse:
     stmt = select(Job, Company).join(Company).where(Job.is_active)
