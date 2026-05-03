@@ -23,6 +23,7 @@ from devsecops_job_hub.models import (
     RoleFamily,
 )
 from devsecops_job_hub.seed.companies import seed_companies
+from devsecops_job_hub.services.fit import compute_fit, profile_from_settings
 from devsecops_job_hub.services.refresh import refresh_all
 
 logging.basicConfig(level=settings.log_level)
@@ -77,6 +78,7 @@ def index(
     remote: RemoteEligibility | None = None,
     location_scope: str | None = Query(default=None, description="conus | oconus | any"),
     min_salary: int | None = None,
+    fit_only: bool = False,
 ) -> HTMLResponse:
     stmt = select(Job, Company).join(Company).where(Job.is_active)
     if role:
@@ -93,9 +95,14 @@ def index(
         stmt = stmt.where(Job.is_oconus.is_(False))  # type: ignore[union-attr]
     if min_salary:
         stmt = stmt.where(Job.salary_min >= min_salary)  # type: ignore[operator]
-    rows = session.exec(stmt).all()
+    db_rows = session.exec(stmt).all()
 
-    last_seen = max((j.last_seen_at for j, _ in rows), default=None)
+    profile = profile_from_settings(settings)
+    rows = [(job, company, compute_fit(job, profile)) for job, company in db_rows]
+    if fit_only:
+        rows = [r for r in rows if r[2].is_fit]
+
+    last_seen = max((j.last_seen_at for j, _, _ in rows), default=None)
 
     return templates.TemplateResponse(
         request,
@@ -113,6 +120,7 @@ def index(
                 "remote": remote.value if remote else "",
                 "location_scope": location_scope or "",
                 "min_salary": min_salary or "",
+                "fit_only": fit_only,
             },
             "last_seen": last_seen,
             "total": len(rows),

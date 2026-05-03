@@ -253,6 +253,23 @@ button:hover {
 .badge--clearance{ background: rgba(255, 215, 0, 0.10);  border-color: rgba(255, 215, 0, 0.35); color: var(--gold); }
 .badge--remote   { background: rgba(255,255,255,0.04); color: var(--muted); }
 .badge--oconus   { background: rgba(255, 105, 180, 0.10); border-color: rgba(255, 105, 180, 0.40); color: #ff8ac1; }
+.badge--fit      { background: rgba(74, 247, 255, 0.16); border-color: var(--cyan); color: #fff; box-shadow: 0 0 14px rgba(74, 247, 255, 0.35); }
+
+.job-card--fit {
+    border-color: rgba(74, 247, 255, 0.45);
+    box-shadow: 0 0 0 1px rgba(74, 247, 255, 0.15), 0 6px 28px rgba(74, 247, 255, 0.08);
+}
+
+.fit-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: var(--cyan);
+    font-size: 0.85rem;
+    padding-top: 18px;
+}
+.fit-toggle input { accent-color: var(--cyan); }
 
 .job-card__salary { font-size: 0.85rem; color: var(--text); }
 .salary-source { color: var(--muted); font-size: 0.72rem; margin-left: 4px; }

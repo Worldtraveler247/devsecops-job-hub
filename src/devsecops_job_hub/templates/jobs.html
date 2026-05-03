@@ -43,6 +43,12 @@
             <label for="min_salary">Min salary (USD)</label>
             <input type="number" name="min_salary" id="min_salary" value="{{ selected.min_salary }}" placeholder="e.g. 120000">
         </div>
+        <div class="filter-group filter-group--fit">
+            <label class="fit-toggle">
+                <input type="checkbox" name="fit_only" value="true" {% if selected.fit_only %}checked{% endif %}>
+                <span>★ Show good-fit jobs only</span>
+            </label>
+        </div>
         <div class="filter-group filter-group--roles">
             <label>Role family</label>
             <div class="role-chips">
@@ -70,14 +76,15 @@
     {% endif %}
 
     <div class="jobs-grid">
-        {% for job, company in rows %}
-        <article class="job-card">
+        {% for job, company, fit in rows %}
+        <article class="job-card{% if fit.is_fit %} job-card--fit{% endif %}">
             <div class="job-card__header">
                 <span class="job-card__company">{{ company.name }}</span>
                 {% if company.hq_location %}<span class="job-card__hq">{{ company.hq_location }}</span>{% endif %}
             </div>
             <h3 class="job-card__title">{{ job.title }}</h3>
             <div class="job-card__meta">
+                {% if fit.is_fit %}<span class="badge badge--fit" title="{{ fit.reasons|join(' · ') }}">★ Good fit</span>{% endif %}
                 {% if job.role_family %}<span class="badge badge--role">{{ job.role_family.value.replace('_', ' ') }}</span>{% endif %}
                 {% if job.career_stage %}<span class="badge badge--stage">{{ job.career_stage.value }}</span>{% endif %}
                 {% if job.clearance_required.value != 'none' %}<span class="badge badge--clearance">{{ job.clearance_required.value.replace('_', ' ') }}</span>{% endif %}
