@@ -44,6 +44,7 @@ class RoleFamily(str, Enum):
     SECURITY_ENG_INFRA = "security_eng_infra"
     DEVOPS_ENG = "devops_eng"
     DEVSECOPS_ENG = "devsecops_eng"
+    SECURITY_OFFICER = "security_officer"  # ISSO/ISSM/SSO/CSSO/FSO — Eddie's pivot point
 
 
 class ClearanceLevel(str, Enum):

@@ -25,6 +25,18 @@ class TestRoleFamily:
     def test_unknown_returns_none(self):
         assert classify_role_family("Sales Account Executive") is None
 
+    def test_isso(self):
+        assert classify_role_family("Information Systems Security Officer (ISSO)") == RoleFamily.SECURITY_OFFICER
+
+    def test_issm(self):
+        assert classify_role_family("Information Systems Security Manager") == RoleFamily.SECURITY_OFFICER
+
+    def test_csso(self):
+        assert classify_role_family("Contractor Special Security Officer") == RoleFamily.SECURITY_OFFICER
+
+    def test_cybersecurity_engineer(self):
+        assert classify_role_family("Cybersecurity Engineer") == RoleFamily.SYS_SECURITY_ENG
+
 
 class TestCareerStage:
     def test_senior(self):

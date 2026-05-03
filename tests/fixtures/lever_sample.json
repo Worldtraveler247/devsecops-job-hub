@@ -1,0 +1,41 @@
+[
+  {
+    "id": "abc-123",
+    "text": "Senior DevOps Engineer",
+    "categories": {
+      "location": "Washington, DC",
+      "team": "Infrastructure",
+      "commitment": "Full-time"
+    },
+    "hostedUrl": "https://example.com/lever/abc-123",
+    "createdAt": 1714521600000,
+    "workplaceType": "hybrid",
+    "country": "United States"
+  },
+  {
+    "id": "def-456",
+    "text": "Information Systems Security Officer (ISSO)",
+    "categories": {
+      "location": "Aomori, Japan",
+      "team": "Security",
+      "commitment": "Full-time"
+    },
+    "hostedUrl": "https://example.com/lever/def-456",
+    "createdAt": 1714608000000,
+    "workplaceType": "on-site",
+    "country": "Japan"
+  },
+  {
+    "id": "ghi-789",
+    "text": "Cloud Security Engineer",
+    "categories": {
+      "location": "Remote",
+      "team": "Security",
+      "commitment": "Full-time"
+    },
+    "hostedUrl": "https://example.com/lever/ghi-789",
+    "createdAt": 1714694400000,
+    "workplaceType": "remote",
+    "country": "United States"
+  }
+]

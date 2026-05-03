@@ -12,17 +12,33 @@ import re
 from devsecops_job_hub.models import CareerStage, ClearanceLevel, RemoteEligibility, RoleFamily
 
 _ROLE_RULES: list[tuple[re.Pattern[str], RoleFamily]] = [
+    # Most specific first.
     (re.compile(r"\bdevsecops\b", re.I), RoleFamily.DEVSECOPS_ENG),
     (re.compile(r"\bappsec\b|\bapplication security\b|\bproduct security\b", re.I), RoleFamily.APPSEC_ENG),
     (re.compile(r"\bcloud security\b", re.I), RoleFamily.CLOUD_SECURITY_ENG),
+    # Govcon security-officer titles — Eddie's pivot point. ISSO, ISSM, SSO, CSSO, FSO.
+    (
+        re.compile(
+            r"\b(isso|issm|csso|fso|sso)\b|"
+            r"\b(information systems? security (officer|manager))\b|"
+            r"\b((contractor )?special security officer)\b|"
+            r"\b(facility security officer)\b",
+            re.I,
+        ),
+        RoleFamily.SECURITY_OFFICER,
+    ),
     (re.compile(r"\bdevops\b", re.I), RoleFamily.DEVOPS_ENG),
     (re.compile(r"\bsre\b|\bsite reliability\b", re.I), RoleFamily.SRE),
     (re.compile(r"\bsoc analyst\b|\bsecurity operations center\b", re.I), RoleFamily.SOC_ANALYST),
     (re.compile(r"\bcloud engineer\b|\bcloud platform\b", re.I), RoleFamily.CLOUD_ENGINEER),
     (re.compile(r"\bcloud (ops|operations)\b", re.I), RoleFamily.CLOUD_OPS),
     (re.compile(r"\bcloud (admin|administrator)\b", re.I), RoleFamily.CLOUD_ADMIN),
-    (re.compile(r"\b(systems?|system) security\b", re.I), RoleFamily.SYS_SECURITY_ENG),
     (re.compile(r"\bsecurity engineer.*(infra|platform|infrastructure)\b", re.I), RoleFamily.SECURITY_ENG_INFRA),
+    # Generic systems-security-engineer / cybersecurity-engineer fall-through.
+    (
+        re.compile(r"\b(systems?|system) security\b|\bcybersecurity engineer\b|\benterprise security engineering\b", re.I),
+        RoleFamily.SYS_SECURITY_ENG,
+    ),
     (re.compile(r"\blinux\b.*\b(admin\w*|engineer\w*|sysadmin)\b", re.I), RoleFamily.LINUX_ADMIN),
 ]
 

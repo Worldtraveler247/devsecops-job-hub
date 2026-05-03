@@ -5,6 +5,7 @@ from contextlib import asynccontextmanager
 from pathlib import Path
 from typing import Annotated
 
+from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from fastapi import Depends, FastAPI, Query, Request
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
@@ -32,12 +33,28 @@ _TEMPLATES_DIR = _PKG_DIR / "templates"
 _STATIC_DIR = _PKG_DIR / "static"
 
 
+scheduler = AsyncIOScheduler()
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     init_db()
     inserted = seed_companies()
     logger.info("seeded %d companies", inserted)
+    if settings.enable_scheduler:
+        scheduler.add_job(
+            refresh_all,
+            "interval",
+            hours=settings.scheduler_interval_hours,
+            id="refresh_all",
+            replace_existing=True,
+            next_run_time=None,  # don't fire immediately on boot — wait one interval
+        )
+        scheduler.start()
+        logger.info("scheduler started; interval=%dh", settings.scheduler_interval_hours)
     yield
+    if scheduler.running:
+        scheduler.shutdown(wait=False)
 
 
 app = FastAPI(title="DevSecOps Job Hub", version="0.1.0", lifespan=lifespan)

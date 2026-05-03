@@ -13,7 +13,7 @@ from datetime import datetime, timedelta, timezone
 import httpx
 from sqlmodel import Session, select
 
-from devsecops_job_hub.adapters import greenhouse
+from devsecops_job_hub.adapters import greenhouse, lever
 from devsecops_job_hub.db import engine
 from devsecops_job_hub.models import ATSProvider, Company, Job
 
@@ -24,12 +24,16 @@ _STALE_AFTER = timedelta(days=14)
 
 async def refresh_company(company: Company, client: httpx.AsyncClient) -> int:
     if company.ats_provider == ATSProvider.GREENHOUSE:
-        try:
-            fetched = await greenhouse.fetch_jobs(company, client)
-        except httpx.HTTPError as e:
-            logger.warning("greenhouse fetch failed for %s: %s", company.name, e)
-            return 0
+        adapter_name, fetcher = "greenhouse", greenhouse.fetch_jobs
+    elif company.ats_provider == ATSProvider.LEVER:
+        adapter_name, fetcher = "lever", lever.fetch_jobs
     else:
+        return 0
+
+    try:
+        fetched = await fetcher(company, client)
+    except httpx.HTTPError as e:
+        logger.warning("%s fetch failed for %s: %s", adapter_name, company.name, e)
         return 0
 
     if not fetched:
