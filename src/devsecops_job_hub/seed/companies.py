@@ -17,6 +17,19 @@ from devsecops_job_hub.models import ATSProvider, Company
 
 def _build_seed() -> list[Company]:
     return [
+        # ── Federal civilian (USAJobs Search API) ──
+        # The hub's audience overlaps heavily with the GS-9 to GS-12 federal
+        # IT/security pipeline. The USAJobs adapter pulls IT (2210), Security
+        # Administration (0080), and Computer Science (1550) job series at
+        # GS-12 or below, applied as a server-side filter.
+        Company(
+            name="U.S. Federal Government",
+            careers_url="https://www.usajobs.gov/",
+            ats_provider=ATSProvider.USAJOBS,
+            ats_company_slug="federal-it",
+            primary_agencies=["civilian", "DoD", "IC"],
+            hq_location="Washington, DC",
+        ),
         # ── Defense tech (the core audience for cleared candidates) ──
         Company(
             name="Anduril Industries",

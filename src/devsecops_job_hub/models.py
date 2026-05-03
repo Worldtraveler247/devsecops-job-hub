@@ -12,6 +12,7 @@ class ATSProvider(str, Enum):
     LEVER = "lever"
     WORKDAY = "workday"
     ICIMS = "icims"
+    USAJOBS = "usajobs"
     CUSTOM = "custom"
     UNKNOWN = "unknown"
 

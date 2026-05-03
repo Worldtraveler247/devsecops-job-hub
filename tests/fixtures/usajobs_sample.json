@@ -1,0 +1,65 @@
+{
+  "SearchResult": {
+    "SearchResultCount": 3,
+    "SearchResultCountAll": 3,
+    "SearchResultItems": [
+      {
+        "MatchedObjectDescriptor": {
+          "PositionID": "USAJOBS-1001",
+          "PositionTitle": "IT Specialist (INFOSEC)",
+          "PositionURI": "https://www.usajobs.gov/job/1001",
+          "ApplyURI": ["https://www.usajobs.gov/job/1001/apply"],
+          "PositionLocation": [
+            { "LocationName": "Fort Meade, MD", "CountryCode": "United States" }
+          ],
+          "OrganizationName": "U.S. Cyber Command",
+          "DepartmentName": "Department of Defense",
+          "QualificationSummary": "GS-9 to GS-12 IT specialist with cloud-security responsibilities. Veteran preference applies. Clearance sponsorship available for the right candidate.",
+          "PositionRemuneration": [
+            { "MinimumRange": "62107", "MaximumRange": "97950", "RateIntervalCode": "PA" }
+          ],
+          "PublicationStartDate": "2026-04-15T00:00:00",
+          "SecurityClearanceRequired": "Top Secret/SCI"
+        }
+      },
+      {
+        "MatchedObjectDescriptor": {
+          "PositionID": "USAJOBS-1002",
+          "PositionTitle": "Information Technology Specialist (Sysadmin)",
+          "PositionURI": "https://www.usajobs.gov/job/1002",
+          "ApplyURI": ["https://www.usajobs.gov/job/1002/apply"],
+          "PositionLocation": [
+            { "LocationName": "Yokota Air Base, Japan", "CountryCode": "Japan" }
+          ],
+          "OrganizationName": "Air Force",
+          "DepartmentName": "Department of the Air Force",
+          "QualificationSummary": "Linux administrator on overseas base. 2-3 years of experience.",
+          "PositionRemuneration": [
+            { "MinimumRange": "57118", "MaximumRange": "74250", "RateIntervalCode": "PA" }
+          ],
+          "PublicationStartDate": "2026-04-20T00:00:00",
+          "SecurityClearanceRequired": "Secret"
+        }
+      },
+      {
+        "MatchedObjectDescriptor": {
+          "PositionID": "USAJOBS-1003",
+          "PositionTitle": "Cybersecurity Engineer (Junior)",
+          "PositionURI": "https://www.usajobs.gov/job/1003",
+          "ApplyURI": ["https://www.usajobs.gov/job/1003/apply"],
+          "PositionLocation": [
+            { "LocationName": "Remote", "CountryCode": "United States" }
+          ],
+          "OrganizationName": "Cybersecurity and Infrastructure Security Agency",
+          "DepartmentName": "Department of Homeland Security",
+          "QualificationSummary": "Entry-level cyber position. New graduates and SkillBridge fellows welcome.",
+          "PositionRemuneration": [
+            { "MinimumRange": "57118", "MaximumRange": "89835", "RateIntervalCode": "PA" }
+          ],
+          "PublicationStartDate": "2026-04-25T00:00:00",
+          "SecurityClearanceRequired": "Public Trust"
+        }
+      }
+    ]
+  }
+}

@@ -18,7 +18,7 @@ from datetime import UTC, datetime, timedelta
 import httpx
 from sqlmodel import Session, select
 
-from devsecops_job_hub.adapters import greenhouse, lever
+from devsecops_job_hub.adapters import greenhouse, lever, usajobs
 from devsecops_job_hub.db import engine
 from devsecops_job_hub.models import ATSProvider, CareerStage, Company, Job
 from devsecops_job_hub.services.breakers import CircuitOpenError
@@ -34,6 +34,8 @@ async def refresh_company(company: Company, client: httpx.AsyncClient) -> int:
         adapter_name, fetcher = "greenhouse", greenhouse.fetch_jobs
     elif company.ats_provider == ATSProvider.LEVER:
         adapter_name, fetcher = "lever", lever.fetch_jobs
+    elif company.ats_provider == ATSProvider.USAJOBS:
+        adapter_name, fetcher = "usajobs", usajobs.fetch_jobs
     else:
         return 0
 

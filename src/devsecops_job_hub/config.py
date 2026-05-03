@@ -29,6 +29,13 @@ class Settings(BaseSettings):
     # limited or 403'd. Set EDGAR_CONTACT_EMAIL in .env.
     edgar_contact_email: str = ""
 
+    # USAJobs Search API (data.usajobs.gov). Free; register an email at
+    # https://developer.usajobs.gov to get an Authorization-Key. The
+    # adapter sends User-Agent: <usajobs_contact_email>. If the key is
+    # blank the USAJobs adapter logs a warning and skips its companies.
+    usajobs_api_key: str = ""
+    usajobs_contact_email: str = ""
+
     # OpenTelemetry tracing. Off by default — when on, FastAPI / SQLAlchemy /
     # httpx are auto-instrumented and span trees print to stdout via the
     # console exporter. See services/telemetry.py.
