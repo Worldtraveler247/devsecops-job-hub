@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}DevSecOps Job Hub{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-inner">
+            <span class="hero-eyebrow">CLEARED CAREERS</span>
+            <h1>DevSecOps <span class="grad">Job Hub</span></h1>
+            <p class="hero-sub">Live postings at U.S. government contractors and defense-tech companies.</p>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>Crafted by Eddie Camacho &bull; 2026 &bull; Data freshness shown per result</p>
+    </footer>
+</body>
+</html>
