@@ -58,7 +58,10 @@ class TestRoleFamily:
     def test_specific_role_wins_over_software_engineer(self):
         # The catch-all must lose to specialized matchers.
         assert classify_role_family("DevSecOps Software Engineer") == RoleFamily.DEVSECOPS_ENG
-        assert classify_role_family("Cloud Security Software Engineer") == RoleFamily.CLOUD_SECURITY_ENG
+        assert (
+            classify_role_family("Cloud Security Software Engineer")
+            == RoleFamily.CLOUD_SECURITY_ENG
+        )
 
     def test_role_falls_back_to_description(self):
         # Title says "Engineer" — vague — but description names the role family.
