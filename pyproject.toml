@@ -53,10 +53,7 @@ ignore = [
 
 [tool.mypy]
 python_version = "3.12"
-warn_unused_ignores = true
-warn_redundant_casts = true
-no_implicit_optional = true
-check_untyped_defs = true
+strict = true
 
 [[tool.mypy.overrides]]
 module = ["apscheduler.*"]

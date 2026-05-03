@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import logging
 import time
+from collections.abc import Callable
 from dataclasses import dataclass
 
 logger = logging.getLogger(__name__)
@@ -55,7 +56,7 @@ class CircuitBreakerRegistry:
         self,
         failure_threshold: int = DEFAULT_FAILURE_THRESHOLD,
         open_seconds: int = DEFAULT_OPEN_SECONDS,
-        clock=time.monotonic,
+        clock: Callable[[], float] = time.monotonic,
     ) -> None:
         self._states: dict[str, _State] = {}
         self._threshold = failure_threshold

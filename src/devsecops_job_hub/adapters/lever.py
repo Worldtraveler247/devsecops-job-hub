@@ -10,6 +10,7 @@ hostedUrl, applyUrl, createdAt (ms epoch), workplaceType, country.
 from __future__ import annotations
 
 from datetime import UTC, datetime
+from typing import Any
 
 import httpx
 from pydantic import BaseModel, ConfigDict
@@ -96,7 +97,7 @@ def _workplace_to_remote(workplace: str | None, location: str | None) -> RemoteE
     wait=wait_exponential(multiplier=0.5, min=0.5, max=4),
     retry=retry_if_exception_type((httpx.TransportError, httpx.HTTPStatusError)),
 )
-async def _get(client: httpx.AsyncClient, url: str) -> list[dict]:
+async def _get(client: httpx.AsyncClient, url: str) -> list[dict[str, Any]]:
     resp = await client.get(url, timeout=15.0)
     resp.raise_for_status()
     payload = resp.json()

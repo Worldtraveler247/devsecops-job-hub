@@ -13,6 +13,7 @@ from __future__ import annotations
 import html
 import re
 from datetime import UTC, datetime
+from typing import Any
 
 import httpx
 from pydantic import BaseModel, ConfigDict
@@ -82,10 +83,11 @@ class _GreenhouseResponse(BaseModel):
     wait=wait_exponential(multiplier=0.5, min=0.5, max=4),
     retry=retry_if_exception_type((httpx.TransportError, httpx.HTTPStatusError)),
 )
-async def _get(client: httpx.AsyncClient, url: str) -> dict:
+async def _get(client: httpx.AsyncClient, url: str) -> dict[str, Any]:
     resp = await client.get(url, timeout=15.0)
     resp.raise_for_status()
-    return resp.json()
+    payload: dict[str, Any] = resp.json()
+    return payload
 
 
 async def fetch_jobs(company: Company, client: httpx.AsyncClient) -> list[Job]:

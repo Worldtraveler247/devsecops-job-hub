@@ -111,10 +111,13 @@ async def _load_cik_map(client: httpx.AsyncClient) -> dict[str, int]:
     return _cik_cache
 
 
-async def _fetch_concept(client: httpx.AsyncClient, cik: int, concept: str) -> dict | None:
+async def _fetch_concept(
+    client: httpx.AsyncClient, cik: int, concept: str
+) -> dict[str, Any] | None:
     url = _CONCEPT_URL.format(cik=cik, concept=concept)
     try:
-        return await _get_json(client, url)
+        result = await _get_json(client, url)
+        return result if isinstance(result, dict) else None
     except httpx.HTTPStatusError as e:
         # 404 means this filer doesn't tag under this concept — try the next one.
         if e.response.status_code == 404:
@@ -122,7 +125,7 @@ async def _fetch_concept(client: httpx.AsyncClient, cik: int, concept: str) -> d
         raise
 
 
-def _pick_latest_annual(payload: dict) -> AnnualRevenue | None:
+def _pick_latest_annual(payload: dict[str, Any]) -> AnnualRevenue | None:
     """Pick the most-recently-filed *current-year* annual revenue entry.
 
     Each 10-K usually reports three years of comparatives — the current fiscal
