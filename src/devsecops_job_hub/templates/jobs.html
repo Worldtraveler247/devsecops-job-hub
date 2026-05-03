@@ -97,6 +97,8 @@
                 {% if job.salary_min or job.salary_max %}
                     ${{ '{:,}'.format(job.salary_min) if job.salary_min else '?' }} &ndash; ${{ '{:,}'.format(job.salary_max) if job.salary_max else '?' }}
                     <span class="salary-source">({{ job.salary_source.value }})</span>
+                    {% set gs = job.salary_min|gs_grade %}
+                    {% if gs %}<span class="gs-grade" title="2025 GS table, DC locality — closest equivalent grade">~GS-{{ gs }}</span>{% endif %}
                 {% else %}
                     <span class="salary-unknown">Salary not disclosed</span>
                 {% endif %}

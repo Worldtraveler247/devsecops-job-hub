@@ -24,6 +24,7 @@ from devsecops_job_hub.models import (
 )
 from devsecops_job_hub.seed.companies import seed_companies
 from devsecops_job_hub.services.fit import compute_fit, profile_from_settings
+from devsecops_job_hub.services.gs_scale import infer_gs_grade
 from devsecops_job_hub.services.refresh import refresh_all
 
 logging.basicConfig(level=settings.log_level)
@@ -72,6 +73,7 @@ app = FastAPI(title="DevSecOps Job Hub", version="0.1.0", lifespan=lifespan)
 app.mount("/static", StaticFiles(directory=_STATIC_DIR), name="static")
 templates = Jinja2Templates(directory=_TEMPLATES_DIR)
 templates.env.filters["humanize_revenue"] = _humanize_revenue
+templates.env.filters["gs_grade"] = infer_gs_grade
 
 
 @app.get("/healthz")
