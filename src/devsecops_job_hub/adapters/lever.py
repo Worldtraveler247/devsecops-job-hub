@@ -44,6 +44,8 @@ class _LeverPosting(BaseModel):
     createdAt: int | None = None
     workplaceType: str | None = None
     country: str | None = None
+    descriptionPlain: str | None = None
+    descriptionBodyPlain: str | None = None
 
 
 def _workplace_to_remote(workplace: str | None, location: str | None) -> RemoteEligibility:
@@ -92,13 +94,17 @@ async def fetch_jobs(company: Company, client: httpx.AsyncClient) -> list[Job]:
             datetime.fromtimestamp(p.createdAt / 1000, tz=timezone.utc) if p.createdAt else None
         )
 
+        # Lever ships the full posting body in one of two fields depending on
+        # account configuration. Prefer the longer one.
+        description = p.descriptionBodyPlain or p.descriptionPlain
+
         jobs.append(
             Job(
                 company_id=company.id or 0,
                 title=p.text,
-                role_family=classify_role_family(p.text),
-                career_stage=classify_career_stage(p.text),
-                clearance_required=classify_clearance(p.text),
+                role_family=classify_role_family(p.text, description),
+                career_stage=classify_career_stage(p.text, description),
+                clearance_required=classify_clearance(p.text, description),
                 clearance_sponsorship_available=False,
                 remote_eligible=_workplace_to_remote(p.workplaceType, location),
                 location=location,

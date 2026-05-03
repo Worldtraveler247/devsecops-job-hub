@@ -1,14 +1,17 @@
 """Greenhouse public boards API adapter.
 
-Endpoint shape: https://boards-api.greenhouse.io/v1/boards/{slug}/jobs
+Endpoint shape: https://boards-api.greenhouse.io/v1/boards/{slug}/jobs?content=true
 
-Public, unauthenticated. Returns active postings with title, location, absolute_url,
-and updated_at. We do NOT request `?content=true` — the HTML descriptions are heavy
-and v1 only needs titles for classification.
+Public, unauthenticated. Returns active postings with title, location,
+absolute_url, updated_at, and (with content=true) HTML description. We strip
+HTML to plain text before passing to the classifier so keyword matching works
+on readable copy rather than markup.
 """
 
 from __future__ import annotations
 
+import html
+import re
 from datetime import datetime, timezone
 
 import httpx
@@ -27,6 +30,17 @@ from devsecops_job_hub.models import Company, Job, SalarySource
 
 _BASE_URL = "https://boards-api.greenhouse.io/v1/boards"
 
+_HTML_TAG = re.compile(r"<[^>]+>")
+_WHITESPACE = re.compile(r"\s+")
+
+
+def _strip_html(raw: str | None) -> str | None:
+    if not raw:
+        return None
+    text = _HTML_TAG.sub(" ", raw)
+    text = html.unescape(text)
+    return _WHITESPACE.sub(" ", text).strip() or None
+
 
 class _Location(BaseModel):
     model_config = ConfigDict(extra="ignore")
@@ -40,6 +54,7 @@ class _GreenhouseJob(BaseModel):
     location: _Location | None = None
     absolute_url: str
     updated_at: datetime
+    content: str | None = None
 
 
 class _GreenhouseResponse(BaseModel):
@@ -62,7 +77,7 @@ async def _get(client: httpx.AsyncClient, url: str) -> dict:
 async def fetch_jobs(company: Company, client: httpx.AsyncClient) -> list[Job]:
     if not company.ats_company_slug:
         return []
-    url = f"{_BASE_URL}/{company.ats_company_slug}/jobs"
+    url = f"{_BASE_URL}/{company.ats_company_slug}/jobs?content=true"
     payload = await _get(client, url)
     parsed = _GreenhouseResponse.model_validate(payload)
 
@@ -70,16 +85,14 @@ async def fetch_jobs(company: Company, client: httpx.AsyncClient) -> list[Job]:
     jobs: list[Job] = []
     for g in parsed.jobs:
         location_name = g.location.name if g.location else None
-        # Classify against title (primary) and location (for remote detection).
-        # Clearance is classified against title here; description-aware classification
-        # is a Slice 2 enhancement.
+        description = _strip_html(g.content)
         jobs.append(
             Job(
                 company_id=company.id or 0,
                 title=g.title,
-                role_family=classify_role_family(g.title),
-                career_stage=classify_career_stage(g.title),
-                clearance_required=classify_clearance(g.title),
+                role_family=classify_role_family(g.title, description),
+                career_stage=classify_career_stage(g.title, description),
+                clearance_required=classify_clearance(g.title, description),
                 clearance_sponsorship_available=False,
                 remote_eligible=classify_remote(location_name),
                 location=location_name,

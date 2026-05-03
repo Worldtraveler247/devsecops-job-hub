@@ -21,9 +21,11 @@ def _reset_db():
 
 
 def _slim_response_body(response: dict) -> dict:
-    # Lever's `mode=json` returns full HTML descriptions per posting (megabytes).
-    # The adapter doesn't read description fields — strip them so cassettes stay
-    # small enough to commit. Greenhouse responses pass through untouched.
+    # Both Lever (mode=json) and Greenhouse (content=true) return full posting
+    # descriptions — megabytes per company. Adapter unit tests just verify
+    # parsing/schema, so we drop description fields from cassettes. Description-
+    # aware classification is exercised in test_classify.py with hand-crafted
+    # text, not via cassettes.
     import json
 
     body = response.get("body", {})
@@ -34,11 +36,10 @@ def _slim_response_body(response: dict) -> dict:
         payload = json.loads(raw)
     except (TypeError, ValueError):
         return response
-    if not isinstance(payload, list):
-        return response
-    # Anything the adapters don't actually parse. Slice 3 will add salaryRange
-    # parsing — re-record cassettes then by removing it from this set.
-    heavy_keys = {
+
+    # Slice 3 will add salaryRange parsing — re-record cassettes then by
+    # removing salaryRange from this set.
+    lever_heavy_keys = {
         "description",
         "descriptionPlain",
         "descriptionBody",
@@ -50,10 +51,21 @@ def _slim_response_body(response: dict) -> dict:
         "additionalPlain",
         "salaryRange",
     }
-    for posting in payload:
-        if isinstance(posting, dict):
-            for k in heavy_keys:
-                posting.pop(k, None)
+    greenhouse_heavy_keys = {"content"}
+
+    if isinstance(payload, list):
+        for posting in payload:
+            if isinstance(posting, dict):
+                for k in lever_heavy_keys:
+                    posting.pop(k, None)
+    elif isinstance(payload, dict) and isinstance(payload.get("jobs"), list):
+        for job in payload["jobs"]:
+            if isinstance(job, dict):
+                for k in greenhouse_heavy_keys:
+                    job.pop(k, None)
+    else:
+        return response
+
     body["string"] = json.dumps(payload).encode() if isinstance(raw, bytes) else json.dumps(payload)
     return response
 

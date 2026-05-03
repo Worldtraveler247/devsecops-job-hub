@@ -42,30 +42,87 @@ _ROLE_RULES: list[tuple[re.Pattern[str], RoleFamily]] = [
     (re.compile(r"\blinux\b.*\b(admin\w*|engineer\w*|sysadmin)\b", re.I), RoleFamily.LINUX_ADMIN),
 ]
 
-_ENTRY_HINTS = re.compile(r"\b(junior|jr\.?|entry[- ]level|associate|intern|i{1,3}\b)\b", re.I)
-_SENIOR_HINTS = re.compile(r"\b(senior|sr\.?|lead|principal|staff|manager|director)\b", re.I)
+_ENTRY_HINTS = re.compile(
+    r"\b(junior|jr\.?|entry[- ]level|associate|intern|apprentice|new grad|early career|"
+    r"skillbridge|returnship|rotational program|i{1,3}\b)\b",
+    re.I,
+)
+_SENIOR_HINTS = re.compile(
+    r"\b(senior|sr\.?|lead|principal|staff|manager|director|head of|"
+    r"vice president|vp\b|chief|architect)\b",
+    re.I,
+)
 _MID_HINTS = re.compile(r"\b(mid[- ]level|ii)\b", re.I)
 
+# Description-only signals (lower-confidence, only used if title is silent).
+# 6+ years experience → senior territory. Match "6+ years", "minimum 7 years",
+# "8 to 10 years", etc.
+_SENIOR_DESC = re.compile(
+    r"\b("
+    r"(?:[6-9]|1[0-9])\+?\s*(?:to|-)?\s*\d*\s*(?:years?|yrs?)\s+(?:of\s+)?(?:experience|exp\.?)|"
+    r"minimum\s+(?:of\s+)?(?:[6-9]|1[0-9])\s*(?:years?|yrs?)|"
+    r"at\s+least\s+(?:[6-9]|1[0-9])\s*(?:years?|yrs?)"
+    r")\b",
+    re.I,
+)
+_ENTRY_DESC = re.compile(
+    r"\b("
+    r"no (?:prior )?experience required|"
+    r"recent (?:graduate|grad)|"
+    r"new grad(?:uate)?s?|"
+    r"early[- ]career|"
+    r"transitioning (?:service members?|veterans?|military)|"
+    r"skillbridge|"
+    r"veterans? (?:are )?encouraged|"
+    r"clearance sponsorship (?:available|provided)|"
+    r"will sponsor clearance|"
+    r"0[- ]?2\s*(?:years?|yrs?)|"
+    r"1[- ]?3\s*(?:years?|yrs?)\s+(?:of\s+)?(?:experience|exp\.?)"
+    r")\b",
+    re.I,
+)
+# Mid-level description signals: "3+ years", "3-5 years", etc.
+_MID_DESC = re.compile(
+    r"\b((?:[2-5])\+?\s*(?:to|-)?\s*\d*\s*(?:years?|yrs?)\s+(?:of\s+)?(?:experience|exp\.?))\b",
+    re.I,
+)
 
-def classify_role_family(title: str) -> RoleFamily | None:
+
+def classify_role_family(title: str, description: str | None = None) -> RoleFamily | None:
     for pattern, family in _ROLE_RULES:
         if pattern.search(title):
             return family
+    # Fall back to description scan if title was silent. Description matches are
+    # weaker — we only accept them for the most distinctive role families.
+    if description:
+        for pattern, family in _ROLE_RULES:
+            if pattern.search(description):
+                return family
     return None
 
 
-def classify_career_stage(title: str) -> CareerStage | None:
-    if _ENTRY_HINTS.search(title):
-        return CareerStage.ENTRY
+def classify_career_stage(title: str, description: str | None = None) -> CareerStage | None:
+    # Title is the strongest signal — "Senior Cloud Engineer" is unambiguous.
     if _SENIOR_HINTS.search(title):
         return CareerStage.SENIOR
+    if _ENTRY_HINTS.search(title):
+        return CareerStage.ENTRY
     if _MID_HINTS.search(title):
         return CareerStage.MID
+    # Description fall-through. Senior signals win on conflict because
+    # "8+ years required" overrides any "early career welcome" boilerplate.
+    if description:
+        if _SENIOR_DESC.search(description):
+            return CareerStage.SENIOR
+        if _ENTRY_DESC.search(description):
+            return CareerStage.ENTRY
+        if _MID_DESC.search(description):
+            return CareerStage.MID
     return None
 
 
-def classify_clearance(text: str) -> ClearanceLevel:
-    t = text.lower()
+def classify_clearance(text: str, description: str | None = None) -> ClearanceLevel:
+    t = (text + " " + (description or "")).lower()
     if "ts/sci" in t or "ts sci" in t or "tssci" in t:
         if "poly" in t:
             return ClearanceLevel.TS_SCI_POLY

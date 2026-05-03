@@ -37,6 +37,26 @@ class TestRoleFamily:
     def test_cybersecurity_engineer(self):
         assert classify_role_family("Cybersecurity Engineer") == RoleFamily.SYS_SECURITY_ENG
 
+    def test_role_falls_back_to_description(self):
+        # Title says "Engineer" — vague — but description names the role family.
+        assert (
+            classify_role_family(
+                "Engineer, Platform",
+                "You'll lead our DevSecOps program covering CI/CD, supply-chain security, and SBOM tooling.",
+            )
+            == RoleFamily.DEVSECOPS_ENG
+        )
+
+    def test_title_role_wins_over_description(self):
+        # If title clearly classifies, ignore description.
+        assert (
+            classify_role_family(
+                "Application Security Engineer",
+                "You'll partner with the SRE team on incident response.",
+            )
+            == RoleFamily.APPSEC_ENG
+        )
+
 
 class TestCareerStage:
     def test_senior(self):
@@ -47,6 +67,71 @@ class TestCareerStage:
 
     def test_no_signal(self):
         assert classify_career_stage("Cloud Engineer") is None
+
+    def test_principal_is_senior(self):
+        assert classify_career_stage("Principal Engineer, Cloud") == CareerStage.SENIOR
+
+    def test_director_is_senior(self):
+        assert classify_career_stage("Director of Security Engineering") == CareerStage.SENIOR
+
+    def test_architect_is_senior(self):
+        assert classify_career_stage("Cloud Security Architect") == CareerStage.SENIOR
+
+    def test_skillbridge_in_title(self):
+        assert classify_career_stage("SkillBridge Cloud Intern") == CareerStage.ENTRY
+
+    def test_apprentice(self):
+        assert classify_career_stage("DevOps Apprentice") == CareerStage.ENTRY
+
+    def test_description_8_years_is_senior(self):
+        assert (
+            classify_career_stage(
+                "Cloud Engineer", "Requires 8+ years of experience in production systems."
+            )
+            == CareerStage.SENIOR
+        )
+
+    def test_description_minimum_seven_years_is_senior(self):
+        assert (
+            classify_career_stage(
+                "Software Engineer", "Minimum 7 years of experience required."
+            )
+            == CareerStage.SENIOR
+        )
+
+    def test_description_skillbridge_is_entry(self):
+        assert (
+            classify_career_stage(
+                "Cloud Engineer", "Open to SkillBridge fellows transitioning from active duty."
+            )
+            == CareerStage.ENTRY
+        )
+
+    def test_description_veteran_friendly_is_entry(self):
+        assert (
+            classify_career_stage(
+                "Cloud Engineer", "Veterans are encouraged to apply. No prior experience required."
+            )
+            == CareerStage.ENTRY
+        )
+
+    def test_description_three_years_is_mid(self):
+        assert (
+            classify_career_stage(
+                "Cloud Engineer", "We're looking for someone with 3+ years of experience."
+            )
+            == CareerStage.MID
+        )
+
+    def test_title_senior_overrides_entry_in_description(self):
+        # Boilerplate "veterans encouraged" shouldn't override a clear senior title.
+        assert (
+            classify_career_stage(
+                "Senior Cloud Engineer",
+                "Veterans are encouraged to apply.",
+            )
+            == CareerStage.SENIOR
+        )
 
 
 class TestClearance:
@@ -61,6 +146,14 @@ class TestClearance:
 
     def test_no_clearance(self):
         assert classify_clearance("Software Engineer") == ClearanceLevel.NONE
+
+    def test_clearance_in_description(self):
+        assert (
+            classify_clearance(
+                "Cloud Engineer", "Active Secret clearance required at start date."
+            )
+            == ClearanceLevel.SECRET
+        )
 
 
 class TestRemote:
