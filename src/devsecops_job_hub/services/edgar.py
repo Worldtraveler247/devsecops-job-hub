@@ -24,6 +24,14 @@ import httpx
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
 from devsecops_job_hub.config import settings
+from devsecops_job_hub.services.breakers import (
+    CircuitOpenError,
+    is_open,
+    record_failure,
+    record_success,
+)
+
+_BREAKER_NAME = "edgar"
 
 logger = logging.getLogger(__name__)
 
@@ -70,8 +78,22 @@ def _user_agent() -> str:
     retry=retry_if_exception_type((httpx.TransportError, httpx.HTTPStatusError)),
 )
 async def _get_json(client: httpx.AsyncClient, url: str) -> Any:
-    resp = await client.get(url, timeout=20.0, headers={"User-Agent": _user_agent()})
-    resp.raise_for_status()
+    if is_open(_BREAKER_NAME):
+        raise CircuitOpenError(_BREAKER_NAME)
+    try:
+        resp = await client.get(url, timeout=20.0, headers={"User-Agent": _user_agent()})
+        resp.raise_for_status()
+    except httpx.HTTPStatusError as e:
+        # 404 = concept-not-found-for-this-filer; that's normal flow when we
+        # try concepts in priority order. Don't trip the breaker on it.
+        if e.response.status_code == 404:
+            raise
+        record_failure(_BREAKER_NAME)
+        raise
+    except httpx.TransportError:
+        record_failure(_BREAKER_NAME)
+        raise
+    record_success(_BREAKER_NAME)
     return resp.json()
 
 

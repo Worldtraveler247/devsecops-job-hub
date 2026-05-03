@@ -68,3 +68,26 @@ async def test_fetch_jobs_skips_when_no_slug():
     async with httpx.AsyncClient() as client:
         jobs = await greenhouse.fetch_jobs(company, client)
     assert jobs == []
+
+
+async def test_circuit_breaker_trips_on_repeated_5xx(fake_company):
+    from devsecops_job_hub.services.breakers import CircuitOpenError, reset_all
+
+    reset_all()
+
+    def always_fail(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(503, text="upstream broken")
+
+    transport = httpx.MockTransport(always_fail)
+    async with httpx.AsyncClient(transport=transport) as client:
+        # Each fetch retries 3x via tenacity, then surfaces an HTTPStatusError
+        # which records a failure. After 3 consecutive failures the breaker
+        # trips and the next call should raise CircuitOpenError immediately
+        # (no upstream call).
+        for _ in range(3):
+            with pytest.raises(httpx.HTTPStatusError):
+                await greenhouse.fetch_jobs(fake_company, client)
+        with pytest.raises(CircuitOpenError):
+            await greenhouse.fetch_jobs(fake_company, client)
+
+    reset_all()

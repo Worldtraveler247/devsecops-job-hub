@@ -16,6 +16,7 @@ from sqlmodel import Session, select
 
 from devsecops_job_hub.db import engine
 from devsecops_job_hub.models import Company, RevenueSource
+from devsecops_job_hub.services.breakers import CircuitOpenError
 from devsecops_job_hub.services.edgar import fetch_annual_revenue
 
 logger = logging.getLogger(__name__)
@@ -46,6 +47,11 @@ async def enrich_companies() -> int:
                 continue
             try:
                 revenue = await fetch_annual_revenue(ticker, client)
+            except CircuitOpenError:
+                # EDGAR is broken; bail out of the whole enrichment loop —
+                # there's no point hitting it 4 more times.
+                logger.warning("EDGAR breaker open; skipping remaining enrichment")
+                break
             except httpx.HTTPError as e:
                 logger.warning("EDGAR fetch failed for %s (%s): %s", name, ticker, e)
                 await asyncio.sleep(_RATE_LIMIT_DELAY)

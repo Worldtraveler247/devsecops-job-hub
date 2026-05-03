@@ -24,8 +24,15 @@ from devsecops_job_hub.classify import (
     classify_role_family,
 )
 from devsecops_job_hub.models import Company, Job, RemoteEligibility, SalarySource
+from devsecops_job_hub.services.breakers import (
+    CircuitOpenError,
+    is_open,
+    record_failure,
+    record_success,
+)
 
 _BASE_URL = "https://api.lever.co/v0/postings"
+_BREAKER_NAME = "lever"
 
 
 class _LeverCategories(BaseModel):
@@ -101,8 +108,15 @@ async def _get(client: httpx.AsyncClient, url: str) -> list[dict]:
 async def fetch_jobs(company: Company, client: httpx.AsyncClient) -> list[Job]:
     if not company.ats_company_slug:
         return []
+    if is_open(_BREAKER_NAME):
+        raise CircuitOpenError(_BREAKER_NAME)
     url = f"{_BASE_URL}/{company.ats_company_slug}?mode=json"
-    payload = await _get(client, url)
+    try:
+        payload = await _get(client, url)
+    except (httpx.TransportError, httpx.HTTPStatusError):
+        record_failure(_BREAKER_NAME)
+        raise
+    record_success(_BREAKER_NAME)
     parsed = [_LeverPosting.model_validate(p) for p in payload]
 
     now = datetime.now(timezone.utc)

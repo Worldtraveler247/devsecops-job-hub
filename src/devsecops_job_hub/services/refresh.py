@@ -21,6 +21,7 @@ from sqlmodel import Session, select
 from devsecops_job_hub.adapters import greenhouse, lever
 from devsecops_job_hub.db import engine
 from devsecops_job_hub.models import ATSProvider, CareerStage, Company, Job
+from devsecops_job_hub.services.breakers import CircuitOpenError
 from devsecops_job_hub.services.enrich import enrich_companies
 
 logger = logging.getLogger(__name__)
@@ -38,6 +39,9 @@ async def refresh_company(company: Company, client: httpx.AsyncClient) -> int:
 
     try:
         fetched = await fetcher(company, client)
+    except CircuitOpenError:
+        # Breaker is open — silently skip; the breaker already logged the trip.
+        return 0
     except httpx.HTTPError as e:
         logger.warning("%s fetch failed for %s: %s", adapter_name, company.name, e)
         return 0
