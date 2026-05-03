@@ -66,17 +66,17 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      - name: Trivy image scan
+      # Two-pass scan: SARIF for the GitHub Security tab (all severities so
+      # nothing's hidden from review), then a TABLE pass with severity gating
+      # that actually fails the build on HIGH/CRITICAL.
+      - name: Trivy SARIF (all severities → Security tab)
         uses: aquasecurity/trivy-action@v0.36.0
         with:
           image-ref: devsecops-job-hub:ci
           format: sarif
           output: trivy-results.sarif
-          # Only fail the job on HIGH or CRITICAL findings. MEDIUM/LOW
-          # appear in the dashboard but don't block CI.
-          severity: HIGH,CRITICAL
-          exit-code: "1"
           ignore-unfixed: true
+          exit-code: "0"
 
       - name: Upload Trivy SARIF to Code Scanning
         if: always()
@@ -84,3 +84,12 @@ jobs:
         with:
           sarif_file: trivy-results.sarif
           category: trivy-image-scan
+
+      - name: Trivy gate (fail on HIGH/CRITICAL)
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: devsecops-job-hub:ci
+          format: table
+          severity: HIGH,CRITICAL
+          ignore-unfixed: true
+          exit-code: "1"
