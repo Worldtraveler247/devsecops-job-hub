@@ -14,6 +14,11 @@ dependencies = [
     "tenacity>=9.0",
     "python-multipart>=0.0.12",
     "apscheduler>=3.10",
+    "opentelemetry-api>=1.27",
+    "opentelemetry-sdk>=1.27",
+    "opentelemetry-instrumentation-fastapi>=0.48b0",
+    "opentelemetry-instrumentation-sqlalchemy>=0.48b0",
+    "opentelemetry-instrumentation-httpx>=0.48b0",
 ]
 
 [project.optional-dependencies]

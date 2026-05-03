@@ -29,5 +29,11 @@ class Settings(BaseSettings):
     # limited or 403'd. Set EDGAR_CONTACT_EMAIL in .env.
     edgar_contact_email: str = ""
 
+    # OpenTelemetry tracing. Off by default — when on, FastAPI / SQLAlchemy /
+    # httpx are auto-instrumented and span trees print to stdout via the
+    # console exporter. See services/telemetry.py.
+    otel_enabled: bool = False
+    otel_service_name: str = "devsecops-job-hub"
+
 
 settings = Settings()

@@ -14,7 +14,7 @@ from fastapi.templating import Jinja2Templates
 from sqlmodel import Session, select
 
 from devsecops_job_hub.config import settings
-from devsecops_job_hub.db import get_session, init_db
+from devsecops_job_hub.db import engine, get_session, init_db
 from devsecops_job_hub.models import (
     CareerStage,
     ClearanceLevel,
@@ -27,6 +27,7 @@ from devsecops_job_hub.seed.companies import seed_companies
 from devsecops_job_hub.services.fit import compute_fit, profile_from_settings
 from devsecops_job_hub.services.gs_scale import infer_gs_grade
 from devsecops_job_hub.services.refresh import refresh_all
+from devsecops_job_hub.services.telemetry import init_telemetry
 
 logging.basicConfig(level=settings.log_level)
 logger = logging.getLogger(__name__)
@@ -44,6 +45,8 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     init_db()
     inserted = seed_companies()
     logger.info("seeded %d companies", inserted)
+    if settings.otel_enabled:
+        init_telemetry(app, engine, settings.otel_service_name)
     if settings.enable_scheduler:
         scheduler.add_job(
             refresh_all,
