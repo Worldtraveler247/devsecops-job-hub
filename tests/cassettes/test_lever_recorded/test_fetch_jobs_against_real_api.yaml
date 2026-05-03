@@ -1,0 +1,1922 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Host:
+      - api.lever.co
+      user-agent:
+      - devsecops-job-hub-test
+    method: GET
+    uri: https://api.lever.co/v0/postings/shieldai?mode=json
+  response:
+    body:
+      string: '[{"categories": {"commitment": "Full Time Employee", "department":
+        "Aircraft Operations Division", "location": "Dallas, Texas", "team": "Production",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1768262155272, "id": "78842190-deba-4864-9ef9-272009cb15a4",
+        "text": "Associate Engineer, Manufacturing (R4637)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/78842190-deba-4864-9ef9-272009cb15a4",
+        "applyUrl": "https://jobs.lever.co/shieldai/78842190-deba-4864-9ef9-272009cb15a4/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Shipping", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1776989945917, "id": "38c1f9a5-5e1a-4d91-b2f5-83c0fe4311d4",
+        "text": "Associate Global S/R Specialist (R4871)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/38c1f9a5-5e1a-4d91-b2f5-83c0fe4311d4",
+        "applyUrl": "https://jobs.lever.co/shieldai/38c1f9a5-5e1a-4d91-b2f5-83c0fe4311d4/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Fleet Asset Management",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1776987950163, "id": "056bd3bb-ef75-48f0-8d6a-55492f16332a",
+        "text": "Associate Inventory Admin (R4879)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/056bd3bb-ef75-48f0-8d6a-55492f16332a",
+        "applyUrl": "https://jobs.lever.co/shieldai/056bd3bb-ef75-48f0-8d6a-55492f16332a/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Supply Chain",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1776809345318, "id": "cf9861ab-c6c3-4ad6-ac2c-6316f3dd0152",
+        "text": "Associate Sourcing Specialist (R4464)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/cf9861ab-c6c3-4ad6-ac2c-6316f3dd0152",
+        "applyUrl": "https://jobs.lever.co/shieldai/cf9861ab-c6c3-4ad6-ac2c-6316f3dd0152/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "San Diego, California", "team": "X-BAT Engineering - Avionics",
+        "allLocations": ["San Diego, California", "Dallas, Texas"]}, "createdAt":
+        1766155875437, "id": "6e5d59f1-cd4a-451b-be66-5db9af34df44", "text": "Avionics
+        Mechanical Engineering - Senior Engineering Manager (R4416)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/6e5d59f1-cd4a-451b-be66-5db9af34df44",
+        "applyUrl": "https://jobs.lever.co/shieldai/6e5d59f1-cd4a-451b-be66-5db9af34df44/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "AI Hive",
+        "location": "New Delhi", "team": "Business Development", "allLocations": ["New
+        Delhi"]}, "createdAt": 1764753774679, "id": "a255acce-59cb-40df-bef3-4753e8687f75",
+        "text": "Business Development Manager (R4247)", "country": "IN", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/a255acce-59cb-40df-bef3-4753e8687f75",
+        "applyUrl": "https://jobs.lever.co/shieldai/a255acce-59cb-40df-bef3-4753e8687f75/apply"},
+        {"categories": {"commitment": "International EOR", "department": "Growth Division",
+        "location": "Tokyo", "team": "International Business Development", "allLocations":
+        ["Tokyo"]}, "createdAt": 1760017037122, "id": "6d6a32da-b985-45ea-adc2-1e67d4791f5a",
+        "text": "Business Development Manager, Japan (R3905)", "country": "JP", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/6d6a32da-b985-45ea-adc2-1e67d4791f5a",
+        "applyUrl": "https://jobs.lever.co/shieldai/6d6a32da-b985-45ea-adc2-1e67d4791f5a/apply"},
+        {"categories": {"commitment": "International EOR", "department": "Growth Division",
+        "location": "Riyadh", "team": "International Business Development", "allLocations":
+        ["Riyadh"]}, "createdAt": 1762985912665, "id": "adb5864a-938a-4d24-8163-264f0ab2d5b2",
+        "text": "Business Development Manager, Saudi Arabia (R3983)", "country": "SA",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/adb5864a-938a-4d24-8163-264f0ab2d5b2",
+        "applyUrl": "https://jobs.lever.co/shieldai/adb5864a-938a-4d24-8163-264f0ab2d5b2/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Growth
+        Division", "location": "Riyadh", "team": "International Business Development",
+        "allLocations": ["Riyadh"]}, "createdAt": 1764040163897, "id": "b0e2409c-8e03-413c-ab23-5a6a0aa2eab6",
+        "text": "Business Development Operations Associate (R3956)", "country": "SA",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/b0e2409c-8e03-413c-ab23-5a6a0aa2eab6",
+        "applyUrl": "https://jobs.lever.co/shieldai/b0e2409c-8e03-413c-ab23-5a6a0aa2eab6/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Melbourne", "team": "AUS", "allLocations":
+        ["Melbourne"]}, "createdAt": 1738030961182, "id": "eb4fc5c9-92ce-427e-ab72-f52c073a5ed4",
+        "text": "C++ Build & Release Engineer (Edge Autonomy) (R4183)", "country":
+        "AU", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/eb4fc5c9-92ce-427e-ab72-f52c073a5ed4",
+        "applyUrl": "https://jobs.lever.co/shieldai/eb4fc5c9-92ce-427e-ab72-f52c073a5ed4/apply"},
+        {"categories": {"commitment": "International EOR", "department": "Hivemind
+        Solutions Division", "location": "London", "team": "Chief Engineers", "allLocations":
+        ["London"]}, "createdAt": 1762315208060, "id": "dd795a91-7317-44ea-8197-caf6266eb8f8",
+        "text": "Chief Engineer", "country": "GB", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/dd795a91-7317-44ea-8197-caf6266eb8f8", "applyUrl":
+        "https://jobs.lever.co/shieldai/dd795a91-7317-44ea-8197-caf6266eb8f8/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Washington, DC", "team": "Chief Engineers",
+        "allLocations": ["Washington, DC", "San Diego, California", "Dallas, Texas"]},
+        "createdAt": 1749590202312, "id": "144f5cec-7d0c-40eb-99b9-dd6f89fa7a91",
+        "salaryDescription": "<div><span style=\"font-size: 14.6667px;\">#LI-DM1</span></div>\n<div><span
+        style=\"font-size: 16px;\">#LE</span></div>", "salaryDescriptionPlain": "#LI-DM1\n#LE\n",
+        "text": "Chief Engineer, Autonomy (R4614)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/144f5cec-7d0c-40eb-99b9-dd6f89fa7a91",
+        "applyUrl": "https://jobs.lever.co/shieldai/144f5cec-7d0c-40eb-99b9-dd6f89fa7a91/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Production", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1767760973749, "id": "ba4d0e4a-4bd3-45d9-8586-4f793afa12e0",
+        "text": "Composite Senior Technician, Prototype (R4609)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/ba4d0e4a-4bd3-45d9-8586-4f793afa12e0",
+        "applyUrl": "https://jobs.lever.co/shieldai/ba4d0e4a-4bd3-45d9-8586-4f793afa12e0/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Melbourne", "team": "AUS", "allLocations":
+        ["Melbourne"]}, "createdAt": 1768380193988, "id": "2cfe6692-a266-4d27-8832-ef652fa57ee4",
+        "text": "Computer Vision Engineer (C++)", "country": "AU", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/2cfe6692-a266-4d27-8832-ef652fa57ee4",
+        "applyUrl": "https://jobs.lever.co/shieldai/2cfe6692-a266-4d27-8832-ef652fa57ee4/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Finance
+        Division", "location": "San Diego, California", "team": "Continuous Integration",
+        "allLocations": ["San Diego, California"]}, "createdAt": 1769574068124, "id":
+        "20fb2c00-395d-4b86-8836-781ad70172d2", "text": "Director of Indirect Procurement
+        (R4468)", "country": "US", "workplaceType": "hybrid", "hostedUrl": "https://jobs.lever.co/shieldai/20fb2c00-395d-4b86-8836-781ad70172d2",
+        "applyUrl": "https://jobs.lever.co/shieldai/20fb2c00-395d-4b86-8836-781ad70172d2/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Washington, DC", "team": "Leadership", "allLocations":
+        ["Washington, DC"]}, "createdAt": 1772764540182, "id": "8867fc46-a0e3-4680-b6e4-a011de1aad98",
+        "text": "Director, Chief Engineering (R4667)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/8867fc46-a0e3-4680-b6e4-a011de1aad98",
+        "applyUrl": "https://jobs.lever.co/shieldai/8867fc46-a0e3-4680-b6e4-a011de1aad98/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Enterprise
+        Operations Division", "location": "San Francisco, California", "team": "Service
+        Delivery", "allLocations": ["San Francisco, California"]}, "createdAt": 1771033044709,
+        "id": "3a41fddc-fef9-4760-978e-b531c14cbd47", "text": "Director, End User
+        Computing (R4575)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/3a41fddc-fef9-4760-978e-b531c14cbd47", "applyUrl":
+        "https://jobs.lever.co/shieldai/3a41fddc-fef9-4760-978e-b531c14cbd47/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Technical Program Management",
+        "allLocations": ["Dallas, Texas", "San Diego, California", "United States"]},
+        "createdAt": 1776883106760, "id": "ea6d68b6-f5d1-4b80-abb0-0db794279b8c",
+        "text": "Director, Engineering Excellence & Design Standards", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/ea6d68b6-f5d1-4b80-abb0-0db794279b8c",
+        "applyUrl": "https://jobs.lever.co/shieldai/ea6d68b6-f5d1-4b80-abb0-0db794279b8c/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Program Management", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1776989099873, "id": "ae95b6b1-5dc6-4681-b9da-253917b42903",
+        "text": "Director, Europe and Africa V-BAT Programs (R4861)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/ae95b6b1-5dc6-4681-b9da-253917b42903",
+        "applyUrl": "https://jobs.lever.co/shieldai/ae95b6b1-5dc6-4681-b9da-253917b42903/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Customer Operations",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1776219121661, "id": "771c3e6b-d97a-40ea-889c-8512eafeeb1c",
+        "text": "Director, Mission Control (R4809)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/771c3e6b-d97a-40ea-889c-8512eafeeb1c",
+        "applyUrl": "https://jobs.lever.co/shieldai/771c3e6b-d97a-40ea-889c-8512eafeeb1c/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Supply Chain",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1774654707064, "id": "b245a505-3593-44c0-ba7b-a1e24e15f5a5",
+        "salaryDescription": "<div>#LI-JM1</div>\n<div>#LF</div>", "salaryDescriptionPlain":
+        "#LI-JM1\n#LF\n", "text": "Director, Supply Chain - Negotiations (R4752)",
+        "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/b245a505-3593-44c0-ba7b-a1e24e15f5a5",
+        "applyUrl": "https://jobs.lever.co/shieldai/b245a505-3593-44c0-ba7b-a1e24e15f5a5/apply"},
+        {"categories": {"department": "Aircraft Operations Division", "location":
+        "Tokyo", "team": "Customer Operations", "allLocations": ["Tokyo"]}, "createdAt":
+        1770578510428, "id": "17c8f26e-d930-4a3f-b790-6019fde7a13e", "text": "Drone
+        Operator", "country": "JP", "workplaceType": "remote", "hostedUrl": "https://jobs.lever.co/shieldai/17c8f26e-d930-4a3f-b790-6019fde7a13e",
+        "applyUrl": "https://jobs.lever.co/shieldai/17c8f26e-d930-4a3f-b790-6019fde7a13e/apply"},
+        {"categories": {"commitment": "International Office Entity", "department":
+        "Aircraft Operations Division", "location": "Kyiv", "team": "Customer Operations",
+        "allLocations": ["Kyiv"]}, "createdAt": 1769223950011, "id": "d9e03800-123d-4a15-a0c9-514c16e54780",
+        "text": "Drone Operator (R4428)", "country": "UA", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/d9e03800-123d-4a15-a0c9-514c16e54780",
+        "applyUrl": "https://jobs.lever.co/shieldai/d9e03800-123d-4a15-a0c9-514c16e54780/apply"},
+        {"categories": {"department": "X-BAT Division", "location": "Boston, MA",
+        "team": "X-BAT Engineering - Avionics", "allLocations": ["Boston, MA"]}, "createdAt":
+        1763994805311, "id": "37fa20c1-57dc-4aa1-9515-ecc87f22f31b", "text": "Electrical
+        Engineer I (BOS)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/37fa20c1-57dc-4aa1-9515-ecc87f22f31b", "applyUrl":
+        "https://jobs.lever.co/shieldai/37fa20c1-57dc-4aa1-9515-ecc87f22f31b/apply"},
+        {"categories": {"department": "X-BAT Division", "location": "San Diego, California",
+        "team": "X-BAT Engineering - Avionics", "allLocations": ["San Diego, California"]},
+        "createdAt": 1763995031335, "id": "1b229cdc-9a0b-4704-b39b-b3b4c6e3fa89",
+        "text": "Electrical Engineer I (SD)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/1b229cdc-9a0b-4704-b39b-b3b4c6e3fa89",
+        "applyUrl": "https://jobs.lever.co/shieldai/1b229cdc-9a0b-4704-b39b-b3b4c6e3fa89/apply"},
+        {"categories": {"department": "X-BAT Division", "location": "Dallas, Texas",
+        "team": "X-BAT Engineering - Avionics", "allLocations": ["Dallas, Texas"]},
+        "createdAt": 1763994903751, "id": "c9321f8a-b367-4dcb-9308-bd64ae6bac1d",
+        "text": "Electrical Engineer I (TX)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/c9321f8a-b367-4dcb-9308-bd64ae6bac1d",
+        "applyUrl": "https://jobs.lever.co/shieldai/c9321f8a-b367-4dcb-9308-bd64ae6bac1d/apply"},
+        {"categories": {"commitment": "Intern", "department": "X-BAT Division", "location":
+        "Dallas, Texas", "team": "X-BAT Engineering - Avionics", "allLocations": ["Dallas,
+        Texas", "San Diego, California", "Boston, MA"]}, "createdAt": 1776259349091,
+        "id": "87d982f2-8b2b-4c73-9a19-71e461c7b724", "salaryDescription": "<div>Rising
+        Bachelor''s graduate = $40/hour</div>\n<div>Rising Master''s graduate = $45/hour</div>\n<div>Rising
+        PhD graduate = $56/hour</div>\n<div>+ Housing stipend provided for those who
+        qualify.</div>\n<div>&nbsp;</div>\n<div>This role may also be eligible for
+        certain benefits like PTO, 401k, healthcare, etc.</div>", "salaryDescriptionPlain":
+        "Rising Bachelor''s graduate = $40/hour\nRising Master''s graduate = $45/hour\nRising
+        PhD graduate = $56/hour\n+ Housing stipend provided for those who qualify.\n\u00a0\nThis
+        role may also be eligible for certain benefits like PTO, 401k, healthcare,
+        etc.\n", "text": "Electrical Engineering Spring Co-op (January 2027) (R4475)",
+        "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/87d982f2-8b2b-4c73-9a19-71e461c7b724",
+        "applyUrl": "https://jobs.lever.co/shieldai/87d982f2-8b2b-4c73-9a19-71e461c7b724/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Avionics", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1772029355580, "id": "aad6341b-0825-48e0-8d31-95e72f915ca0",
+        "text": "Electrical Integration - Electrical Engineer II (R4627)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/aad6341b-0825-48e0-8d31-95e72f915ca0",
+        "applyUrl": "https://jobs.lever.co/shieldai/aad6341b-0825-48e0-8d31-95e72f915ca0/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Avionics", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1772029459393, "id": "4c73320c-71e9-4bef-abf5-2af3f23ff6e1",
+        "text": "Electrical Integration - Staff Electrical Engineer (R4628)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/4c73320c-71e9-4bef-abf5-2af3f23ff6e1",
+        "applyUrl": "https://jobs.lever.co/shieldai/4c73320c-71e9-4bef-abf5-2af3f23ff6e1/apply"},
+        {"categories": {"commitment": "Intern", "department": "X-BAT Division", "location":
+        "Boston, MA", "team": "X-BAT Engineering - Software", "allLocations": ["Boston,
+        MA"]}, "createdAt": 1774885466369, "id": "6b9de151-1090-47c0-a245-85b601295966",
+        "salaryDescription": "<div>Rising Bachelor''s graduate = $42/hour</div>\n<div>Rising
+        Master''s graduate = $50/hour</div>\n<div>Rising PhD graduate = $62/hour</div>\n<div>+
+        Housing stipend provided for those who qualify.</div>", "salaryDescriptionPlain":
+        "Rising Bachelor''s graduate = $42/hour\nRising Master''s graduate = $50/hour\nRising
+        PhD graduate = $62/hour\n+ Housing stipend provided for those who qualify.\n",
+        "text": "Embedded Software Engineering Intern - 2026 Summer Intern (Boston,
+        MA)", "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/6b9de151-1090-47c0-a245-85b601295966",
+        "applyUrl": "https://jobs.lever.co/shieldai/6b9de151-1090-47c0-a245-85b601295966/apply"},
+        {"categories": {"commitment": "International EOR", "department": "Hivemind
+        Solutions Division", "location": "Taipei", "team": "Customer Engagement",
+        "allLocations": ["Taipei"]}, "createdAt": 1776811580190, "id": "d4f0de22-d9eb-42a4-b192-21a9c30460e1",
+        "text": "Engineer II, Applications (R4789)", "country": "TW", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/d4f0de22-d9eb-42a4-b192-21a9c30460e1",
+        "applyUrl": "https://jobs.lever.co/shieldai/d4f0de22-d9eb-42a4-b192-21a9c30460e1/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "United States", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["United States", "San Diego, California", "Dallas, Texas", "Boston, MA"]},
+        "createdAt": 1776988867411, "id": "9806bf99-0fbf-4163-93ed-8df06970816d",
+        "text": "Engineer II, Avionics Thermal Engineering (R4859)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/9806bf99-0fbf-4163-93ed-8df06970816d",
+        "applyUrl": "https://jobs.lever.co/shieldai/9806bf99-0fbf-4163-93ed-8df06970816d/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Electrical", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1771536666429, "id": "73be298c-49d5-4f38-bdf5-93a0c0e8a7a5",
+        "text": "Engineer II, Electrical Failure Analysis (R4593)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/73be298c-49d5-4f38-bdf5-93a0c0e8a7a5",
+        "applyUrl": "https://jobs.lever.co/shieldai/73be298c-49d5-4f38-bdf5-93a0c0e8a7a5/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1776293360874, "id": "07546f7f-9a69-4adb-96d6-f94505e7523f",
+        "text": "Engineer II, Flight Controls - X-BAT (R4816)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/07546f7f-9a69-4adb-96d6-f94505e7523f",
+        "applyUrl": "https://jobs.lever.co/shieldai/07546f7f-9a69-4adb-96d6-f94505e7523f/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["Dallas, Texas", "Boston, MA", "San Diego, California"]}, "createdAt": 1774460707765,
+        "id": "b7ebe7cb-45df-4cda-a0d3-cc7b88258e36", "text": "Engineer II, Mechanical
+        - Harness Design (R4597)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/b7ebe7cb-45df-4cda-a0d3-cc7b88258e36", "applyUrl":
+        "https://jobs.lever.co/shieldai/b7ebe7cb-45df-4cda-a0d3-cc7b88258e36/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Mechanical", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1777497255771, "id": "87a9df91-ce26-475f-9d93-c01991441847",
+        "text": "Engineer II, Mechanical (R4886)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/87a9df91-ce26-475f-9d93-c01991441847",
+        "applyUrl": "https://jobs.lever.co/shieldai/87a9df91-ce26-475f-9d93-c01991441847/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1775526118389, "id": "c5c89666-d394-4d08-b846-7db8e205bea3",
+        "text": "Engineer II, Software Test (R4786)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/c5c89666-d394-4d08-b846-7db8e205bea3",
+        "applyUrl": "https://jobs.lever.co/shieldai/c5c89666-d394-4d08-b846-7db8e205bea3/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas", "San Diego, California", "San Francisco, California", "Washington,
+        DC", "Boston, MA"]}, "createdAt": 1762278535706, "id": "133ad6aa-d624-4fad-b1cc-1f8f42d0401f",
+        "text": "Engineer, State Estimation (Dallas/San Diego/Boston/ DC/ San Fran)",
+        "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/133ad6aa-d624-4fad-b1cc-1f8f42d0401f",
+        "applyUrl": "https://jobs.lever.co/shieldai/133ad6aa-d624-4fad-b1cc-1f8f42d0401f/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas", "San Diego, California", "San Francisco, California", "Washington,
+        DC", "Boston, MA"]}, "createdAt": 1762278778252, "id": "133e1006-4bcd-4a31-afaf-c85ad113b749",
+        "text": "Engineer, State Estimation (Dallas/San Diego/Boston/ DC/ San Fran)",
+        "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/133e1006-4bcd-4a31-afaf-c85ad113b749",
+        "applyUrl": "https://jobs.lever.co/shieldai/133e1006-4bcd-4a31-afaf-c85ad113b749/apply"},
+        {"categories": {"commitment": "International Office Entity", "department":
+        "Hivemind Solutions Division", "location": "Melbourne", "team": "AUS", "allLocations":
+        ["Melbourne"]}, "createdAt": 1773956365861, "id": "28ebb068-b00d-4a34-a4d7-a471c84e09ff",
+        "text": "Engineering Lead, Autonomy Software (R4705)", "country": "AU", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/28ebb068-b00d-4a34-a4d7-a471c84e09ff",
+        "applyUrl": "https://jobs.lever.co/shieldai/28ebb068-b00d-4a34-a4d7-a471c84e09ff/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "San Diego, California", "team": "X-BAT Engineering - Mechanical",
+        "allLocations": ["San Diego, California", "Dallas, Texas"]}, "createdAt":
+        1767896398107, "id": "df95d2c2-8186-451a-8ab0-bb946098648f", "text": "Engineering
+        Manager, Mechanical Systems (R4427)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/df95d2c2-8186-451a-8ab0-bb946098648f",
+        "applyUrl": "https://jobs.lever.co/shieldai/df95d2c2-8186-451a-8ab0-bb946098648f/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "United States", "team": "X-BAT Engineering - Aerostructures",
+        "allLocations": ["United States", "San Diego, California", "Dallas, Texas"]},
+        "createdAt": 1776295236738, "id": "751d5f0b-0c1b-4c1a-b0ab-691b7fc88f1a",
+        "text": "Engineering Manager, Structural Design (R4825)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/751d5f0b-0c1b-4c1a-b0ab-691b7fc88f1a",
+        "applyUrl": "https://jobs.lever.co/shieldai/751d5f0b-0c1b-4c1a-b0ab-691b7fc88f1a/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Boston, MA", "team": "X-BAT Engineering - Avionics", "allLocations":
+        ["Boston, MA"]}, "createdAt": 1773166416498, "id": "a65707de-fc21-4555-8817-f2dc37200831",
+        "text": "Engineering Specialist/Sr. Technician, Electrical Engineering (R4691)",
+        "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/a65707de-fc21-4555-8817-f2dc37200831",
+        "applyUrl": "https://jobs.lever.co/shieldai/a65707de-fc21-4555-8817-f2dc37200831/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Avionics", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1775742521220, "id": "dc29adac-fe50-41c1-a466-71b7700626ba",
+        "text": "EWIS Harness Design - Engineer I", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/dc29adac-fe50-41c1-a466-71b7700626ba",
+        "applyUrl": "https://jobs.lever.co/shieldai/dc29adac-fe50-41c1-a466-71b7700626ba/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Customer Operations",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1768273568609, "id": "d2460f30-ea78-4bc2-b6d0-ecab2d8c5cc2",
+        "text": "Field Engineer - Maritime Systems (VBAT) (R4778)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/d2460f30-ea78-4bc2-b6d0-ecab2d8c5cc2",
+        "applyUrl": "https://jobs.lever.co/shieldai/d2460f30-ea78-4bc2-b6d0-ecab2d8c5cc2/apply"},
+        {"categories": {"commitment": "International EOR", "department": "Growth Division",
+        "location": "Abu Dhabi", "team": "Business Development Marketing", "allLocations":
+        ["Abu Dhabi"]}, "createdAt": 1768966858878, "id": "dd503008-96a9-4e2a-8922-40488706849f",
+        "text": "Field Marketing Manager, Middle East (R4253)", "country": "AE", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/dd503008-96a9-4e2a-8922-40488706849f",
+        "applyUrl": "https://jobs.lever.co/shieldai/dd503008-96a9-4e2a-8922-40488706849f/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Propulsion", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1760457942919, "id": "9a6944c7-f448-45bd-a272-09c94d2faa80",
+        "text": "Fuel Systems Engineer (X-BAT)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/9a6944c7-f448-45bd-a272-09c94d2faa80",
+        "applyUrl": "https://jobs.lever.co/shieldai/9a6944c7-f448-45bd-a272-09c94d2faa80/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Special Division", "location": "United States", "team": "Special Projects",
+        "allLocations": ["United States"]}, "createdAt": 1771955531869, "id": "f348563f-a5c9-4bbf-92eb-94fbcb64c14e",
+        "text": "Full Stack Software Engineer, C++/Integration (R4539)", "country":
+        "US", "workplaceType": "remote", "hostedUrl": "https://jobs.lever.co/shieldai/f348563f-a5c9-4bbf-92eb-94fbcb64c14e",
+        "applyUrl": "https://jobs.lever.co/shieldai/f348563f-a5c9-4bbf-92eb-94fbcb64c14e/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1761072260935, "id": "cf148e69-2ca0-4bfd-a4cc-af214bfcce8a",
+        "text": "Ground Control Station (GCS) Software Engineer (R3963)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/cf148e69-2ca0-4bfd-a4cc-af214bfcce8a",
+        "applyUrl": "https://jobs.lever.co/shieldai/cf148e69-2ca0-4bfd-a4cc-af214bfcce8a/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1775524956864, "id": "fe7531e1-c25e-4e4a-9661-19e3a2ab8e69",
+        "text": "Ground System Software Engineer (R4787)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/fe7531e1-c25e-4e4a-9661-19e3a2ab8e69",
+        "applyUrl": "https://jobs.lever.co/shieldai/fe7531e1-c25e-4e4a-9661-19e3a2ab8e69/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Avionics", "allLocations":
+        ["Dallas, Texas", "Boston, MA"]}, "createdAt": 1775242849086, "id": "55e14c5c-ee01-4c42-afc1-3583cf5e93d9",
+        "text": "Hardware Reliability Engineer II (R4675)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/55e14c5c-ee01-4c42-afc1-3583cf5e93d9",
+        "applyUrl": "https://jobs.lever.co/shieldai/55e14c5c-ee01-4c42-afc1-3583cf5e93d9/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Hardware Test",
+        "allLocations": ["Dallas, Texas", "Boston, MA", "San Diego, California"]},
+        "createdAt": 1770743651679, "id": "c7759763-15c1-447c-b9d9-6ebce48a6f69",
+        "text": "Hardware Test - Electrical Engineer (R4000)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/c7759763-15c1-447c-b9d9-6ebce48a6f69",
+        "applyUrl": "https://jobs.lever.co/shieldai/c7759763-15c1-447c-b9d9-6ebce48a6f69/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Hardware Test",
+        "allLocations": ["Dallas, Texas", "Boston, MA", "San Diego, California"]},
+        "createdAt": 1770743881259, "id": "990155eb-64c4-4fc7-85ce-3de1f1564bf2",
+        "text": "Hardware Test - Senior Electrical Engineer (R4000)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/990155eb-64c4-4fc7-85ce-3de1f1564bf2",
+        "applyUrl": "https://jobs.lever.co/shieldai/990155eb-64c4-4fc7-85ce-3de1f1564bf2/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Boston, MA", "team": "V-BAT Engineering - Hardware Test", "allLocations":
+        ["Boston, MA"]}, "createdAt": 1770744067341, "id": "14cb1844-986d-46ea-b2a5-16135c7acdd9",
+        "text": "Hardware Test - Senior Electrical Engineer (R4000) (BOS)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/14cb1844-986d-46ea-b2a5-16135c7acdd9",
+        "applyUrl": "https://jobs.lever.co/shieldai/14cb1844-986d-46ea-b2a5-16135c7acdd9/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Hardware Test",
+        "allLocations": ["Dallas, Texas", "Boston, MA"]}, "createdAt": 1761053760685,
+        "id": "a6b11a01-e749-4b1a-90a4-828524ceb7a0", "text": "Hardware Test - Senior
+        Software Engineer", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/a6b11a01-e749-4b1a-90a4-828524ceb7a0", "applyUrl":
+        "https://jobs.lever.co/shieldai/a6b11a01-e749-4b1a-90a4-828524ceb7a0/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Hardware Test",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1768317467339, "id": "44da0d02-7c4e-47b2-bdd8-d6c6a6a8682b",
+        "text": "Hardware Test - Senior Technician (R4764)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/44da0d02-7c4e-47b2-bdd8-d6c6a6a8682b",
+        "applyUrl": "https://jobs.lever.co/shieldai/44da0d02-7c4e-47b2-bdd8-d6c6a6a8682b/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Finance
+        Division", "location": "San Diego, California", "team": "Accounting", "allLocations":
+        ["San Diego, California"]}, "createdAt": 1775482581547, "id": "9750a6fd-319c-4063-a69c-388b79ce0c9d",
+        "text": "Lead Accountant (R4209)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/9750a6fd-319c-4063-a69c-388b79ce0c9d",
+        "applyUrl": "https://jobs.lever.co/shieldai/9750a6fd-319c-4063-a69c-388b79ce0c9d/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Finance
+        Division", "location": "San Diego, California", "team": "FP&A", "allLocations":
+        ["San Diego, California", "Washington, DC", "San Francisco, California"]},
+        "createdAt": 1774546860823, "id": "6224def5-5489-459e-a4bc-4a795d662762",
+        "text": "Lead FP&A Analyst", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/6224def5-5489-459e-a4bc-4a795d662762", "applyUrl":
+        "https://jobs.lever.co/shieldai/6224def5-5489-459e-a4bc-4a795d662762/apply"},
+        {"categories": {"commitment": "International Office Entity", "department":
+        "Finance Division", "location": "Melbourne", "team": "Finance", "allLocations":
+        ["Melbourne"]}, "createdAt": 1774309844836, "id": "99479315-593d-4a8e-bdaa-a8ea84e7ffd3",
+        "text": "Lead, Program Finance (R4707)", "country": "AU", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/99479315-593d-4a8e-bdaa-a8ea84e7ffd3",
+        "applyUrl": "https://jobs.lever.co/shieldai/99479315-593d-4a8e-bdaa-a8ea84e7ffd3/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Finance
+        Division", "location": "San Diego, California", "team": "Accounting", "allLocations":
+        ["San Diego, California"]}, "createdAt": 1767758544534, "id": "15ff8f0b-12d5-444e-825e-570dcd7c04c4",
+        "text": "Manager, Accounting (R4323)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/15ff8f0b-12d5-444e-825e-570dcd7c04c4",
+        "applyUrl": "https://jobs.lever.co/shieldai/15ff8f0b-12d5-444e-825e-570dcd7c04c4/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Avionics", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1763994569235, "id": "f33a5494-3c49-4a20-a9d2-d8a587fedc6e",
+        "text": "Manager, Electrical Engineering (R4191)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/f33a5494-3c49-4a20-a9d2-d8a587fedc6e",
+        "applyUrl": "https://jobs.lever.co/shieldai/f33a5494-3c49-4a20-a9d2-d8a587fedc6e/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1774655262654, "id": "19aea956-a8ff-4a8c-8552-16d954257ac1",
+        "text": "Manager, Embedded Software (R4755)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/19aea956-a8ff-4a8c-8552-16d954257ac1",
+        "applyUrl": "https://jobs.lever.co/shieldai/19aea956-a8ff-4a8c-8552-16d954257ac1/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1776989708154, "id": "4b31c2db-feb0-4a4f-96e3-20af7b267e2d",
+        "text": "Manager, Simulation Engineering (R4870)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/4b31c2db-feb0-4a4f-96e3-20af7b267e2d",
+        "applyUrl": "https://jobs.lever.co/shieldai/4b31c2db-feb0-4a4f-96e3-20af7b267e2d/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Washington, DC", "team": "Flight System
+        Integration", "allLocations": ["Washington, DC"]}, "createdAt": 1774549392649,
+        "id": "1120529c-2f7d-4b27-a29b-50976c49c433", "text": "Manager, Software -
+        Perception (R3770)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/1120529c-2f7d-4b27-a29b-50976c49c433", "applyUrl":
+        "https://jobs.lever.co/shieldai/1120529c-2f7d-4b27-a29b-50976c49c433/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1774546329988, "id": "bfcf87d0-60b0-4769-bc65-4a5544b43278",
+        "text": "Manager, Software Engineering - System Update Tools (R4745)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/bfcf87d0-60b0-4769-bc65-4a5544b43278",
+        "applyUrl": "https://jobs.lever.co/shieldai/bfcf87d0-60b0-4769-bc65-4a5544b43278/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Melbourne", "team": "AUS", "allLocations":
+        ["Melbourne"]}, "createdAt": 1775531995825, "id": "2c42f55f-331d-44da-859d-16ec532df973",
+        "text": "Modelling and Simulation Lead", "country": "AU", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/2c42f55f-331d-44da-859d-16ec532df973",
+        "applyUrl": "https://jobs.lever.co/shieldai/2c42f55f-331d-44da-859d-16ec532df973/apply"},
+        {"categories": {"department": "X-BAT Division", "location": "Dallas, Texas",
+        "team": "X-BAT Engineering - Avionics", "allLocations": ["Dallas, Texas",
+        "Boston, MA", "San Diego, California"]}, "createdAt": 1765470218385, "id":
+        "0af53b2b-e1ba-4e73-9e94-a4a689cabab9", "text": "Power Electronics - Electrical
+        Engineer I", "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/0af53b2b-e1ba-4e73-9e94-a4a689cabab9",
+        "applyUrl": "https://jobs.lever.co/shieldai/0af53b2b-e1ba-4e73-9e94-a4a689cabab9/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Avionics", "allLocations":
+        ["Dallas, Texas", "Boston, MA", "San Diego, California"]}, "createdAt": 1758719466059,
+        "id": "622ee448-5ab3-4b2e-b20b-1fff995cbc45", "text": "Power Electronics -
+        Electrical Engineer II", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/622ee448-5ab3-4b2e-b20b-1fff995cbc45", "applyUrl":
+        "https://jobs.lever.co/shieldai/622ee448-5ab3-4b2e-b20b-1fff995cbc45/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "San Diego, California", "team": "X-BAT Engineering - Avionics",
+        "allLocations": ["San Diego, California", "Dallas, Texas", "Boston, MA", "United
+        States"]}, "createdAt": 1775653178858, "id": "819a0502-f705-4f02-8784-ddfb1ca2b289",
+        "text": "Power Electronics - Principal Electrical Engineer (R4822)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/819a0502-f705-4f02-8784-ddfb1ca2b289",
+        "applyUrl": "https://jobs.lever.co/shieldai/819a0502-f705-4f02-8784-ddfb1ca2b289/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Avionics", "allLocations":
+        ["Dallas, Texas", "Boston, MA", "San Diego, California"]}, "createdAt": 1775570629664,
+        "id": "be0a4dc7-d2ca-428b-91ef-516012965b5f", "text": "Power Electronics -
+        Staff Electrical Engineer (R4479)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/be0a4dc7-d2ca-428b-91ef-516012965b5f",
+        "applyUrl": "https://jobs.lever.co/shieldai/be0a4dc7-d2ca-428b-91ef-516012965b5f/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Avionics", "allLocations":
+        ["Dallas, Texas", "San Diego, California", "Boston, MA"]}, "createdAt": 1776347741998,
+        "id": "f6bbec19-f1c6-44ce-9af5-132b25b6e83a", "text": "Power Electronics -
+        Thermal Engineer I (R4842)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/f6bbec19-f1c6-44ce-9af5-132b25b6e83a", "applyUrl":
+        "https://jobs.lever.co/shieldai/f6bbec19-f1c6-44ce-9af5-132b25b6e83a/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Avionics", "allLocations":
+        ["Dallas, Texas", "San Diego, California", "Boston, MA"]}, "createdAt": 1775656034661,
+        "id": "12f75166-fed5-4cc1-863d-c172e8852fb4", "text": "Power Electronics -
+        Thermal Engineer Senior Staff", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/12f75166-fed5-4cc1-863d-c172e8852fb4",
+        "applyUrl": "https://jobs.lever.co/shieldai/12f75166-fed5-4cc1-863d-c172e8852fb4/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Avionics", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1769024072900, "id": "c03bc781-786f-4bac-9884-4328b98e2534",
+        "text": "Power System - High Voltage Specialist/Sr. Technician (R4728)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/c03bc781-786f-4bac-9884-4328b98e2534",
+        "applyUrl": "https://jobs.lever.co/shieldai/c03bc781-786f-4bac-9884-4328b98e2534/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "United States", "team": "X-BAT Engineering - Aerostructures",
+        "allLocations": ["United States"]}, "createdAt": 1769223085808, "id": "4bc0d612-d68b-43ce-8bb2-19e07d0577c7",
+        "text": "Principal Aerostructures Design Engineer (R4721)", "country": "US",
+        "workplaceType": "remote", "hostedUrl": "https://jobs.lever.co/shieldai/4bc0d612-d68b-43ce-8bb2-19e07d0577c7",
+        "applyUrl": "https://jobs.lever.co/shieldai/4bc0d612-d68b-43ce-8bb2-19e07d0577c7/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["Dallas, Texas", "San Diego, California", "Remote"]}, "createdAt": 1768422205998,
+        "id": "e0b86a02-d7ce-4b46-971b-bd75b2aea929", "text": "Principal Engineer,
+        Aircraft Thermal (R4353)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/e0b86a02-d7ce-4b46-971b-bd75b2aea929", "applyUrl":
+        "https://jobs.lever.co/shieldai/e0b86a02-d7ce-4b46-971b-bd75b2aea929/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1776213453633, "id": "3dddb78e-4ade-48e3-95d3-84a160dc421d",
+        "text": "Principal Engineer, Fluid & Thermal Systems (R4793)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/3dddb78e-4ade-48e3-95d3-84a160dc421d",
+        "applyUrl": "https://jobs.lever.co/shieldai/3dddb78e-4ade-48e3-95d3-84a160dc421d/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "San Diego, California", "team": "X-BAT Engineering - MEG", "allLocations":
+        ["San Diego, California", "Dallas, Texas", "Washington, DC", "Boston, MA"]},
+        "createdAt": 1773796693076, "id": "ced2a802-5f57-48a4-bb8c-f318bcedac4c",
+        "text": "Principal Engineer, Mission Systems (R4603)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/ced2a802-5f57-48a4-bb8c-f318bcedac4c",
+        "applyUrl": "https://jobs.lever.co/shieldai/ced2a802-5f57-48a4-bb8c-f318bcedac4c/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1771015448925, "id": "c59d711d-4370-4d79-af73-5b54d7f19034",
+        "text": "Principal Engineer, Software Architect (R4562)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/c59d711d-4370-4d79-af73-5b54d7f19034",
+        "applyUrl": "https://jobs.lever.co/shieldai/c59d711d-4370-4d79-af73-5b54d7f19034/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "United States", "team": "X-BAT Engineering - Software", "allLocations":
+        ["United States", "San Diego, California", "Dallas, Texas", "Boston, MA",
+        "Washington, DC", "Remote"]}, "createdAt": 1775154936078, "id": "4ccdcce2-ce09-4180-aba4-01f3e405e0e5",
+        "text": "Principal Engineer, State Estimation (R4602)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/4ccdcce2-ce09-4180-aba4-01f3e405e0e5",
+        "applyUrl": "https://jobs.lever.co/shieldai/4ccdcce2-ce09-4180-aba4-01f3e405e0e5/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "United States", "team": "X-BAT Engineering - MEG", "allLocations":
+        ["United States", "San Diego, California", "Dallas, Texas", "Washington, DC"]},
+        "createdAt": 1775680443149, "id": "0d1400ec-f456-4d5b-8592-740a656260b0",
+        "text": "Principal Engineer, Survivability (R4608)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/0d1400ec-f456-4d5b-8592-740a656260b0",
+        "applyUrl": "https://jobs.lever.co/shieldai/0d1400ec-f456-4d5b-8592-740a656260b0/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Propulsion", "allLocations":
+        ["Dallas, Texas", "United States", "Boston, MA", "San Diego, California"]},
+        "createdAt": 1760458831980, "id": "0036466f-7c47-42ac-9df4-3485ad0f75e2",
+        "text": "Principal Fuel Systems Engineer (X-BAT)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/0036466f-7c47-42ac-9df4-3485ad0f75e2",
+        "applyUrl": "https://jobs.lever.co/shieldai/0036466f-7c47-42ac-9df4-3485ad0f75e2/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Platform Division", "location": "San Diego, California", "team": "Product
+        Management", "allLocations": ["San Diego, California"]}, "createdAt": 1757545725777,
+        "id": "7886f437-2d5e-4616-8dcb-3dc488f1f585", "text": "Product Manager,  AI
+        Platforms (R3865)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/7886f437-2d5e-4616-8dcb-3dc488f1f585", "applyUrl":
+        "https://jobs.lever.co/shieldai/7886f437-2d5e-4616-8dcb-3dc488f1f585/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Platform Division", "location": "San Diego, California", "team": "Product
+        Management", "allLocations": ["San Diego, California", "Washington, DC"]},
+        "createdAt": 1770674731542, "id": "9bb06428-e22a-4538-9e5c-ffc75c89c4dd",
+        "text": "Product Manager, Assured Edge Autonomy (R4504)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/9bb06428-e22a-4538-9e5c-ffc75c89c4dd",
+        "applyUrl": "https://jobs.lever.co/shieldai/9bb06428-e22a-4538-9e5c-ffc75c89c4dd/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Production", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1653570507860, "id": "efe94990-c80b-45b6-949b-71dde71235d2",
+        "text": "Production Technician (R3973)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/efe94990-c80b-45b6-949b-71dde71235d2",
+        "applyUrl": "https://jobs.lever.co/shieldai/efe94990-c80b-45b6-949b-71dde71235d2/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Program Management", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1776731281378, "id": "fa207de3-589c-4e05-ac8a-3ea8bccc96ae",
+        "text": "Project Manager, Demo (R4836)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/fa207de3-589c-4e05-ac8a-3ea8bccc96ae",
+        "applyUrl": "https://jobs.lever.co/shieldai/fa207de3-589c-4e05-ac8a-3ea8bccc96ae/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Supply Chain",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1770684873730, "id": "4e0b7a1e-e8e4-4732-ab6f-cefe1a1a7a00",
+        "text": "Receiving Quality Inspector (R4568)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/4e0b7a1e-e8e4-4732-ab6f-cefe1a1a7a00",
+        "applyUrl": "https://jobs.lever.co/shieldai/4e0b7a1e-e8e4-4732-ab6f-cefe1a1a7a00/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "San Diego, California", "team": "X-BAT Engineering - System Engineering
+        & Integrated Test", "allLocations": ["San Diego, California"]}, "createdAt":
+        1777588174578, "id": "31ebd04d-5345-4ccf-b9da-98d0b302d2a0", "text": "Reliability
+        Staff Systems Engineer (R4906)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/31ebd04d-5345-4ccf-b9da-98d0b302d2a0",
+        "applyUrl": "https://jobs.lever.co/shieldai/31ebd04d-5345-4ccf-b9da-98d0b302d2a0/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Avionics", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1769543682707, "id": "3d073907-8204-4d5a-82b8-40a64ae75844",
+        "text": "RF - Senior Principal Engineer (R4491)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/3d073907-8204-4d5a-82b8-40a64ae75844",
+        "applyUrl": "https://jobs.lever.co/shieldai/3d073907-8204-4d5a-82b8-40a64ae75844/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Aerostructures",
+        "allLocations": ["Dallas, Texas", "San Diego, California"]}, "createdAt":
+        1771000380904, "id": "115aa1cf-8ac5-4002-8b75-5c7e64945883", "text": "Senior
+        Aerostructures Design Engineer", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/115aa1cf-8ac5-4002-8b75-5c7e64945883",
+        "applyUrl": "https://jobs.lever.co/shieldai/115aa1cf-8ac5-4002-8b75-5c7e64945883/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "United States", "team": "Applications Engineering",
+        "allLocations": ["United States", "San Diego, California"]}, "createdAt":
+        1721071436487, "id": "2394368a-67ff-441c-83c3-e998446327e7", "text": "Senior
+        Applications Engineer, Autonomy", "country": "US", "workplaceType": "remote",
+        "hostedUrl": "https://jobs.lever.co/shieldai/2394368a-67ff-441c-83c3-e998446327e7",
+        "applyUrl": "https://jobs.lever.co/shieldai/2394368a-67ff-441c-83c3-e998446327e7/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Enterprise
+        Operations Division", "location": "Dallas, Texas", "team": "Service Delivery",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1776375562319, "id": "d53b4715-f72a-4607-8a56-f79b573d19fa",
+        "text": "Senior Asset Management Specialist (R4747)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/d53b4715-f72a-4607-8a56-f79b573d19fa",
+        "applyUrl": "https://jobs.lever.co/shieldai/d53b4715-f72a-4607-8a56-f79b573d19fa/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Enterprise
+        Operations Division", "location": "San Diego, California", "team": "Cloud
+        & Infrastructure", "allLocations": ["San Diego, California", "Dallas, Texas",
+        "San Francisco, California"]}, "createdAt": 1765412657345, "id": "702e2609-db48-49ab-8bec-d405c956a6ce",
+        "text": "Senior Cloud Engineer (R4222)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/702e2609-db48-49ab-8bec-d405c956a6ce",
+        "applyUrl": "https://jobs.lever.co/shieldai/702e2609-db48-49ab-8bec-d405c956a6ce/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - MEG", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1761076666833, "id": "1a2aa3ca-7742-4da0-bc9a-a804a70c8e7a",
+        "text": "Senior Communications Engineer (Hiring at Multiple Levels)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/1a2aa3ca-7742-4da0-bc9a-a804a70c8e7a",
+        "applyUrl": "https://jobs.lever.co/shieldai/1a2aa3ca-7742-4da0-bc9a-a804a70c8e7a/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Avionics", "allLocations":
+        ["Dallas, Texas", "Boston, MA", "San Diego, California"]}, "createdAt": 1776952115299,
+        "id": "a64042bd-5490-4ef7-9e93-38e1b120b1d3", "text": "Senior Component Engineer",
+        "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/a64042bd-5490-4ef7-9e93-38e1b120b1d3",
+        "applyUrl": "https://jobs.lever.co/shieldai/a64042bd-5490-4ef7-9e93-38e1b120b1d3/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Legal Division",
+        "location": "Washington, DC", "team": "Contracts", "allLocations": ["Washington,
+        DC"]}, "createdAt": 1767705701704, "id": "b2817f5b-22bd-4dbc-9955-64267aa2fb2b",
+        "text": "Senior Contracts Manager (R4378)", "country": "US", "workplaceType":
+        "hybrid", "hostedUrl": "https://jobs.lever.co/shieldai/b2817f5b-22bd-4dbc-9955-64267aa2fb2b",
+        "applyUrl": "https://jobs.lever.co/shieldai/b2817f5b-22bd-4dbc-9955-64267aa2fb2b/apply"},
+        {"categories": {"commitment": "International EOR", "department": "Growth Division",
+        "location": "Tokyo", "team": "International Business Development", "allLocations":
+        ["Tokyo"]}, "createdAt": 1776809858411, "id": "14f30de4-a7ee-4b86-bb27-d60f3aceb678",
+        "text": "Senior Director of Business Development - Japan, South Korea, and
+        Taiwan (R4831)", "country": "JP", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/14f30de4-a7ee-4b86-bb27-d60f3aceb678", "applyUrl":
+        "https://jobs.lever.co/shieldai/14f30de4-a7ee-4b86-bb27-d60f3aceb678/apply"},
+        {"categories": {"department": "Growth Division", "location": "Abu Dhabi",
+        "team": "International Business Development", "allLocations": ["Abu Dhabi"]},
+        "createdAt": 1771608220882, "id": "1797f337-f646-4fd1-8f31-a8163213eaec",
+        "text": "Senior Director of Business Development, Middle East (R4499)", "country":
+        "AE", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/1797f337-f646-4fd1-8f31-a8163213eaec",
+        "applyUrl": "https://jobs.lever.co/shieldai/1797f337-f646-4fd1-8f31-a8163213eaec/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Growth
+        Division", "location": "Washington, DC", "team": "Business Development", "allLocations":
+        ["Washington, DC"]}, "createdAt": 1762314593391, "id": "43c92998-5c18-4ead-bc41-d9cf895a9a16",
+        "text": "Senior Director, Air Force Strategic Capture (R4047)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/43c92998-5c18-4ead-bc41-d9cf895a9a16",
+        "applyUrl": "https://jobs.lever.co/shieldai/43c92998-5c18-4ead-bc41-d9cf895a9a16/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Growth
+        Division", "location": "United States", "team": "Business Development", "allLocations":
+        ["United States", "Washington, DC", "San Francisco, California"]}, "createdAt":
+        1777330805794, "id": "e82022ba-1deb-40c3-be03-90172ac40cae", "text": "Senior
+        Director, BD - Simulation (R4883)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/e82022ba-1deb-40c3-be03-90172ac40cae",
+        "applyUrl": "https://jobs.lever.co/shieldai/e82022ba-1deb-40c3-be03-90172ac40cae/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Growth
+        Division", "location": "Washington, DC", "team": "Business Development", "allLocations":
+        ["Washington, DC"]}, "createdAt": 1766211707263, "id": "b6c8b63f-334a-4c5b-8de3-2de561dd37c4",
+        "text": "Senior Director, Joint Staff/OSW Strategic Capture (R4259)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/b6c8b63f-334a-4c5b-8de3-2de561dd37c4",
+        "applyUrl": "https://jobs.lever.co/shieldai/b6c8b63f-334a-4c5b-8de3-2de561dd37c4/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Washington, DC", "team": "Leadership", "allLocations":
+        ["Washington, DC"]}, "createdAt": 1773431476477, "id": "1be64921-b848-413c-b76c-da55d9cbefa7",
+        "text": "Senior Director, Program Management- Emerging Domains (R4649)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/1be64921-b848-413c-b76c-da55d9cbefa7",
+        "applyUrl": "https://jobs.lever.co/shieldai/1be64921-b848-413c-b76c-da55d9cbefa7/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Avionics", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1765980953227, "id": "0fc2025e-01ba-452b-b3e7-d3df4de88a08",
+        "text": "Senior Electrical Engineer", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/0fc2025e-01ba-452b-b3e7-d3df4de88a08",
+        "applyUrl": "https://jobs.lever.co/shieldai/0fc2025e-01ba-452b-b3e7-d3df4de88a08/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Avionics", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1776103347988, "id": "9b2b2e07-f23f-49c8-882d-a1adffe53bb1",
+        "text": "Senior Electronics Lab Technician (R4824)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/9b2b2e07-f23f-49c8-882d-a1adffe53bb1",
+        "applyUrl": "https://jobs.lever.co/shieldai/9b2b2e07-f23f-49c8-882d-a1adffe53bb1/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas", "San Diego, California"]}, "createdAt": 1771889031078, "id":
+        "899822bb-7c18-45c5-ac34-7b84cc689f9e", "text": "Senior Engineer, Aeronautical
+        Modeling & Simulation (Dallas/San Diego) (R4538)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/899822bb-7c18-45c5-ac34-7b84cc689f9e",
+        "applyUrl": "https://jobs.lever.co/shieldai/899822bb-7c18-45c5-ac34-7b84cc689f9e/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "United States", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["United States", "San Diego, California", "Dallas, Texas", "Boston, MA"]},
+        "createdAt": 1777502100496, "id": "425c064c-7585-462f-973d-66d685d1ab17",
+        "text": "Senior Engineer, Air Vehicle Fluid Systems (R4891)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/425c064c-7585-462f-973d-66d685d1ab17",
+        "applyUrl": "https://jobs.lever.co/shieldai/425c064c-7585-462f-973d-66d685d1ab17/apply"},
+        {"categories": {"commitment": "International EOR", "department": "Hivemind
+        Solutions Division", "location": "Taipei", "team": "Customer Engagement",
+        "allLocations": ["Taipei"]}, "createdAt": 1776811877497, "id": "4d6c0395-4b2c-4e5f-a658-98ec604678cb",
+        "text": "Senior Engineer, Applications (R4792)", "country": "TW", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/4d6c0395-4b2c-4e5f-a658-98ec604678cb",
+        "applyUrl": "https://jobs.lever.co/shieldai/4d6c0395-4b2c-4e5f-a658-98ec604678cb/apply"},
+        {"categories": {"commitment": "International EOR", "department": "Hivemind
+        Solutions Division", "location": "Tokyo", "team": "Customer Engagement", "allLocations":
+        ["Tokyo"]}, "createdAt": 1776470934208, "id": "ca9c2a51-fc9c-4258-a420-85b9a97b28b3",
+        "text": "Senior Engineer, Applications (R4829)", "country": "JP", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/ca9c2a51-fc9c-4258-a420-85b9a97b28b3",
+        "applyUrl": "https://jobs.lever.co/shieldai/ca9c2a51-fc9c-4258-a420-85b9a97b28b3/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Washington, DC", "team": "Flight System
+        Integration", "allLocations": ["Washington, DC", "Boston, MA", "San Diego,
+        California"]}, "createdAt": 1755280245037, "id": "1af75b70-43ff-457b-858b-2935e7c8983a",
+        "text": "Senior Engineer, Autonomy - Tactical Behaviors (R4235)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/1af75b70-43ff-457b-858b-2935e7c8983a",
+        "applyUrl": "https://jobs.lever.co/shieldai/1af75b70-43ff-457b-858b-2935e7c8983a/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "San Diego, California", "team": "Integration
+        & Test", "allLocations": ["San Diego, California"]}, "createdAt": 1769831915542,
+        "id": "498f7d45-a951-45ad-aa7f-3f54bf3dd2bb", "text": "Senior Engineer, Autonomy
+        Systems Integration and Test (R4472)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/498f7d45-a951-45ad-aa7f-3f54bf3dd2bb",
+        "applyUrl": "https://jobs.lever.co/shieldai/498f7d45-a951-45ad-aa7f-3f54bf3dd2bb/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Platform Division", "location": "San Diego, California", "team": "Software
+        Ops", "allLocations": ["San Diego, California"]}, "createdAt": 1766211388418,
+        "id": "6cdd98c9-6579-4609-8ac3-9fc0604f6160", "text": "Senior Engineer, Build
+        and CI (R4220)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/6cdd98c9-6579-4609-8ac3-9fc0604f6160", "applyUrl":
+        "https://jobs.lever.co/shieldai/6cdd98c9-6579-4609-8ac3-9fc0604f6160/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1776471434737, "id": "50f45142-caa6-4e50-a6d4-ba46f0cf205d",
+        "text": "Senior Engineer, DevOps (Dallas, TX) (R4819)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/50f45142-caa6-4e50-a6d4-ba46f0cf205d",
+        "applyUrl": "https://jobs.lever.co/shieldai/50f45142-caa6-4e50-a6d4-ba46f0cf205d/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1755536632456, "id": "d5fdafe1-2e50-4543-98b1-38f3a3d26e12",
+        "text": "Senior Engineer, Embedded OS (Dallas Tx) (R3793)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/d5fdafe1-2e50-4543-98b1-38f3a3d26e12",
+        "applyUrl": "https://jobs.lever.co/shieldai/d5fdafe1-2e50-4543-98b1-38f3a3d26e12/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1776292789821, "id": "e764ace5-77fb-4f03-b21e-4e9149e356a6",
+        "text": "Senior Engineer, Flight Controls - X-BAT (R4814)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/e764ace5-77fb-4f03-b21e-4e9149e356a6",
+        "applyUrl": "https://jobs.lever.co/shieldai/e764ace5-77fb-4f03-b21e-4e9149e356a6/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1767889175098, "id": "c2479afc-d804-4b2a-a3b8-0b111f785e8e",
+        "text": "Senior Engineer, Foundry Applications (R3934)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/c2479afc-d804-4b2a-a3b8-0b111f785e8e",
+        "applyUrl": "https://jobs.lever.co/shieldai/c2479afc-d804-4b2a-a3b8-0b111f785e8e/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1776218522772, "id": "12901f0e-56f1-4654-939d-1605d5b10e75",
+        "salaryDescription": "<div>#LI-SM1</div>\n<div>#LC</div>", "salaryDescriptionPlain":
+        "#LI-SM1\n#LC\n", "text": "Senior Engineer, Full-Stack Software - Foundry
+        Applications (R4806)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/12901f0e-56f1-4654-939d-1605d5b10e75", "applyUrl":
+        "https://jobs.lever.co/shieldai/12901f0e-56f1-4654-939d-1605d5b10e75/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "United States", "team": "X-BAT Engineering - Software", "allLocations":
+        ["United States", "San Diego, California", "Dallas, Texas", "Boston, MA"]},
+        "createdAt": 1775155260203, "id": "6d3cf300-d22e-47bb-b190-e376bd8715f1",
+        "text": "Senior Engineer, GNC - Sensor Integration (R4601)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/6d3cf300-d22e-47bb-b190-e376bd8715f1",
+        "applyUrl": "https://jobs.lever.co/shieldai/6d3cf300-d22e-47bb-b190-e376bd8715f1/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Production", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1766211975931, "id": "836d3989-cb7c-455c-8594-c56f97022182",
+        "text": "Senior Engineer, Manufacturing (R4265)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/836d3989-cb7c-455c-8594-c56f97022182",
+        "applyUrl": "https://jobs.lever.co/shieldai/836d3989-cb7c-455c-8594-c56f97022182/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Mechanical", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1771967533785, "id": "af5cef92-2843-4c4d-bf6c-6ba514208d2a",
+        "text": "Senior Engineer, Mechanical Design - V-BAT (R4467)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/af5cef92-2843-4c4d-bf6c-6ba514208d2a",
+        "applyUrl": "https://jobs.lever.co/shieldai/af5cef92-2843-4c4d-bf6c-6ba514208d2a/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1771387036818, "id": "13c02cef-8e99-47c4-a264-a442798d5b5a",
+        "text": "Senior Engineer, Mechanical Test (R4582)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/13c02cef-8e99-47c4-a264-a442798d5b5a",
+        "applyUrl": "https://jobs.lever.co/shieldai/13c02cef-8e99-47c4-a264-a442798d5b5a/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "United States", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["United States", "San Diego, California", "Dallas, Texas"]}, "createdAt":
+        1777501226899, "id": "28332c5d-703f-42e8-bb9b-ceafb14fb765", "text": "Senior
+        Engineer, Mechanisms (R4890)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/28332c5d-703f-42e8-bb9b-ceafb14fb765",
+        "applyUrl": "https://jobs.lever.co/shieldai/28332c5d-703f-42e8-bb9b-ceafb14fb765/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - MEG", "allLocations":
+        ["Dallas, Texas", "Boston, MA", "San Diego, California"]}, "createdAt": 1769176042077,
+        "id": "5e7f78df-f6c4-43a8-9b81-e775b42f553a", "text": "Senior Engineer, Mission
+        Processing and Architecture (Hiring at Multiple Levels)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/5e7f78df-f6c4-43a8-9b81-e775b42f553a",
+        "applyUrl": "https://jobs.lever.co/shieldai/5e7f78df-f6c4-43a8-9b81-e775b42f553a/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Mission System",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1760740568941, "id": "4eee4290-8519-4b1b-8010-84373fcd1e5f",
+        "text": "Senior Engineer, Mission Systems (Avionics & Sensor Integration)
+        (R4884)", "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/4eee4290-8519-4b1b-8010-84373fcd1e5f",
+        "applyUrl": "https://jobs.lever.co/shieldai/4eee4290-8519-4b1b-8010-84373fcd1e5f/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Washington, DC", "team": "X-BAT Engineering - MEG", "allLocations":
+        ["Washington, DC", "Boston, MA", "San Diego, California", "Dallas, Texas"]},
+        "createdAt": 1769783894696, "id": "dab6c7df-d56a-4993-ab0c-c53a72698eb3",
+        "text": "Senior Engineer, Mission Systems (Hiring at Multiple Levels)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/dab6c7df-d56a-4993-ab0c-c53a72698eb3",
+        "applyUrl": "https://jobs.lever.co/shieldai/dab6c7df-d56a-4993-ab0c-c53a72698eb3/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "United States", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["United States", "Dallas, Texas", "Washington, DC"]}, "createdAt": 1776129322211,
+        "id": "62764a66-3abe-400e-9f85-dac472ff7711", "text": "Senior Engineer, Operations
+        Analysis (4762)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/62764a66-3abe-400e-9f85-dac472ff7711", "applyUrl":
+        "https://jobs.lever.co/shieldai/62764a66-3abe-400e-9f85-dac472ff7711/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas", "San Diego, California"]}, "createdAt": 1771888551506, "id":
+        "5118a08f-4ae8-431f-a06f-6dba3eaff113", "text": "Senior Engineer, Radar Modeling
+        & Simulation (Dallas/San Diego) (R4537)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/5118a08f-4ae8-431f-a06f-6dba3eaff113",
+        "applyUrl": "https://jobs.lever.co/shieldai/5118a08f-4ae8-431f-a06f-6dba3eaff113/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas", "San Diego, California"]}, "createdAt": 1771887794208, "id":
+        "49ba177b-7759-460e-a778-e76fa297af35", "text": "Senior Engineer, Simulation
+        Applications (Dallas/San Diego) (R4535)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/49ba177b-7759-460e-a778-e76fa297af35",
+        "applyUrl": "https://jobs.lever.co/shieldai/49ba177b-7759-460e-a778-e76fa297af35/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Washington, DC", "team": "Flight System
+        Integration", "allLocations": ["Washington, DC", "Boston, MA", "San Diego,
+        California"]}, "createdAt": 1755280951607, "id": "3daaf9c5-164e-4a8e-abc9-b475a38522c3",
+        "text": "Senior Engineer, Software - Autonomous Aircraft Integration (R4590)",
+        "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/3daaf9c5-164e-4a8e-abc9-b475a38522c3",
+        "applyUrl": "https://jobs.lever.co/shieldai/3daaf9c5-164e-4a8e-abc9-b475a38522c3/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "San Diego, California", "team": "Flight
+        System Integration", "allLocations": ["San Diego, California", "Washington,
+        DC", "Boston, MA"]}, "createdAt": 1755282220872, "id": "d6f1d906-5c1e-4640-87f3-3e31e1b45fa6",
+        "text": "Senior Engineer, Software - Perception (R3771)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/d6f1d906-5c1e-4640-87f3-3e31e1b45fa6",
+        "applyUrl": "https://jobs.lever.co/shieldai/d6f1d906-5c1e-4640-87f3-3e31e1b45fa6/apply"},
+        {"categories": {"commitment": "International EOR", "department": "Hivemind
+        Solutions Division", "location": "Amsterdam", "team": "Applications Engineering",
+        "allLocations": ["Amsterdam"]}, "createdAt": 1764707086293, "id": "c885261d-0c85-48c3-8059-8be12eb4cb19",
+        "text": "Senior Engineer, Software Autonomy Applications", "country": "NL",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/c885261d-0c85-48c3-8059-8be12eb4cb19",
+        "applyUrl": "https://jobs.lever.co/shieldai/c885261d-0c85-48c3-8059-8be12eb4cb19/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Platform Division", "location": "San Diego, California", "team": "Quality",
+        "allLocations": ["San Diego, California"]}, "createdAt": 1744662886020, "id":
+        "21d73732-e08b-415e-a6ec-b2763b6faaeb", "text": "Senior Engineer, Software
+        Integration and Test (R4461)", "country": "US", "workplaceType": "hybrid",
+        "hostedUrl": "https://jobs.lever.co/shieldai/21d73732-e08b-415e-a6ec-b2763b6faaeb",
+        "applyUrl": "https://jobs.lever.co/shieldai/21d73732-e08b-415e-a6ec-b2763b6faaeb/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1777089336075, "id": "9d317f29-93ac-46fd-a1a6-a6e0d36146e3",
+        "text": "Senior Engineer, Software Test (R4877)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/9d317f29-93ac-46fd-a1a6-a6e0d36146e3",
+        "applyUrl": "https://jobs.lever.co/shieldai/9d317f29-93ac-46fd-a1a6-a6e0d36146e3/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "San Diego, California", "team": "X-BAT Engineering - System Engineering
+        & Integrated Test", "allLocations": ["San Diego, California"]}, "createdAt":
+        1767883619469, "id": "a327cbe1-915b-4745-b730-376041d91202", "text": "Senior
+        Engineer, Systems Integration (R4310)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/a327cbe1-915b-4745-b730-376041d91202",
+        "applyUrl": "https://jobs.lever.co/shieldai/a327cbe1-915b-4745-b730-376041d91202/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas", "San Diego, California"]}, "createdAt": 1756402709070, "id":
+        "d0635c93-bb07-4585-80d3-c53aaa2fdf6d", "text": "Senior Engineer, VBAT Software
+        Test Automation (Hiring Multiple Levels)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/d0635c93-bb07-4585-80d3-c53aaa2fdf6d",
+        "applyUrl": "https://jobs.lever.co/shieldai/d0635c93-bb07-4585-80d3-c53aaa2fdf6d/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas", "Boston, MA", "San Diego, California"]}, "createdAt": 1761078601859,
+        "id": "7a5377da-0d83-434a-a3c9-8b3ff99b97f7", "text": "Senior Engineer, XBAT
+        DevOps (R4542) (TX/Bos/San Diego)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/7a5377da-0d83-434a-a3c9-8b3ff99b97f7",
+        "applyUrl": "https://jobs.lever.co/shieldai/7a5377da-0d83-434a-a3c9-8b3ff99b97f7/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas", "San Diego, California", "Boston, MA"]}, "createdAt": 1770418286729,
+        "id": "8a471d5b-833a-402c-b7a5-4c22b3aee16a", "text": "Senior Engineer, XBAT
+        Simulation Infrastructure (TX/SD/Bos) (R4543)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/8a471d5b-833a-402c-b7a5-4c22b3aee16a",
+        "applyUrl": "https://jobs.lever.co/shieldai/8a471d5b-833a-402c-b7a5-4c22b3aee16a/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas", "San Diego, California", "Boston, MA"]}, "createdAt": 1775769668411,
+        "id": "f38c09b5-ce0f-4b87-ae4f-319cc9e26d5d", "text": "Senior Engineer, XBAT
+        Simulation Modeling (R4546) (TX/SD/BOS)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/f38c09b5-ce0f-4b87-ae4f-319cc9e26d5d",
+        "applyUrl": "https://jobs.lever.co/shieldai/f38c09b5-ce0f-4b87-ae4f-319cc9e26d5d/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Production", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1773880813780, "id": "88cc0d61-0237-49f0-869a-cd8048fe06a1",
+        "salaryDescription": "<div>#LI-JM1</div>\n<div>#LC</div>", "salaryDescriptionPlain":
+        "#LI-JM1\n#LC\n", "text": "Senior Engineering Technician - Operational Excellence
+        (R4703)", "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/88cc0d61-0237-49f0-869a-cd8048fe06a1",
+        "applyUrl": "https://jobs.lever.co/shieldai/88cc0d61-0237-49f0-869a-cd8048fe06a1/apply"},
+        {"categories": {"commitment": "International Office Entity", "department":
+        "Growth Division", "location": "London", "team": "Business Development Marketing",
+        "allLocations": ["London"]}, "createdAt": 1775596010365, "id": "adae7dfa-e9b2-4cdc-92c9-13ec68f29548",
+        "text": "Senior Field Marketing Manager - Europe (R4771)", "country": "GB",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/adae7dfa-e9b2-4cdc-92c9-13ec68f29548",
+        "applyUrl": "https://jobs.lever.co/shieldai/adae7dfa-e9b2-4cdc-92c9-13ec68f29548/apply"},
+        {"categories": {"commitment": "International Office Entity", "department":
+        "Growth Division", "location": "New Delhi", "team": "Business Development
+        Marketing", "allLocations": ["New Delhi"]}, "createdAt": 1775596670223, "id":
+        "4fe88e9b-b46f-4316-92c7-4a4bbd16a4e2", "text": "Senior Field Marketing Manager
+        - India (R4772)", "country": "IN", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/4fe88e9b-b46f-4316-92c7-4a4bbd16a4e2", "applyUrl":
+        "https://jobs.lever.co/shieldai/4fe88e9b-b46f-4316-92c7-4a4bbd16a4e2/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "People
+        Experience Division", "location": "Dallas, Texas", "team": "People Experience",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1776893135710, "id": "7702d1b0-2d2b-48d7-b29e-bbdca360055a",
+        "text": "Senior Global Mobility Manager (R4846)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/7702d1b0-2d2b-48d7-b29e-bbdca360055a",
+        "applyUrl": "https://jobs.lever.co/shieldai/7702d1b0-2d2b-48d7-b29e-bbdca360055a/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1777091007521, "id": "6c140531-db2d-4fdf-8055-a4418a9d262b",
+        "text": "Senior Human Machine Interface Designer (R4854)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/6c140531-db2d-4fdf-8055-a4418a9d262b",
+        "applyUrl": "https://jobs.lever.co/shieldai/6c140531-db2d-4fdf-8055-a4418a9d262b/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Finance
+        Division", "location": "San Francisco, California", "team": "FP&A", "allLocations":
+        ["San Francisco, California"]}, "createdAt": 1773368359349, "id": "adc251db-b4e9-4e21-a0de-6fd96a8f9029",
+        "text": "Senior Lead Data Engineer (R4680)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/adc251db-b4e9-4e21-a0de-6fd96a8f9029",
+        "applyUrl": "https://jobs.lever.co/shieldai/adc251db-b4e9-4e21-a0de-6fd96a8f9029/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Executive
+        Division", "location": "San Diego, California", "team": "Executive Office",
+        "allLocations": ["San Diego, California", "Dallas, Texas", "Washington, DC"]},
+        "createdAt": 1772767519050, "id": "8a0edafa-f906-48c3-9ca5-0af07075b156",
+        "text": "Senior Lead, Strategy & Operations (R4671)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/8a0edafa-f906-48c3-9ca5-0af07075b156",
+        "applyUrl": "https://jobs.lever.co/shieldai/8a0edafa-f906-48c3-9ca5-0af07075b156/apply"},
+        {"categories": {"commitment": "International Office Entity", "department":
+        "Finance Division", "location": "New Delhi", "team": "Accounting", "allLocations":
+        ["New Delhi"]}, "createdAt": 1776725978648, "id": "f28c7ac0-fc3b-4b99-a1c1-7287c0ad1913",
+        "text": "Senior Manager, Finance (R4839)", "country": "IN", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/f28c7ac0-fc3b-4b99-a1c1-7287c0ad1913",
+        "applyUrl": "https://jobs.lever.co/shieldai/f28c7ac0-fc3b-4b99-a1c1-7287c0ad1913/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Finance
+        Division", "location": "San Francisco, California", "team": "FP&A", "allLocations":
+        ["San Francisco, California"]}, "createdAt": 1772765206739, "id": "567daf92-c9c3-4ab9-8a08-fd26d22bfde0",
+        "text": "Senior Manager, FP&A - Corporate Finance (R4668)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/567daf92-c9c3-4ab9-8a08-fd26d22bfde0",
+        "applyUrl": "https://jobs.lever.co/shieldai/567daf92-c9c3-4ab9-8a08-fd26d22bfde0/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Mechanical", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1775679927902, "id": "f6f121b7-1e56-49bb-b540-99dafe1b1ff2",
+        "text": "Senior Manager, Mechanical Engineering (R4791)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/f6f121b7-1e56-49bb-b540-99dafe1b1ff2",
+        "applyUrl": "https://jobs.lever.co/shieldai/f6f121b7-1e56-49bb-b540-99dafe1b1ff2/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - LRV", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1776988601884, "id": "e2937327-d2de-44b5-8975-a3612ef2dfbe",
+        "text": "Senior Manager, Mechanisms Engineering (R4858)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/e2937327-d2de-44b5-8975-a3612ef2dfbe",
+        "applyUrl": "https://jobs.lever.co/shieldai/e2937327-d2de-44b5-8975-a3612ef2dfbe/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "San Diego, California", "team": "Flight
+        System Integration", "allLocations": ["San Diego, California", "Washington,
+        DC"]}, "createdAt": 1754067912169, "id": "501e3703-1a63-4773-b961-6029e5fb71d6",
+        "text": "Senior Manager, Perception (R3634)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/501e3703-1a63-4773-b961-6029e5fb71d6",
+        "applyUrl": "https://jobs.lever.co/shieldai/501e3703-1a63-4773-b961-6029e5fb71d6/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1774655007761, "id": "35bb0c9f-5ce9-45bf-a285-75ae2c95fd68",
+        "text": "Senior Manager, Software Test and Automation (R4754)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/35bb0c9f-5ce9-45bf-a285-75ae2c95fd68",
+        "applyUrl": "https://jobs.lever.co/shieldai/35bb0c9f-5ce9-45bf-a285-75ae2c95fd68/apply"},
+        {"categories": {"commitment": "International Office Entity", "department":
+        "Hivemind Solutions Division", "location": "Lviv", "team": "Program & Technical
+        Program Management", "allLocations": ["Lviv"]}, "createdAt": 1766528017887,
+        "id": "cf22bade-ce5f-4c53-9dbd-49aa997b45b4", "text": "Senior Manager, Technical
+        Program Management (R4197)", "country": "UA", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/cf22bade-ce5f-4c53-9dbd-49aa997b45b4", "applyUrl":
+        "https://jobs.lever.co/shieldai/cf22bade-ce5f-4c53-9dbd-49aa997b45b4/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Finance
+        Division", "location": "San Francisco, California", "team": "Accounting",
+        "allLocations": ["San Francisco, California"]}, "createdAt": 1773371595829,
+        "id": "6e738512-06bb-499f-bccb-0bf680f31612", "text": "Senior Manager, Treasury
+        (R4682)", "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/6e738512-06bb-499f-bccb-0bf680f31612",
+        "applyUrl": "https://jobs.lever.co/shieldai/6e738512-06bb-499f-bccb-0bf680f31612/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Supply Chain",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1773796420993, "id": "fca36368-be91-4f0d-80b4-e4c18564b1ea",
+        "text": "Senior Materials Planner (R4622)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/fca36368-be91-4f0d-80b4-e4c18564b1ea",
+        "applyUrl": "https://jobs.lever.co/shieldai/fca36368-be91-4f0d-80b4-e4c18564b1ea/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1774049557934, "id": "269355be-4438-4d8c-9ee7-336456be9051",
+        "text": "Senior Mechanical Engineer, Actuation & Fluid Systems (R4730)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/269355be-4438-4d8c-9ee7-336456be9051",
+        "applyUrl": "https://jobs.lever.co/shieldai/269355be-4438-4d8c-9ee7-336456be9051/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Washington, DC", "team": "Strategic Product
+        Development", "allLocations": ["Washington, DC"]}, "createdAt": 1769032024895,
+        "id": "99975ad6-3b57-494b-9374-b46a761a097e", "text": "Senior Operations Analyst
+        (R4487)", "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/99975ad6-3b57-494b-9374-b46a761a097e",
+        "applyUrl": "https://jobs.lever.co/shieldai/99975ad6-3b57-494b-9374-b46a761a097e/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Finance
+        Division", "location": "Washington, DC", "team": "FP&A", "allLocations": ["Washington,
+        DC", "San Diego, California"]}, "createdAt": 1774050040259, "id": "7a027544-02b6-4f33-9f3a-e31fdacec834",
+        "text": "Senior Program Finance Analyst (R4731)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/7a027544-02b6-4f33-9f3a-e31fdacec834",
+        "applyUrl": "https://jobs.lever.co/shieldai/7a027544-02b6-4f33-9f3a-e31fdacec834/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Propulsion", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1773671223003, "id": "183856ee-0477-4038-8068-123a993fb717",
+        "text": "Senior Propulsion Design Engineer (R4642)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/183856ee-0477-4038-8068-123a993fb717",
+        "applyUrl": "https://jobs.lever.co/shieldai/183856ee-0477-4038-8068-123a993fb717/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Propulsion", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1773671461786, "id": "ed621528-2186-448b-9ba9-7a33df7b931e",
+        "text": "Senior Propulsion Engineer (R4644)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/ed621528-2186-448b-9ba9-7a33df7b931e",
+        "applyUrl": "https://jobs.lever.co/shieldai/ed621528-2186-448b-9ba9-7a33df7b931e/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Propulsion", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1773671726349, "id": "9aeaf414-6a45-4294-a2f0-2d62eaafc9a4",
+        "text": "Senior Propulsion Technician (R4638)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/9aeaf414-6a45-4294-a2f0-2d62eaafc9a4",
+        "applyUrl": "https://jobs.lever.co/shieldai/9aeaf414-6a45-4294-a2f0-2d62eaafc9a4/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Propulsion", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1773671596044, "id": "00e419e1-cd8b-47c3-9c82-40b07d51bf87",
+        "text": "Senior Propulsion Test Engineer (R4640)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/00e419e1-cd8b-47c3-9c82-40b07d51bf87",
+        "applyUrl": "https://jobs.lever.co/shieldai/00e419e1-cd8b-47c3-9c82-40b07d51bf87/apply"},
+        {"categories": {"commitment": "International EOR", "department": "Growth Division",
+        "location": "Athens", "team": "International Business Development", "allLocations":
+        ["Athens"]}, "createdAt": 1769122939155, "id": "97508d43-0da0-45ff-8751-a9ecfc534a03",
+        "text": "Senior Regional Manager \u2013 West Balkans, Greece & Cyprus (R4331)",
+        "country": "GR", "workplaceType": "hybrid", "hostedUrl": "https://jobs.lever.co/shieldai/97508d43-0da0-45ff-8751-a9ecfc534a03",
+        "applyUrl": "https://jobs.lever.co/shieldai/97508d43-0da0-45ff-8751-a9ecfc534a03/apply"},
+        {"categories": {"commitment": "International EOR", "department": "Growth Division",
+        "location": "Oslo", "team": "International Business Development", "allLocations":
+        ["Oslo"]}, "createdAt": 1761079764015, "id": "2db7519e-c72d-4fbf-bf07-8a437c513c4f",
+        "text": "Senior Regional Manager, Nordics (Norway, Sweden, Denmark & Finland)",
+        "country": "NO", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/2db7519e-c72d-4fbf-bf07-8a437c513c4f",
+        "applyUrl": "https://jobs.lever.co/shieldai/2db7519e-c72d-4fbf-bf07-8a437c513c4f/apply"},
+        {"categories": {"commitment": "International EOR", "department": "Hivemind
+        Solutions Division", "location": "New Delhi", "team": "Applications Engineering",
+        "allLocations": ["New Delhi"]}, "createdAt": 1759218077061, "id": "c223a9c5-e3b3-4da1-b523-1b1045bdf296",
+        "text": "Senior Software Engineer, Autonomy Applications Engineering", "country":
+        "IN", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/c223a9c5-e3b3-4da1-b523-1b1045bdf296",
+        "applyUrl": "https://jobs.lever.co/shieldai/c223a9c5-e3b3-4da1-b523-1b1045bdf296/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Boston, MA", "team": "Flight System Integration",
+        "allLocations": ["Boston, MA", "Washington, DC"]}, "createdAt": 1777580864845,
+        "id": "ccddd964-0a35-4650-9690-28d54b690298", "text": "Senior Software Engineer,
+        Autonomy Behaviors (R4587)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/ccddd964-0a35-4650-9690-28d54b690298", "applyUrl":
+        "https://jobs.lever.co/shieldai/ccddd964-0a35-4650-9690-28d54b690298/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Washington, DC", "team": "Integration &
+        Test", "allLocations": ["Washington, DC"]}, "createdAt": 1766532369984, "id":
+        "c146c0dc-0d3f-4a2a-bc63-57558ddc861c", "text": "Senior Software Engineer,
+        C++ Software Integration (R4020)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/c146c0dc-0d3f-4a2a-bc63-57558ddc861c",
+        "applyUrl": "https://jobs.lever.co/shieldai/c146c0dc-0d3f-4a2a-bc63-57558ddc861c/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Boston, MA", "team": "X-BAT Engineering - Software", "allLocations":
+        ["Boston, MA"]}, "createdAt": 1770772114504, "id": "6bb0bc83-a790-4633-b872-ca062ed9d1e7",
+        "text": "Senior Software Engineer, Embedded Applications (R3155)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/6bb0bc83-a790-4633-b872-ca062ed9d1e7",
+        "applyUrl": "https://jobs.lever.co/shieldai/6bb0bc83-a790-4633-b872-ca062ed9d1e7/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "United States", "team": "X-BAT Engineering - Aerostructures",
+        "allLocations": ["United States"]}, "createdAt": 1774626903811, "id": "cca5ba8a-6fbd-4cff-a2d4-0faf9c3a57e7",
+        "text": "Senior Staff Aerostructures Design Engineer (R4721)", "country":
+        "US", "workplaceType": "remote", "hostedUrl": "https://jobs.lever.co/shieldai/cca5ba8a-6fbd-4cff-a2d4-0faf9c3a57e7",
+        "applyUrl": "https://jobs.lever.co/shieldai/cca5ba8a-6fbd-4cff-a2d4-0faf9c3a57e7/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Growth
+        Division", "location": "Washington, DC", "team": "Business Development", "allLocations":
+        ["Washington, DC"]}, "createdAt": 1776379869056, "id": "3017a4b0-a65d-4756-a1db-7d10e4f5ed66",
+        "text": "Senior Staff BD Account Executive, Hivemind - Air Force (R4795)",
+        "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/3017a4b0-a65d-4756-a1db-7d10e4f5ed66",
+        "applyUrl": "https://jobs.lever.co/shieldai/3017a4b0-a65d-4756-a1db-7d10e4f5ed66/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Growth
+        Division", "location": "Washington, DC", "team": "Business Development", "allLocations":
+        ["Washington, DC"]}, "createdAt": 1775770388213, "id": "f14b7309-0674-4f18-8754-86d783049fed",
+        "text": "Senior Staff BD Account Executive, Hivemind - Army (R4794)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/f14b7309-0674-4f18-8754-86d783049fed",
+        "applyUrl": "https://jobs.lever.co/shieldai/f14b7309-0674-4f18-8754-86d783049fed/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "San Diego, California", "team": "Catalyst",
+        "allLocations": ["San Diego, California", "Washington, DC", "Boston, MA"]},
+        "createdAt": 1757544776334, "id": "fd938d01-0807-4cf1-95df-5dd97b0faf21",
+        "text": "Senior Staff Customer Success Manager (R4694)", "country": "US",
+        "workplaceType": "hybrid", "hostedUrl": "https://jobs.lever.co/shieldai/fd938d01-0807-4cf1-95df-5dd97b0faf21",
+        "applyUrl": "https://jobs.lever.co/shieldai/fd938d01-0807-4cf1-95df-5dd97b0faf21/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Platform Division", "location": "United States", "team": "Design", "allLocations":
+        ["United States"]}, "createdAt": 1767758815170, "id": "1a538fba-796a-47ab-b956-20157a43f16f",
+        "text": "Senior Staff Designer (R4320)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/1a538fba-796a-47ab-b956-20157a43f16f",
+        "applyUrl": "https://jobs.lever.co/shieldai/1a538fba-796a-47ab-b956-20157a43f16f/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Production", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1768273951636, "id": "38657de3-7e8d-4be8-80a4-e898a68727e6",
+        "text": "Senior Staff Engineer, Advanced Manufacturing (R4359)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/38657de3-7e8d-4be8-80a4-e898a68727e6",
+        "applyUrl": "https://jobs.lever.co/shieldai/38657de3-7e8d-4be8-80a4-e898a68727e6/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Washington, DC", "team": "Flight System
+        Integration", "allLocations": ["Washington, DC", "Boston, MA", "San Diego,
+        California"]}, "createdAt": 1755279989660, "id": "d345caad-82d3-4d53-ba5f-c93882547f09",
+        "text": "Senior Staff Engineer, Autonomy - Tactical Behaviors (R4073)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/d345caad-82d3-4d53-ba5f-c93882547f09",
+        "applyUrl": "https://jobs.lever.co/shieldai/d345caad-82d3-4d53-ba5f-c93882547f09/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["Dallas, Texas", "Boston, MA", "San Diego, California"]}, "createdAt": 1774460971778,
+        "id": "a71ef068-f820-4d86-aec3-956a7982c3b2", "text": "Senior Staff Engineer,
+        Electromechanical (R4583)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/a71ef068-f820-4d86-aec3-956a7982c3b2", "applyUrl":
+        "https://jobs.lever.co/shieldai/a71ef068-f820-4d86-aec3-956a7982c3b2/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1776291633337, "id": "71278ad9-359f-48dd-bad4-fc63ab6b9f1d",
+        "text": "Senior Staff Engineer, Flight Controls - X-BAT (R4812)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/71278ad9-359f-48dd-bad4-fc63ab6b9f1d",
+        "applyUrl": "https://jobs.lever.co/shieldai/71278ad9-359f-48dd-bad4-fc63ab6b9f1d/apply"},
+        {"categories": {"department": "X-BAT Division", "location": "Dallas, Texas",
+        "team": "X-BAT Engineering - Mechanical", "allLocations": ["Dallas, Texas"]},
+        "createdAt": 1773954194521, "id": "e22acd8e-8985-498e-98bd-50f08529db80",
+        "text": "Senior Staff Engineer, Mechanical - Actuated Systems (R4724)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/e22acd8e-8985-498e-98bd-50f08529db80",
+        "applyUrl": "https://jobs.lever.co/shieldai/e22acd8e-8985-498e-98bd-50f08529db80/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Program Management", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1771955373541, "id": "04d7771a-f6d7-45f0-bbc4-47ce0d9be812",
+        "text": "Senior Staff Engineer, Mechanical Design - V-BAT (R4467)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/04d7771a-f6d7-45f0-bbc4-47ce0d9be812",
+        "applyUrl": "https://jobs.lever.co/shieldai/04d7771a-f6d7-45f0-bbc4-47ce0d9be812/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["Dallas, Texas", "San Diego, California"]}, "createdAt": 1774959954211, "id":
+        "d99bdd28-b380-4527-9e68-b1ef43ab7cb1", "text": "Senior Staff Engineer, Mechanical
+        Design (R4486)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/d99bdd28-b380-4527-9e68-b1ef43ab7cb1", "applyUrl":
+        "https://jobs.lever.co/shieldai/d99bdd28-b380-4527-9e68-b1ef43ab7cb1/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1768520785256, "id": "e949e412-bf17-416d-a460-291d20a2c599",
+        "text": "Senior Staff Engineer, Mechanical Test (R4413)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/e949e412-bf17-416d-a460-291d20a2c599",
+        "applyUrl": "https://jobs.lever.co/shieldai/e949e412-bf17-416d-a460-291d20a2c599/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "United States", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["United States", "San Diego, California", "Dallas, Texas", "Boston, MA"]},
+        "createdAt": 1776896129620, "id": "55be4281-21ab-4111-a79c-bfaa83b7d730",
+        "text": "Senior Staff Engineer, Mechanisms (R4857)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/55be4281-21ab-4111-a79c-bfaa83b7d730",
+        "applyUrl": "https://jobs.lever.co/shieldai/55be4281-21ab-4111-a79c-bfaa83b7d730/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Washington, DC", "team": "X-BAT Engineering - MEG", "allLocations":
+        ["Washington, DC", "Dallas, Texas", "Boston, MA"]}, "createdAt": 1761000518466,
+        "id": "a9e683af-6f4c-4200-918d-bf09f4e6d7ed", "text": "Senior Staff Engineer,
+        Mission Systems (R3929)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/a9e683af-6f4c-4200-918d-bf09f4e6d7ed", "applyUrl":
+        "https://jobs.lever.co/shieldai/a9e683af-6f4c-4200-918d-bf09f4e6d7ed/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "United States", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["United States", "Dallas, Texas", "Washington, DC"]}, "createdAt": 1776129857597,
+        "id": "a9b38ec7-eaeb-4881-bc46-722e3bfd06b8", "text": "Senior Staff Engineer,
+        Operations Analysis (R4759)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/a9b38ec7-eaeb-4881-bc46-722e3bfd06b8",
+        "applyUrl": "https://jobs.lever.co/shieldai/a9b38ec7-eaeb-4881-bc46-722e3bfd06b8/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Washington, DC", "team": "Flight System
+        Integration", "allLocations": ["Washington, DC", "Boston, MA", "San Diego,
+        California"]}, "createdAt": 1755280803213, "id": "25011392-094f-482c-b007-f307fb8c4f9f",
+        "text": "Senior Staff Engineer, Software - Autonomous Aircraft Integration
+        (R3949)", "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/25011392-094f-482c-b007-f307fb8c4f9f",
+        "applyUrl": "https://jobs.lever.co/shieldai/25011392-094f-482c-b007-f307fb8c4f9f/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "San Diego, California", "team": "Flight
+        System Integration", "allLocations": ["San Diego, California", "Washington,
+        DC", "Boston, MA"]}, "createdAt": 1755282043540, "id": "5cf8609e-ce9a-47e9-8956-00dae756e406",
+        "text": "Senior Staff Engineer, Software - Perception (R4234)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/5cf8609e-ce9a-47e9-8956-00dae756e406",
+        "applyUrl": "https://jobs.lever.co/shieldai/5cf8609e-ce9a-47e9-8956-00dae756e406/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Platform Division", "location": "San Diego, California", "team": "Foundations",
+        "allLocations": ["San Diego, California"]}, "createdAt": 1767757627226, "id":
+        "ed0205dd-46b7-4261-bf6b-499aaa754664", "text": "Senior Staff Engineer, Software
+        (C++/Networking) (R4337)", "country": "US", "workplaceType": "hybrid", "hostedUrl":
+        "https://jobs.lever.co/shieldai/ed0205dd-46b7-4261-bf6b-499aaa754664", "applyUrl":
+        "https://jobs.lever.co/shieldai/ed0205dd-46b7-4261-bf6b-499aaa754664/apply"},
+        {"categories": {"commitment": "International EOR", "department": "Hivemind
+        Solutions Division", "location": "Amsterdam", "team": "Applications Engineering",
+        "allLocations": ["Amsterdam"]}, "createdAt": 1762424985041, "id": "c83937ad-af8a-4077-ae41-98b9a2f9241a",
+        "text": "Senior Staff Engineer, Software Autonomy Applications (R3906)", "country":
+        "NL", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/c83937ad-af8a-4077-ae41-98b9a2f9241a",
+        "applyUrl": "https://jobs.lever.co/shieldai/c83937ad-af8a-4077-ae41-98b9a2f9241a/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Aerostructures",
+        "allLocations": ["Dallas, Texas", "San Diego, California"]}, "createdAt":
+        1771513395512, "id": "29d5b3ec-2401-4b2c-9571-5fa6fecb6c0c", "text": "Senior
+        Staff Engineer, Structural Analysis (R4722)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/29d5b3ec-2401-4b2c-9571-5fa6fecb6c0c",
+        "applyUrl": "https://jobs.lever.co/shieldai/29d5b3ec-2401-4b2c-9571-5fa6fecb6c0c/apply"},
+        {"categories": {"department": "X-BAT Division", "location": "Dallas, Texas",
+        "team": "X-BAT Engineering - LRV", "allLocations": ["Dallas, Texas"]}, "createdAt":
+        1775587743925, "id": "17a5ac9a-3f4c-45c0-91ef-e552afc247a7", "text": "Senior
+        Staff Engineer, Structures - Launch Recovery Vehicle (R4765)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/17a5ac9a-3f4c-45c0-91ef-e552afc247a7",
+        "applyUrl": "https://jobs.lever.co/shieldai/17a5ac9a-3f4c-45c0-91ef-e552afc247a7/apply"},
+        {"categories": {"commitment": "International Office Entity", "department":
+        "Aircraft Operations Division", "location": "Hyderabad", "team": "Supply Chain",
+        "allLocations": ["Hyderabad"]}, "createdAt": 1767758375043, "id": "9dcc940c-7ba0-421f-95b2-ef7be122d207",
+        "text": "Senior Staff Engineer, Supplier Development (R4184)", "country":
+        "IN", "workplaceType": "remote", "hostedUrl": "https://jobs.lever.co/shieldai/9dcc940c-7ba0-421f-95b2-ef7be122d207",
+        "applyUrl": "https://jobs.lever.co/shieldai/9dcc940c-7ba0-421f-95b2-ef7be122d207/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "United States", "team": "X-BAT Engineering - MEG", "allLocations":
+        ["United States", "San Diego, California", "Dallas, Texas", "Washington, DC"]},
+        "createdAt": 1775680223008, "id": "c3703339-0aa5-4d0d-92f9-4c2e2882f7a4",
+        "text": "Senior Staff Engineer, Survivability (R4606)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/c3703339-0aa5-4d0d-92f9-4c2e2882f7a4",
+        "applyUrl": "https://jobs.lever.co/shieldai/c3703339-0aa5-4d0d-92f9-4c2e2882f7a4/apply"},
+        {"categories": {"commitment": "International Office Entity", "department":
+        "Legal Division", "location": "Melbourne", "team": "Security", "allLocations":
+        ["Melbourne"]}, "createdAt": 1775580060288, "id": "5bd03e13-49f7-4087-b464-726f988aca9c",
+        "text": "Senior Staff Facilities Security Officer (R4726)", "country": "AU",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/5bd03e13-49f7-4087-b464-726f988aca9c",
+        "applyUrl": "https://jobs.lever.co/shieldai/5bd03e13-49f7-4087-b464-726f988aca9c/apply"},
+        {"categories": {"commitment": "International Office Entity", "department":
+        "Hivemind Solutions Division", "location": "Melbourne", "team": "AUS", "allLocations":
+        ["Melbourne"]}, "createdAt": 1768964936625, "id": "962c1ed9-256d-421c-b414-f066a0782381",
+        "text": "Senior Staff Mechatronics Engineer (R4386)", "country": "AU", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/962c1ed9-256d-421c-b414-f066a0782381",
+        "applyUrl": "https://jobs.lever.co/shieldai/962c1ed9-256d-421c-b414-f066a0782381/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1777090022952, "id": "b63b3f50-9b7b-42c0-8a9d-f3ba4ed1f099",
+        "text": "Senior Staff Network Architect (R4843)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/b63b3f50-9b7b-42c0-8a9d-f3ba4ed1f099",
+        "applyUrl": "https://jobs.lever.co/shieldai/b63b3f50-9b7b-42c0-8a9d-f3ba4ed1f099/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Washington, DC", "team": "Strategic Product
+        Development", "allLocations": ["Washington, DC"]}, "createdAt": 1769032730525,
+        "id": "c20dd47f-751f-4750-ab67-f352410aa5ac", "text": "Senior Staff Operations
+        Analyst (R4487)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/c20dd47f-751f-4750-ab67-f352410aa5ac", "applyUrl":
+        "https://jobs.lever.co/shieldai/c20dd47f-751f-4750-ab67-f352410aa5ac/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Propulsion", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1762272588593, "id": "fd347d9c-3dc1-401e-aec2-43b5b38bc260",
+        "text": "Senior Staff Propulsion Engineer (TVC) (X-BAT) (R4160)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/fd347d9c-3dc1-401e-aec2-43b5b38bc260",
+        "applyUrl": "https://jobs.lever.co/shieldai/fd347d9c-3dc1-401e-aec2-43b5b38bc260/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Wichita Metro Area", "team": "Customer
+        Operations", "allLocations": ["Wichita Metro Area"]}, "createdAt": 1767761914590,
+        "id": "c3e09d7f-cbd3-4e25-b1eb-cbb6e06d8459", "text": "Senior Staff Propulsion
+        Test Engineer (R4380)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/c3e09d7f-cbd3-4e25-b1eb-cbb6e06d8459", "applyUrl":
+        "https://jobs.lever.co/shieldai/c3e09d7f-cbd3-4e25-b1eb-cbb6e06d8459/apply"},
+        {"categories": {"commitment": "Contractor", "department": "People Experience
+        Division", "location": "Remote", "team": "People Experience", "allLocations":
+        ["Remote"]}, "createdAt": 1777086947852, "id": "fd20c0e0-3e2a-4cf5-9078-1acb0ff037ca",
+        "text": "Senior Staff Recruiter - Contract (R4882)", "country": "US", "workplaceType":
+        "remote", "hostedUrl": "https://jobs.lever.co/shieldai/fd20c0e0-3e2a-4cf5-9078-1acb0ff037ca",
+        "applyUrl": "https://jobs.lever.co/shieldai/fd20c0e0-3e2a-4cf5-9078-1acb0ff037ca/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "San Diego, California", "team": "X-BAT Engineering - System Engineering
+        & Integrated Test", "allLocations": ["San Diego, California", "Boston, MA",
+        "Dallas, Texas", "Washington, DC"]}, "createdAt": 1760046385974, "id": "0a7f0460-5035-4959-9713-80471fcae3c1",
+        "text": "Senior Staff Systems Engineer (R4738)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/0a7f0460-5035-4959-9713-80471fcae3c1",
+        "applyUrl": "https://jobs.lever.co/shieldai/0a7f0460-5035-4959-9713-80471fcae3c1/apply"},
+        {"categories": {"commitment": "International Office Entity", "department":
+        "AI Hive", "location": "New Delhi", "team": "Administrative", "allLocations":
+        ["New Delhi"]}, "createdAt": 1773952331151, "id": "de945a62-882a-482f-b364-9eb380c31b0c",
+        "text": "Senior Systems Administrator (R4696)", "country": "IN", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/de945a62-882a-482f-b364-9eb380c31b0c",
+        "applyUrl": "https://jobs.lever.co/shieldai/de945a62-882a-482f-b364-9eb380c31b0c/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Melbourne", "team": "AUS", "allLocations":
+        ["Melbourne"]}, "createdAt": 1768275462804, "id": "76524c09-ac8c-4e1a-bca5-fd7572094ba7",
+        "text": "Senior Systems Engineer (R4315)", "country": "AU", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/76524c09-ac8c-4e1a-bca5-fd7572094ba7",
+        "applyUrl": "https://jobs.lever.co/shieldai/76524c09-ac8c-4e1a-bca5-fd7572094ba7/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Legal Division",
+        "location": "Washington, DC", "team": "Compliance", "allLocations": ["Washington,
+        DC", "San Diego, California", "Dallas, Texas", "San Francisco, California"]},
+        "createdAt": 1777589772793, "id": "dada6495-b52b-4e77-93f1-9e7fff6074a3",
+        "text": "Senior Trade Compliance Specialist- Authorizations (R4873)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/dada6495-b52b-4e77-93f1-9e7fff6074a3",
+        "applyUrl": "https://jobs.lever.co/shieldai/dada6495-b52b-4e77-93f1-9e7fff6074a3/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Legal Division",
+        "location": "Dallas, Texas", "team": "Compliance", "allLocations": ["Dallas,
+        Texas", "Washington, DC", "San Francisco, California", "San Diego, California"]},
+        "createdAt": 1777589676524, "id": "c37bbe0c-9c25-4b0a-b8d3-12836b0abb47",
+        "text": "Senior Trade Compliance Specialist, Classifier (R4874)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/c37bbe0c-9c25-4b0a-b8d3-12836b0abb47",
+        "applyUrl": "https://jobs.lever.co/shieldai/c37bbe0c-9c25-4b0a-b8d3-12836b0abb47/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Customer Operations",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1772254876821, "id": "52bfd55b-d539-4af1-b8bf-dbd2ccf12161",
+        "text": "Senior V-BAT Air Vehicle Operator, Deployed Operations Site Lead",
+        "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/52bfd55b-d539-4af1-b8bf-dbd2ccf12161",
+        "applyUrl": "https://jobs.lever.co/shieldai/52bfd55b-d539-4af1-b8bf-dbd2ccf12161/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1772571349141, "id": "6b372289-c8df-40ff-9d36-98926dc7fa8c",
+        "text": "Senior Verification and Validation Engineer (R4835)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/6b372289-c8df-40ff-9d36-98926dc7fa8c",
+        "applyUrl": "https://jobs.lever.co/shieldai/6b372289-c8df-40ff-9d36-98926dc7fa8c/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Boston, MA", "team": "Flight System Integration",
+        "allLocations": ["Boston, MA", "Washington, DC"]}, "createdAt": 1777580562711,
+        "id": "b682f55e-ca09-444b-8251-38422567ada8", "text": "Software Engineer II,
+        Autonomy Behaviors (R4587)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/b682f55e-ca09-444b-8251-38422567ada8", "applyUrl":
+        "https://jobs.lever.co/shieldai/b682f55e-ca09-444b-8251-38422567ada8/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Finance
+        Division", "location": "Dallas, Texas", "team": "FP&A", "allLocations": ["Dallas,
+        Texas"]}, "createdAt": 1776218871913, "id": "950c7cc3-bd36-4654-9c2d-786d4dee114c",
+        "text": "Sr Lead FP&A - Procurement (R4808)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/950c7cc3-bd36-4654-9c2d-786d4dee114c",
+        "applyUrl": "https://jobs.lever.co/shieldai/950c7cc3-bd36-4654-9c2d-786d4dee114c/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Supply Chain",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1773792256745, "id": "8ebbb0a3-68b3-4979-ab12-f099cfd5ef13",
+        "text": "Sr Manager, Supplier Development Engineer (R4699)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/8ebbb0a3-68b3-4979-ab12-f099cfd5ef13",
+        "applyUrl": "https://jobs.lever.co/shieldai/8ebbb0a3-68b3-4979-ab12-f099cfd5ef13/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Customer Operations",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1776294336063, "id": "0e6da96a-a834-4d18-bb3c-efd626bce6d5",
+        "text": "Sr Manager, V-BAT Internal Training (R4821)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/0e6da96a-a834-4d18-bb3c-efd626bce6d5",
+        "applyUrl": "https://jobs.lever.co/shieldai/0e6da96a-a834-4d18-bb3c-efd626bce6d5/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "United States", "team": "Applications Engineering",
+        "allLocations": ["United States"]}, "createdAt": 1728912061521, "id": "277d8a41-6b43-4135-bbd1-86cd95189720",
+        "text": "Staff Applications Engineer, Autonomy", "country": "US", "workplaceType":
+        "remote", "hostedUrl": "https://jobs.lever.co/shieldai/277d8a41-6b43-4135-bbd1-86cd95189720",
+        "applyUrl": "https://jobs.lever.co/shieldai/277d8a41-6b43-4135-bbd1-86cd95189720/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Legal Division",
+        "location": "Washington, DC", "team": "Security", "allLocations": ["Washington,
+        DC"]}, "createdAt": 1777513356373, "id": "181b43f3-724b-4da6-b36b-0fc8cbba14f6",
+        "text": "Staff Contractor Program Security Officer (R4898)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/181b43f3-724b-4da6-b36b-0fc8cbba14f6",
+        "applyUrl": "https://jobs.lever.co/shieldai/181b43f3-724b-4da6-b36b-0fc8cbba14f6/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Customer Operations",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1776217754813, "id": "f1a43142-d9e6-4ec6-a088-5afcaf2f97d9",
+        "text": "Staff Curriculum Manager (R4803)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/f1a43142-d9e6-4ec6-a088-5afcaf2f97d9",
+        "applyUrl": "https://jobs.lever.co/shieldai/f1a43142-d9e6-4ec6-a088-5afcaf2f97d9/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Electrical", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1763993631161, "id": "287b6bce-52fc-4a64-9fe9-f25445baf6eb",
+        "text": "Staff Electrical Engineer", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/287b6bce-52fc-4a64-9fe9-f25445baf6eb",
+        "applyUrl": "https://jobs.lever.co/shieldai/287b6bce-52fc-4a64-9fe9-f25445baf6eb/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "San Diego, California", "team": "X-BAT Engineering - Avionics",
+        "allLocations": ["San Diego, California", "Dallas, Texas", "Boston, MA"]},
+        "createdAt": 1766212102945, "id": "9a3a2c7f-c5f5-4253-b173-560f102fc13c",
+        "text": "Staff Electrical Engineer", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/9a3a2c7f-c5f5-4253-b173-560f102fc13c",
+        "applyUrl": "https://jobs.lever.co/shieldai/9a3a2c7f-c5f5-4253-b173-560f102fc13c/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Production", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1765780911300, "id": "6e5e0b9b-ddbd-43c3-bf01-3d0d0f29109c",
+        "text": "Staff Engineer, Advanced Manufacturing (R4301)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/6e5e0b9b-ddbd-43c3-bf01-3d0d0f29109c",
+        "applyUrl": "https://jobs.lever.co/shieldai/6e5e0b9b-ddbd-43c3-bf01-3d0d0f29109c/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "San Diego, California", "team": "X-BAT Engineering - Configuration
+        Design", "allLocations": ["San Diego, California"]}, "createdAt": 1760739554216,
+        "id": "0d9b57b1-24ab-4ad7-9c6a-453e6a2960e2", "text": "Staff Engineer, Aircraft
+        Configuration Design (R4028)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/0d9b57b1-24ab-4ad7-9c6a-453e6a2960e2",
+        "applyUrl": "https://jobs.lever.co/shieldai/0d9b57b1-24ab-4ad7-9c6a-453e6a2960e2/apply"},
+        {"categories": {"commitment": "International EOR", "department": "Hivemind
+        Solutions Division", "location": "Taipei", "team": "Customer Engagement",
+        "allLocations": ["Taipei"]}, "createdAt": 1776812308223, "id": "8846ec30-76f4-4f4d-88ef-09aa3389fadc",
+        "text": "Staff Engineer, Applications (R4828)", "country": "TW", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/8846ec30-76f4-4f4d-88ef-09aa3389fadc",
+        "applyUrl": "https://jobs.lever.co/shieldai/8846ec30-76f4-4f4d-88ef-09aa3389fadc/apply"},
+        {"categories": {"commitment": "International EOR", "department": "Hivemind
+        Solutions Division", "location": "Tokyo", "team": "Customer Engagement", "allLocations":
+        ["Tokyo"]}, "createdAt": 1776471117617, "id": "75c6cb21-5e86-4676-aaab-821f9aab4e5d",
+        "text": "Staff Engineer, Applications (R4830)", "country": "JP", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/75c6cb21-5e86-4676-aaab-821f9aab4e5d",
+        "applyUrl": "https://jobs.lever.co/shieldai/75c6cb21-5e86-4676-aaab-821f9aab4e5d/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Washington, DC", "team": "Flight System
+        Integration", "allLocations": ["Washington, DC", "Boston, MA", "San Diego,
+        California"]}, "createdAt": 1755280148105, "id": "9c66691e-4497-4a25-8fe8-c9fdf09046ea",
+        "text": "Staff Engineer, Autonomy - Tactical Behaviors (R3914)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/9c66691e-4497-4a25-8fe8-c9fdf09046ea",
+        "applyUrl": "https://jobs.lever.co/shieldai/9c66691e-4497-4a25-8fe8-c9fdf09046ea/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Production", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1761744335503, "id": "5f562503-1655-4a53-91fc-b6ea72d1841b",
+        "text": "Staff Engineer, Composite Manufacturing", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/5f562503-1655-4a53-91fc-b6ea72d1841b",
+        "applyUrl": "https://jobs.lever.co/shieldai/5f562503-1655-4a53-91fc-b6ea72d1841b/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "United States", "team": "V-BAT Engineering - Software", "allLocations":
+        ["United States", "San Diego, California", "Dallas, Texas"]}, "createdAt":
+        1776214316795, "id": "1d77e789-a2be-414c-9a1f-f4bc284343ea", "text": "Staff
+        Engineer, DevOps (4797)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/1d77e789-a2be-414c-9a1f-f4bc284343ea", "applyUrl":
+        "https://jobs.lever.co/shieldai/1d77e789-a2be-414c-9a1f-f4bc284343ea/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "San Diego, California", "team": "V-BAT Engineering - Software",
+        "allLocations": ["San Diego, California", "Dallas, Texas"]}, "createdAt":
+        1772763592710, "id": "cdb92a85-1560-4f78-bf05-908748fce1f5", "text": "Staff
+        Engineer, DevOps (R4666)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/cdb92a85-1560-4f78-bf05-908748fce1f5", "applyUrl":
+        "https://jobs.lever.co/shieldai/cdb92a85-1560-4f78-bf05-908748fce1f5/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Electrical", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1776128345539, "id": "d12619b5-ab54-4797-9d1c-9b0a6ab3a281",
+        "text": "Staff Engineer, Electrical Failure Analysis (R4593)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/d12619b5-ab54-4797-9d1c-9b0a6ab3a281",
+        "applyUrl": "https://jobs.lever.co/shieldai/d12619b5-ab54-4797-9d1c-9b0a6ab3a281/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1776292380337, "id": "86bbc19b-138b-4974-b27a-ad488230669e",
+        "text": "Staff Engineer, Flight Controls - X-BAT (R4813)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/86bbc19b-138b-4974-b27a-ad488230669e",
+        "applyUrl": "https://jobs.lever.co/shieldai/86bbc19b-138b-4974-b27a-ad488230669e/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1775586993850, "id": "7d210135-6de0-4433-bd46-198035378bb8",
+        "text": "Staff Engineer, G&C (R4763)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/7d210135-6de0-4433-bd46-198035378bb8",
+        "applyUrl": "https://jobs.lever.co/shieldai/7d210135-6de0-4433-bd46-198035378bb8/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Production", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1765780497860, "id": "b1bc272c-ad7b-4af3-9676-1f1132485492",
+        "text": "Staff Engineer, Industrial (R4300)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/b1bc272c-ad7b-4af3-9676-1f1132485492",
+        "applyUrl": "https://jobs.lever.co/shieldai/b1bc272c-ad7b-4af3-9676-1f1132485492/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Production", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1731945155622, "id": "60960e9b-f39e-48bf-b2ea-f61a58db8a5d",
+        "text": "Staff Engineer, Manufacturing", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/60960e9b-f39e-48bf-b2ea-f61a58db8a5d",
+        "applyUrl": "https://jobs.lever.co/shieldai/60960e9b-f39e-48bf-b2ea-f61a58db8a5d/apply"},
+        {"categories": {"commitment": "International Office Entity", "department":
+        "Hivemind Solutions Division", "location": "Melbourne", "team": "AUS", "allLocations":
+        ["Melbourne"]}, "createdAt": 1776472292890, "id": "7923525a-d620-46b1-8771-9972dc82e893",
+        "text": "Staff Engineer, Manufacturing (R4656)", "country": "AU", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/7923525a-d620-46b1-8771-9972dc82e893",
+        "applyUrl": "https://jobs.lever.co/shieldai/7923525a-d620-46b1-8771-9972dc82e893/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Production", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1773796136941, "id": "b2de60ed-3c1e-4f94-883c-90917d3ca45e",
+        "text": "Staff Engineer, Manufacturing Equipment (R4592)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/b2de60ed-3c1e-4f94-883c-90917d3ca45e",
+        "applyUrl": "https://jobs.lever.co/shieldai/b2de60ed-3c1e-4f94-883c-90917d3ca45e/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["Dallas, Texas", "Boston, MA", "San Diego, California"]}, "createdAt": 1774461159875,
+        "id": "abbca258-77dc-4429-87fd-37e6f0b5adf8", "text": "Staff Engineer, Mechanical
+        - Harness Design (R4594)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/abbca258-77dc-4429-87fd-37e6f0b5adf8", "applyUrl":
+        "https://jobs.lever.co/shieldai/abbca258-77dc-4429-87fd-37e6f0b5adf8/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - LRV", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1774616169879, "id": "38746bcd-9f50-4c37-b661-878a4f38a466",
+        "text": "Staff Engineer, Mechanical Design - Launch and Recovery Systems (R4571)",
+        "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/38746bcd-9f50-4c37-b661-878a4f38a466",
+        "applyUrl": "https://jobs.lever.co/shieldai/38746bcd-9f50-4c37-b661-878a4f38a466/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - LRV", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1774616308242, "id": "a3dfba6d-09ec-42c3-9328-dbb2b5fbdab3",
+        "text": "Staff Engineer, Mechanical Design - Launch and Recovery Systems (R4572)",
+        "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/a3dfba6d-09ec-42c3-9328-dbb2b5fbdab3",
+        "applyUrl": "https://jobs.lever.co/shieldai/a3dfba6d-09ec-42c3-9328-dbb2b5fbdab3/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - LRV", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1774616437808, "id": "27bbf841-7b7e-4405-a201-08e252472a91",
+        "text": "Staff Engineer, Mechanical Design - Launch and Recovery Systems (R4573)",
+        "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/27bbf841-7b7e-4405-a201-08e252472a91",
+        "applyUrl": "https://jobs.lever.co/shieldai/27bbf841-7b7e-4405-a201-08e252472a91/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "San Diego, California", "team": "X-BAT Engineering - Software",
+        "allLocations": ["San Diego, California"]}, "createdAt": 1777087970209, "id":
+        "52b8f7b5-3a88-4e78-8f22-a3edc3bf1e73", "text": "Staff Engineer, Modeling
+        & Simulation (R4869)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/52b8f7b5-3a88-4e78-8f22-a3edc3bf1e73", "applyUrl":
+        "https://jobs.lever.co/shieldai/52b8f7b5-3a88-4e78-8f22-a3edc3bf1e73/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "United States", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["United States", "Dallas, Texas", "Washington, DC"]}, "createdAt": 1776129629105,
+        "id": "8e9e5ff8-b706-4c64-8f7e-3102d1e8458c", "text": "Staff Engineer, Operations
+        Analysis (R4757)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/8e9e5ff8-b706-4c64-8f7e-3102d1e8458c", "applyUrl":
+        "https://jobs.lever.co/shieldai/8e9e5ff8-b706-4c64-8f7e-3102d1e8458c/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Enterprise
+        Operations Division", "location": "Dallas, Texas", "team": "Cybersecurity",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1773254878094, "id": "e6434735-b6af-4657-89a5-382a2f9bf366",
+        "text": "Staff Engineer, Product Security & Compliance (R4650)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/e6434735-b6af-4657-89a5-382a2f9bf366",
+        "applyUrl": "https://jobs.lever.co/shieldai/e6434735-b6af-4657-89a5-382a2f9bf366/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Quality", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1774545817356, "id": "664414ae-6aa0-4dc1-8e24-e89e7466428b",
+        "text": "Staff Engineer, Quality (R4744)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/664414ae-6aa0-4dc1-8e24-e89e7466428b",
+        "applyUrl": "https://jobs.lever.co/shieldai/664414ae-6aa0-4dc1-8e24-e89e7466428b/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Washington, DC", "team": "Flight System
+        Integration", "allLocations": ["Washington, DC", "Boston, MA", "San Diego,
+        California"]}, "createdAt": 1755280895829, "id": "6265ee65-8136-41b5-9279-97f9a4b1d2f6",
+        "text": "Staff Engineer, Software - Autonomous Aircraft Integration (R4589)",
+        "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/6265ee65-8136-41b5-9279-97f9a4b1d2f6",
+        "applyUrl": "https://jobs.lever.co/shieldai/6265ee65-8136-41b5-9279-97f9a4b1d2f6/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "San Diego, California", "team": "Flight
+        System Integration", "allLocations": ["San Diego, California", "Washington,
+        DC", "Boston, MA"]}, "createdAt": 1755282138641, "id": "8739c509-b6ea-4640-bcc1-c8b5b1de31b2",
+        "text": "Staff Engineer, Software - Perception (R3771)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/8739c509-b6ea-4640-bcc1-c8b5b1de31b2",
+        "applyUrl": "https://jobs.lever.co/shieldai/8739c509-b6ea-4640-bcc1-c8b5b1de31b2/apply"},
+        {"categories": {"commitment": "International EOR", "department": "Hivemind
+        Solutions Division", "location": "Amsterdam", "team": "Applications Engineering",
+        "allLocations": ["Amsterdam"]}, "createdAt": 1762424819463, "id": "8690bc50-83d1-40bd-bd7f-0bc0b7814e98",
+        "text": "Staff Engineer, Software Autonomy Applications (R3908)", "country":
+        "NL", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/8690bc50-83d1-40bd-bd7f-0bc0b7814e98",
+        "applyUrl": "https://jobs.lever.co/shieldai/8690bc50-83d1-40bd-bd7f-0bc0b7814e98/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Platform Division", "location": "San Diego, California", "team": "Quality",
+        "allLocations": ["San Diego, California", "San Francisco, California"]}, "createdAt":
+        1769832098996, "id": "ed36d9df-a47e-4905-8e2b-aaee98182df8", "text": "Staff
+        Engineer, Software Integration (R4483)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/ed36d9df-a47e-4905-8e2b-aaee98182df8",
+        "applyUrl": "https://jobs.lever.co/shieldai/ed36d9df-a47e-4905-8e2b-aaee98182df8/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "San Diego, California", "team": "System
+        Design", "allLocations": ["San Diego, California", "Dallas, Texas", "Washington,
+        DC", "Boston, MA"]}, "createdAt": 1770440301702, "id": "5066a608-9185-4426-831b-c0ade202c358",
+        "text": "Staff Engineer, Software Systems (R4445)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/5066a608-9185-4426-831b-c0ade202c358",
+        "applyUrl": "https://jobs.lever.co/shieldai/5066a608-9185-4426-831b-c0ade202c358/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1775526697891, "id": "1f0a4bfe-acd7-4ace-913e-42937e9b23e2",
+        "text": "Staff Engineer, Software Test (R4784)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/1f0a4bfe-acd7-4ace-913e-42937e9b23e2",
+        "applyUrl": "https://jobs.lever.co/shieldai/1f0a4bfe-acd7-4ace-913e-42937e9b23e2/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Software", "allLocations":
+        ["Dallas, Texas", "San Diego, California", "San Francisco, California", "Washington,
+        DC", "Boston, MA"]}, "createdAt": 1748888200784, "id": "f8849287-b9ff-4c3e-a37f-be20e39c597b",
+        "text": "Staff Engineer, State Estimation (Dallas/San Diego/Boston/DC/San
+        Fran)", "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/f8849287-b9ff-4c3e-a37f-be20e39c597b",
+        "applyUrl": "https://jobs.lever.co/shieldai/f8849287-b9ff-4c3e-a37f-be20e39c597b/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Aerostructures",
+        "allLocations": ["Dallas, Texas", "San Diego, California"]}, "createdAt":
+        1720031068975, "id": "ee7f7c27-9e53-4e20-a7fc-3a37ad35d47d", "text": "Staff
+        Engineer, Structural Analysis (R4722)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/ee7f7c27-9e53-4e20-a7fc-3a37ad35d47d",
+        "applyUrl": "https://jobs.lever.co/shieldai/ee7f7c27-9e53-4e20-a7fc-3a37ad35d47d/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - MEG", "allLocations":
+        ["Dallas, Texas", "Boston, MA", "San Diego, California"]}, "createdAt": 1748014837995,
+        "id": "0ea1cea2-6bb5-40e9-a3ca-c9ab45498454", "text": "Staff Engineer, Survivability
+        (Dallas) (R4607)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/0ea1cea2-6bb5-40e9-a3ca-c9ab45498454", "applyUrl":
+        "https://jobs.lever.co/shieldai/0ea1cea2-6bb5-40e9-a3ca-c9ab45498454/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Platform Division", "location": "San Diego, California", "team": "Engineering",
+        "allLocations": ["San Diego, California"]}, "createdAt": 1773430109893, "id":
+        "82bc8fe9-0672-461c-bb9c-cd6461d17b22", "text": "Staff Engineer, Systems (R4624)",
+        "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/82bc8fe9-0672-461c-bb9c-cd6461d17b22",
+        "applyUrl": "https://jobs.lever.co/shieldai/82bc8fe9-0672-461c-bb9c-cd6461d17b22/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Platform Division", "location": "San Diego, California", "team": "Engineering",
+        "allLocations": ["San Diego, California"]}, "createdAt": 1773430563846, "id":
+        "466470a1-4a1a-4c49-8adc-90cd6358ea76", "text": "Staff Engineer, Systems (R4625)",
+        "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/466470a1-4a1a-4c49-8adc-90cd6358ea76",
+        "applyUrl": "https://jobs.lever.co/shieldai/466470a1-4a1a-4c49-8adc-90cd6358ea76/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Platform Division", "location": "San Diego, California", "team": "Engineering",
+        "allLocations": ["San Diego, California"]}, "createdAt": 1776294922494, "id":
+        "1e53409e-18ef-44b1-88e0-c90a5551f6cf", "text": "Staff Engineer, Systems Safety
+        (R4823)", "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/1e53409e-18ef-44b1-88e0-c90a5551f6cf",
+        "applyUrl": "https://jobs.lever.co/shieldai/1e53409e-18ef-44b1-88e0-c90a5551f6cf/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "San Diego, California", "team": "X-BAT Engineering - System Engineering
+        & Integrated Test", "allLocations": ["San Diego, California", "Dallas, Texas"]},
+        "createdAt": 1775494824831, "id": "e523ae82-4e5e-4a8a-bc70-9dcb41bee108",
+        "text": "Staff Engineer, Test & Evaluation Engineer", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/e523ae82-4e5e-4a8a-bc70-9dcb41bee108",
+        "applyUrl": "https://jobs.lever.co/shieldai/e523ae82-4e5e-4a8a-bc70-9dcb41bee108/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "United States", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["United States", "Dallas, Texas", "San Diego, California"]}, "createdAt":
+        1776895133910, "id": "bbc92590-2f3e-467c-8ffc-c2efd0e8b98a", "text": "Staff
+        Engineer, Thermal - Air Vehicle (R4856)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/bbc92590-2f3e-467c-8ffc-c2efd0e8b98a",
+        "applyUrl": "https://jobs.lever.co/shieldai/bbc92590-2f3e-467c-8ffc-c2efd0e8b98a/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Production", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1765780081585, "id": "6bccbc94-835c-46cc-94de-0eca27e532fa",
+        "text": "Staff Engineer, Tool Design (R4299)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/6bccbc94-835c-46cc-94de-0eca27e532fa",
+        "applyUrl": "https://jobs.lever.co/shieldai/6bccbc94-835c-46cc-94de-0eca27e532fa/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "V-BAT Division",
+        "location": "Dallas, Texas", "team": "V-BAT Engineering - Hardware Test",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1774300404558, "id": "85d560f6-ce8e-4fdb-9307-8e5bdc01652e",
+        "text": "Staff Engineering Specialist, Hardware Test (R4710)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/85d560f6-ce8e-4fdb-9307-8e5bdc01652e",
+        "applyUrl": "https://jobs.lever.co/shieldai/85d560f6-ce8e-4fdb-9307-8e5bdc01652e/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Avionics", "allLocations":
+        ["Dallas, Texas", "Boston, MA"]}, "createdAt": 1772820443893, "id": "88a4633a-d0b1-4025-b3ff-cb4c976fadc9",
+        "text": "Staff Hardware Reliability Engineer (R4675)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/88a4633a-d0b1-4025-b3ff-cb4c976fadc9",
+        "applyUrl": "https://jobs.lever.co/shieldai/88a4633a-d0b1-4025-b3ff-cb4c976fadc9/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Aerostructures",
+        "allLocations": ["Dallas, Texas", "San Diego, California"]}, "createdAt":
+        1750412133361, "id": "18347d18-9816-4085-b0da-5f2ff84687c1", "text": "Staff
+        Loads Engineer (R4722)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/18347d18-9816-4085-b0da-5f2ff84687c1", "applyUrl":
+        "https://jobs.lever.co/shieldai/18347d18-9816-4085-b0da-5f2ff84687c1/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Production", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1774301168862, "id": "24cc91f1-1558-4911-8777-6726a0e5acc8",
+        "text": "Staff Machinist, CNC Programming (R4737)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/24cc91f1-1558-4911-8777-6726a0e5acc8",
+        "applyUrl": "https://jobs.lever.co/shieldai/24cc91f1-1558-4911-8777-6726a0e5acc8/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Growth
+        Division", "location": "San Francisco, California", "team": "Business Development
+        Marketing", "allLocations": ["San Francisco, California"]}, "createdAt": 1777512408523,
+        "id": "4575cec9-a1dc-4db8-9930-cbd1c0dcd24e", "text": "Staff Marketing Strategy
+        and Operations Manager (R4894)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/4575cec9-a1dc-4db8-9930-cbd1c0dcd24e",
+        "applyUrl": "https://jobs.lever.co/shieldai/4575cec9-a1dc-4db8-9930-cbd1c0dcd24e/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Growth
+        Division", "location": "Amsterdam", "team": "Sales Solutions Engineering",
+        "allLocations": ["Amsterdam"]}, "createdAt": 1775679278065, "id": "0f25e1d7-3eba-4d11-857d-815d4f1341d4",
+        "text": "Staff Sales Engineer (R4790)", "country": "NL", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/0f25e1d7-3eba-4d11-857d-815d4f1341d4",
+        "applyUrl": "https://jobs.lever.co/shieldai/0f25e1d7-3eba-4d11-857d-815d4f1341d4/apply"},
+        {"categories": {"commitment": "International Office Entity", "department":
+        "Hivemind Solutions Division", "location": "New Delhi", "team": "Applications
+        Engineering", "allLocations": ["New Delhi"]}, "createdAt": 1752015369134,
+        "id": "20ba2fbb-f9b3-4408-ac5c-7809a8446ea3", "text": "Staff Software Engineer,
+        Autonomy Applications Engineering", "country": "IN", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/20ba2fbb-f9b3-4408-ac5c-7809a8446ea3",
+        "applyUrl": "https://jobs.lever.co/shieldai/20ba2fbb-f9b3-4408-ac5c-7809a8446ea3/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Boston, MA", "team": "Flight System Integration",
+        "allLocations": ["Boston, MA", "Washington, DC", "San Diego, California"]},
+        "createdAt": 1777493348196, "id": "addd3b2a-4b3b-41d8-9821-1cf50a442836",
+        "salaryDescription": "<div>#LD</div>\n<div>#LI-ED1</div>", "salaryDescriptionPlain":
+        "#LD\n#LI-ED1\n", "text": "Staff Software Engineer, Autonomy Behaviors", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/addd3b2a-4b3b-41d8-9821-1cf50a442836",
+        "applyUrl": "https://jobs.lever.co/shieldai/addd3b2a-4b3b-41d8-9821-1cf50a442836/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Washington, DC", "team": "Integration &
+        Test", "allLocations": ["Washington, DC"]}, "createdAt": 1766531329058, "id":
+        "8b2b23c7-5841-4783-b8da-4c8222dd9f34", "text": "Staff Software Engineer,
+        C++ Software Integration (R4016)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/8b2b23c7-5841-4783-b8da-4c8222dd9f34",
+        "applyUrl": "https://jobs.lever.co/shieldai/8b2b23c7-5841-4783-b8da-4c8222dd9f34/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Washington, DC", "team": "Integration &
+        Test", "allLocations": ["Washington, DC"]}, "createdAt": 1766531729345, "id":
+        "0428f808-4977-4289-969e-8eeb3156e4c2", "text": "Staff Software Engineer,
+        C++ Software Integration (R4017)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/0428f808-4977-4289-969e-8eeb3156e4c2",
+        "applyUrl": "https://jobs.lever.co/shieldai/0428f808-4977-4289-969e-8eeb3156e4c2/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Hivemind
+        Solutions Division", "location": "Washington, DC", "team": "Integration &
+        Test", "allLocations": ["Washington, DC"]}, "createdAt": 1763489693779, "id":
+        "76691555-47d7-4801-800a-b3386a8bb8de", "text": "Staff Software Engineer,
+        C++ Software Integration (R4018)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/76691555-47d7-4801-800a-b3386a8bb8de",
+        "applyUrl": "https://jobs.lever.co/shieldai/76691555-47d7-4801-800a-b3386a8bb8de/apply"},
+        {"categories": {"commitment": "International Office Entity", "department":
+        "AI Hive", "location": "New Delhi", "team": "Administrative", "allLocations":
+        ["New Delhi"]}, "createdAt": 1773951309070, "id": "9cb8bd80-678d-439c-aa4f-abed77975d38",
+        "text": "Staff Systems Administrator (R4697)", "country": "IN", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/9cb8bd80-678d-439c-aa4f-abed77975d38",
+        "applyUrl": "https://jobs.lever.co/shieldai/9cb8bd80-678d-439c-aa4f-abed77975d38/apply"},
+        {"categories": {"commitment": "Contractor", "department": "People Experience
+        Division", "location": "Melbourne", "team": "People Experience", "allLocations":
+        ["Melbourne"]}, "createdAt": 1776810531245, "id": "8898b9ed-e350-47fa-9c8c-3bdea24ea799",
+        "text": "Staff Talent Sourcer - Contract (R4855)", "country": "AU", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/8898b9ed-e350-47fa-9c8c-3bdea24ea799",
+        "applyUrl": "https://jobs.lever.co/shieldai/8898b9ed-e350-47fa-9c8c-3bdea24ea799/apply"},
+        {"categories": {"commitment": "Contractor", "department": "People Experience
+        Division", "location": "Remote", "team": "People Experience", "allLocations":
+        ["Remote"]}, "createdAt": 1777086302190, "id": "a4ce653a-3da6-4461-ba72-842fda902695",
+        "text": "Staff Talent Sourcer - Contract (R4881)", "country": "US", "workplaceType":
+        "remote", "hostedUrl": "https://jobs.lever.co/shieldai/a4ce653a-3da6-4461-ba72-842fda902695",
+        "applyUrl": "https://jobs.lever.co/shieldai/a4ce653a-3da6-4461-ba72-842fda902695/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Production", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1774543206704, "id": "5044fc9d-3138-46fe-a90d-058cf1373746",
+        "text": "Staff Technical Program Manager, Manufacturing (R4741)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/5044fc9d-3138-46fe-a90d-058cf1373746",
+        "applyUrl": "https://jobs.lever.co/shieldai/5044fc9d-3138-46fe-a90d-058cf1373746/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Propulsion", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1774049336505, "id": "f6accb83-eb53-449d-802c-09171e216f8a",
+        "text": "Staff Technical Program Manager, Propulsion (R4727)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/f6accb83-eb53-449d-802c-09171e216f8a",
+        "applyUrl": "https://jobs.lever.co/shieldai/f6accb83-eb53-449d-802c-09171e216f8a/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1777502339347, "id": "3d6d5608-23f6-4a7c-81ff-f41aaf05eb27",
+        "text": "Staff Technician, Air Vehicle Systems (R4892)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/3d6d5608-23f6-4a7c-81ff-f41aaf05eb27",
+        "applyUrl": "https://jobs.lever.co/shieldai/3d6d5608-23f6-4a7c-81ff-f41aaf05eb27/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["Dallas, Texas", "Boston, MA", "San Diego, California"]}, "createdAt": 1763131796204,
+        "id": "eef811a9-5e6d-44af-9ee2-f4259de7aeee", "text": "Staff Thermal Engineer
+        - Aircraft Avionics & Thermal Systems (R3930)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/eef811a9-5e6d-44af-9ee2-f4259de7aeee",
+        "applyUrl": "https://jobs.lever.co/shieldai/eef811a9-5e6d-44af-9ee2-f4259de7aeee/apply"},
+        {"categories": {"department": "Aircraft Operations Division", "location":
+        "Dallas, Texas", "team": "Customer Operations", "allLocations": ["Dallas,
+        Texas"]}, "createdAt": 1774305511780, "id": "91a83ad8-2453-4eda-ba35-a2c2ec6baf27",
+        "text": "Standardization Pilot (R4736)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/91a83ad8-2453-4eda-ba35-a2c2ec6baf27",
+        "applyUrl": "https://jobs.lever.co/shieldai/91a83ad8-2453-4eda-ba35-a2c2ec6baf27/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Growth
+        Division", "location": "Washington, DC", "team": "International Business Development",
+        "allLocations": ["Washington, DC"]}, "createdAt": 1777511835867, "id": "1d551077-9e00-4f3c-84bd-f3ee911c83f8",
+        "text": "Strategic Capture Director (R4893)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/1d551077-9e00-4f3c-84bd-f3ee911c83f8",
+        "applyUrl": "https://jobs.lever.co/shieldai/1d551077-9e00-4f3c-84bd-f3ee911c83f8/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Supply Chain",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1765470436337, "id": "42de5714-9487-42a5-ba68-f68ebec43d78",
+        "salaryDescription": "<div>#LI-AA1</div>\n<div><span style=\"font-size: 13.3333px;\">#LB</span></div>",
+        "salaryDescriptionPlain": "#LI-AA1\n#LB\n", "text": "Strategic Sourcing Manager
+        (R4251)", "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/42de5714-9487-42a5-ba68-f68ebec43d78",
+        "applyUrl": "https://jobs.lever.co/shieldai/42de5714-9487-42a5-ba68-f68ebec43d78/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Supply Chain",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1677106677593, "id": "515658a7-d371-48ac-aea4-0c09d6ade3a6",
+        "text": "Strategic Sourcing Specialist \u2013 Construction Projects (R4463)",
+        "country": "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/515658a7-d371-48ac-aea4-0c09d6ade3a6",
+        "applyUrl": "https://jobs.lever.co/shieldai/515658a7-d371-48ac-aea4-0c09d6ade3a6/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "X-BAT Division",
+        "location": "Dallas, Texas", "team": "X-BAT Engineering - Mechanical", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1776969690591, "id": "49d637fc-8dfe-485f-910e-941a496b50d4",
+        "text": "Structural Test Stand Design Engineer (R4413)", "country": "US",
+        "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/49d637fc-8dfe-485f-910e-941a496b50d4",
+        "applyUrl": "https://jobs.lever.co/shieldai/49d637fc-8dfe-485f-910e-941a496b50d4/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Enterprise
+        Operations Division", "location": "United States", "team": "Service Delivery",
+        "allLocations": ["United States", "San Diego, California", "Dallas, Texas",
+        "Washington, DC"]}, "createdAt": 1776268692431, "id": "aab97c51-b15e-41d8-9b5c-18df4f23daa4",
+        "text": "Supervisor, Desktop Engineering (R4768)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/aab97c51-b15e-41d8-9b5c-18df4f23daa4",
+        "applyUrl": "https://jobs.lever.co/shieldai/aab97c51-b15e-41d8-9b5c-18df4f23daa4/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Enterprise
+        Operations Division", "location": "San Diego, California", "team": "Service
+        Delivery", "allLocations": ["San Diego, California", "Dallas, Texas", "Boston,
+        MA", "Washington, DC", "San Francisco, California"]}, "createdAt": 1774540428148,
+        "id": "72eec21f-0a5d-424e-b5c0-6f14429d40c0", "salaryDescription": "<div>#LI-HM1</div>\n<div>#LC</div>",
+        "salaryDescriptionPlain": "#LI-HM1\n#LC\n", "text": "Supervisor, IT Service
+        Delivery (R4740)", "country": "US", "workplaceType": "onsite", "hostedUrl":
+        "https://jobs.lever.co/shieldai/72eec21f-0a5d-424e-b5c0-6f14429d40c0", "applyUrl":
+        "https://jobs.lever.co/shieldai/72eec21f-0a5d-424e-b5c0-6f14429d40c0/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Supply Chain",
+        "allLocations": ["Dallas, Texas", "United States"]}, "createdAt": 1725050379795,
+        "id": "cf0f2076-a481-4b1a-8a37-39979abb98e6", "text": "Supplier Development
+        Engineer - Electronics (R4560)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/cf0f2076-a481-4b1a-8a37-39979abb98e6",
+        "applyUrl": "https://jobs.lever.co/shieldai/cf0f2076-a481-4b1a-8a37-39979abb98e6/apply"},
+        {"categories": {"commitment": "International EOR", "department": "Aircraft
+        Operations Division", "location": "Taipei", "team": "Supply Chain", "allLocations":
+        ["Taipei"]}, "createdAt": 1774973062187, "id": "34d71878-2793-427c-ac43-e83cff4a5fee",
+        "text": "Supplier Development Engineer (R4621)", "country": "TW", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/34d71878-2793-427c-ac43-e83cff4a5fee",
+        "applyUrl": "https://jobs.lever.co/shieldai/34d71878-2793-427c-ac43-e83cff4a5fee/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Supply Chain",
+        "allLocations": ["Dallas, Texas", "United States"]}, "createdAt": 1773958230316,
+        "id": "9f1c3c6f-6807-4cd4-bbb1-d9914841c23e", "text": "Supplier Development
+        Engineer, Mechanical (R4712)", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/9f1c3c6f-6807-4cd4-bbb1-d9914841c23e",
+        "applyUrl": "https://jobs.lever.co/shieldai/9f1c3c6f-6807-4cd4-bbb1-d9914841c23e/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Enterprise
+        Operations Division", "location": "Remote", "team": "Enterprise Operations",
+        "allLocations": ["Remote"]}, "createdAt": 1776812695864, "id": "f9364298-220f-4a43-ab29-b51c73218157",
+        "salaryDescription": "<div>\n<div>Total package details for U.S. based positions:</div>\n<div>-
+        Regular employee positions: Salary within range listed above + Bonus + Benefits
+        + Equity</div>\n<div>- Temporary employee positions: Hourly within range listed
+        above + temporary benefits package (applicable after 60 days</div>\n<div>of
+        employment)</div>\n<div>- Interns/Military Fellows/Part-time not eligible
+        for bonus, benefits or equity</div>\n<div>&nbsp;</div>\n<div>Total package
+        details for International positions which are roles based outside of the United
+        States (where applicable):</div>\n<div>- International premium, hardship differential,
+        cost of living differential, living quarters allowance, foreign service transfer</div>\n<div>allowance,
+        equity, international benefits, visa assistance, and relocation assistance.</div>\n<div>&nbsp;</div>\n<div>Salary
+        compensation is influenced by a wide array of factors including but not limited
+        to skill set, level of experience, licenses and certifications, and specific
+        work location. All offers are contingent on a cleared background and possible
+        reference check.</div>\n<div>&nbsp;</div>\n<div>Shield AI is proud to be an
+        equal opportunity workplace and is an affirmative action employer. We are
+        committed to&nbsp;equal employment opportunity regardless of race, color,
+        ancestry, religion, sex, national origin, sexual orientation, age, marital
+        status, disability, gender identity or Veteran status. If you have a disability
+        or special need that requires accommodation, please let us know.</div>\n</div>",
+        "salaryDescriptionPlain": "Total package details for U.S. based positions:\n-
+        Regular employee positions: Salary within range listed above + Bonus + Benefits
+        + Equity\n- Temporary employee positions: Hourly within range listed above
+        + temporary benefits package (applicable after 60 days\nof employment)\n-
+        Interns/Military Fellows/Part-time not eligible for bonus, benefits or equity\n\u00a0\nTotal
+        package details for International positions which are roles based outside
+        of the United States (where applicable):\n- International premium, hardship
+        differential, cost of living differential, living quarters allowance, foreign
+        service transfer\nallowance, equity, international benefits, visa assistance,
+        and relocation assistance.\n\u00a0\nSalary compensation is influenced by a
+        wide array of factors including but not limited to skill set, level of experience,
+        licenses and certifications, and specific work location. All offers are contingent
+        on a cleared background and possible reference check.\n\u00a0\nShield AI is
+        proud to be an equal opportunity workplace and is an affirmative action employer.
+        We are committed to\u00a0equal employment opportunity regardless of race,
+        color, ancestry, religion, sex, national origin, sexual orientation, age,
+        marital status, disability, gender identity or Veteran status. If you have
+        a disability or special need that requires accommodation, please let us know.\n",
+        "text": "Technical Director, ERP Programs", "country": "US", "workplaceType":
+        "remote", "hostedUrl": "https://jobs.lever.co/shieldai/f9364298-220f-4a43-ab29-b51c73218157",
+        "applyUrl": "https://jobs.lever.co/shieldai/f9364298-220f-4a43-ab29-b51c73218157/apply"},
+        {"categories": {"commitment": "International Office Entity", "department":
+        "Hivemind Solutions Division", "location": "London", "team": "Program & Technical
+        Program Management", "allLocations": ["London"]}, "createdAt": 1764832702385,
+        "id": "194442b9-f75d-4a76-adc9-dc6cf4a8ef6a", "text": "Technical Program Director
+        (R3982)", "country": "GB", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/194442b9-f75d-4a76-adc9-dc6cf4a8ef6a",
+        "applyUrl": "https://jobs.lever.co/shieldai/194442b9-f75d-4a76-adc9-dc6cf4a8ef6a/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Customer Operations",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1772686197467, "id": "4dc07b16-24f4-4ed7-a66e-65422ed1ad1f",
+        "text": "Technician II, Maintenance (R4818)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/4dc07b16-24f4-4ed7-a66e-65422ed1ad1f",
+        "applyUrl": "https://jobs.lever.co/shieldai/4dc07b16-24f4-4ed7-a66e-65422ed1ad1f/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Production", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1773372512334, "id": "432de5f3-a30f-4bbb-98bd-7ed44b754658",
+        "text": "Technician III, CNC Machinist (R4690)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/432de5f3-a30f-4bbb-98bd-7ed44b754658",
+        "applyUrl": "https://jobs.lever.co/shieldai/432de5f3-a30f-4bbb-98bd-7ed44b754658/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Quality", "allLocations":
+        ["Dallas, Texas"]}, "createdAt": 1774308292930, "id": "1c218d71-5929-4be5-962c-a5ca585e79a2",
+        "text": "Technician III, CNC/CMM Program (R4735)", "country": "US", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/1c218d71-5929-4be5-962c-a5ca585e79a2",
+        "applyUrl": "https://jobs.lever.co/shieldai/1c218d71-5929-4be5-962c-a5ca585e79a2/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Growth
+        Division", "location": "United States", "team": "Business Development", "allLocations":
+        ["United States"]}, "createdAt": 1775770950901, "id": "4327879d-715a-4b10-8f47-cb3d64c956c4",
+        "text": "Territory Business Development Manager, Army (R4796)", "country":
+        "US", "workplaceType": "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/4327879d-715a-4b10-8f47-cb3d64c956c4",
+        "applyUrl": "https://jobs.lever.co/shieldai/4327879d-715a-4b10-8f47-cb3d64c956c4/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Aircraft
+        Operations Division", "location": "Dallas, Texas", "team": "Customer Operations",
+        "allLocations": ["Dallas, Texas"]}, "createdAt": 1647637366752, "id": "3286ffe2-a1e7-4393-9df6-2703d8b55967",
+        "text": "V-BAT Air Vehicle Operator", "country": "US", "workplaceType": "onsite",
+        "hostedUrl": "https://jobs.lever.co/shieldai/3286ffe2-a1e7-4393-9df6-2703d8b55967",
+        "applyUrl": "https://jobs.lever.co/shieldai/3286ffe2-a1e7-4393-9df6-2703d8b55967/apply"},
+        {"categories": {"commitment": "Full Time Employee", "department": "Growth
+        Division", "location": "Oslo", "team": "International Business Development",
+        "allLocations": ["Oslo"]}, "createdAt": 1747186675137, "id": "14f83ee4-4097-4dc2-95c5-624ea35a3332",
+        "text": "X-BAT Capture Lead  - Nordics", "country": "NO", "workplaceType":
+        "onsite", "hostedUrl": "https://jobs.lever.co/shieldai/14f83ee4-4097-4dc2-95c5-624ea35a3332",
+        "applyUrl": "https://jobs.lever.co/shieldai/14f83ee4-4097-4dc2-95c5-624ea35a3332/apply"}]'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3542129'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 03 May 2026 05:54:15 GMT
+      ETag:
+      - W/"360c71-3qzz9uQkF8njZ6XEpo0CvYwm+Oo"
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Stream-Path:
+      - dapi
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+version: 1

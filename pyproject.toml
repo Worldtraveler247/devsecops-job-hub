@@ -52,3 +52,8 @@ check_untyped_defs = true
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 testpaths = ["tests"]
+# pytest-recording: cassettes are recorded once and replayed on subsequent runs.
+# Override on demand with `--record-mode=rewrite` to refresh against the live API.
+markers = [
+    "vcr: replay HTTP via a checked-in cassette (no live network on CI)",
+]
