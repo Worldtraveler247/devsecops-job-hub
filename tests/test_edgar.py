@@ -144,11 +144,13 @@ class TestFetchAnnualRevenue:
     @pytest.mark.asyncio
     async def test_falls_through_to_next_concept_on_404(self):
         # First concept 404s; second concept returns the data.
-        responses = iter([
-            httpx.Response(200, json=_TICKER_PAYLOAD),
-            httpx.Response(404),  # RevenueFromContractWithCustomerExcludingAssessedTax
-            httpx.Response(200, json=_concept_payload_three_year()),  # Revenues
-        ])
+        responses = iter(
+            [
+                httpx.Response(200, json=_TICKER_PAYLOAD),
+                httpx.Response(404),  # RevenueFromContractWithCustomerExcludingAssessedTax
+                httpx.Response(200, json=_concept_payload_three_year()),  # Revenues
+            ]
+        )
 
         def handler(request: httpx.Request) -> httpx.Response:
             return next(responses)

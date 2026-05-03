@@ -12,7 +12,7 @@ from __future__ import annotations
 
 import html
 import re
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import httpx
 from pydantic import BaseModel, ConfigDict
@@ -102,7 +102,7 @@ async def fetch_jobs(company: Company, client: httpx.AsyncClient) -> list[Job]:
     record_success(_BREAKER_NAME)
     parsed = _GreenhouseResponse.model_validate(payload)
 
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
     jobs: list[Job] = []
     for g in parsed.jobs:
         location_name = g.location.name if g.location else None

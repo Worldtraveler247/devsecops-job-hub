@@ -9,7 +9,7 @@ hostedUrl, applyUrl, createdAt (ms epoch), workplaceType, country.
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import httpx
 from pydantic import BaseModel, ConfigDict
@@ -119,7 +119,7 @@ async def fetch_jobs(company: Company, client: httpx.AsyncClient) -> list[Job]:
     record_success(_BREAKER_NAME)
     parsed = [_LeverPosting.model_validate(p) for p in payload]
 
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
     jobs: list[Job] = []
     for p in parsed:
         location = p.categories.location if p.categories else None
@@ -129,9 +129,7 @@ async def fetch_jobs(company: Company, client: httpx.AsyncClient) -> list[Job]:
         if not is_oconus:
             is_oconus = classify_oconus(location)
 
-        posted_at = (
-            datetime.fromtimestamp(p.createdAt / 1000, tz=timezone.utc) if p.createdAt else None
-        )
+        posted_at = datetime.fromtimestamp(p.createdAt / 1000, tz=UTC) if p.createdAt else None
 
         # Lever ships the full posting body in one of two fields depending on
         # account configuration. Prefer the longer one.

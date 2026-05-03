@@ -92,8 +92,7 @@ class CircuitBreakerRegistry:
         if s.failure_count >= self._threshold and s.opened_at is None:
             s.opened_at = self._clock()
             logger.warning(
-                "breaker %s opened after %d consecutive failures; will skip "
-                "for %ds",
+                "breaker %s opened after %d consecutive failures; will skip for %ds",
                 name,
                 s.failure_count,
                 self._open_seconds,

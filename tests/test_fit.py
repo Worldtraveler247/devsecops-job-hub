@@ -66,9 +66,7 @@ def test_clearance_above_ceiling_hard_fails(junior_cloud_sec_profile):
 
 
 def test_clearance_at_ceiling_passes(junior_cloud_sec_profile):
-    verdict = compute_fit(
-        _job(clearance_required=ClearanceLevel.SECRET), junior_cloud_sec_profile
-    )
+    verdict = compute_fit(_job(clearance_required=ClearanceLevel.SECRET), junior_cloud_sec_profile)
     assert verdict.is_fit is True
 
 

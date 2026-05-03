@@ -43,7 +43,13 @@ target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
-ignore = ["E501"]
+ignore = [
+    "E501",   # line length — handled by formatter
+    "B008",   # FastAPI uses Query/Depends in argument defaults idiomatically
+    "RUF001", # en-dashes are intentional in salary-range regex
+    "RUF003", # en-dashes in module docstrings are intentional
+    "UP042",  # `class Foo(str, Enum)` is the well-tested pattern; StrEnum migration is style-only
+]
 
 [tool.mypy]
 python_version = "3.12"
@@ -51,6 +57,10 @@ warn_unused_ignores = true
 warn_redundant_casts = true
 no_implicit_optional = true
 check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = ["apscheduler.*"]
+ignore_missing_imports = true
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"

@@ -18,7 +18,9 @@ class FakeClock:
         self._t += seconds
 
 
-def make_registry(threshold: int = 3, open_seconds: int = 300) -> tuple[CircuitBreakerRegistry, FakeClock]:
+def make_registry(
+    threshold: int = 3, open_seconds: int = 300
+) -> tuple[CircuitBreakerRegistry, FakeClock]:
     clock = FakeClock()
     reg = CircuitBreakerRegistry(
         failure_threshold=threshold, open_seconds=open_seconds, clock=clock

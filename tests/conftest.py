@@ -12,8 +12,9 @@ os.environ["DATABASE_URL"] = f"sqlite:///{_tmp_db_path}"
 
 @pytest.fixture(autouse=True)
 def _reset_db():
-    from devsecops_job_hub.db import engine, init_db
     from sqlmodel import SQLModel
+
+    from devsecops_job_hub.db import engine, init_db
 
     SQLModel.metadata.drop_all(engine)
     init_db()

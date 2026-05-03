@@ -13,7 +13,7 @@ false positives are an acceptable trade-off for that posture.
 from __future__ import annotations
 
 import logging
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 
 import httpx
 from sqlmodel import Session, select
@@ -111,7 +111,7 @@ async def refresh_all() -> int:
 
 
 def _soft_delete_stale() -> None:
-    cutoff = datetime.now(timezone.utc) - _STALE_AFTER
+    cutoff = datetime.now(UTC) - _STALE_AFTER
     with Session(engine) as session:
         stale = session.exec(select(Job).where(Job.is_active, Job.last_seen_at < cutoff)).all()
         for job in stale:

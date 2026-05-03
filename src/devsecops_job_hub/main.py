@@ -13,7 +13,7 @@ from fastapi.templating import Jinja2Templates
 from sqlmodel import Session, select
 
 from devsecops_job_hub.config import settings
-from devsecops_job_hub.db import engine, get_session, init_db
+from devsecops_job_hub.db import get_session, init_db
 from devsecops_job_hub.models import (
     CareerStage,
     ClearanceLevel,
@@ -105,7 +105,7 @@ def index(
     if location_scope == "oconus":
         stmt = stmt.where(Job.is_oconus)
     elif location_scope == "conus":
-        stmt = stmt.where(Job.is_oconus.is_(False))  # type: ignore[union-attr]
+        stmt = stmt.where(Job.is_oconus.is_(False))  # type: ignore[attr-defined]
     if min_salary:
         stmt = stmt.where(Job.salary_min >= min_salary)  # type: ignore[operator]
     db_rows = session.exec(stmt).all()

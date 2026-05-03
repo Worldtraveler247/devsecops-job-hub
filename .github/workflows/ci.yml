@@ -1,0 +1,86 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Cancel an in-progress run when a new commit lands on the same ref.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  # Needed for Trivy to upload SARIF results to GitHub Code Scanning.
+  security-events: write
+
+jobs:
+  lint-and-test:
+    name: Lint + types + tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: ruff (lint + format check)
+        run: |
+          ruff check .
+          ruff format --check .
+
+      - name: mypy
+        run: mypy src
+
+      - name: pytest
+        run: pytest -q
+
+  build-and-scan:
+    name: Build container + Trivy scan
+    runs-on: ubuntu-latest
+    # Run regardless of lint-and-test result so security findings still surface
+    # on a broken build. Comment out `needs:` to gate on the other job instead.
+    needs: lint-and-test
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build image (load to local daemon)
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Containerfile
+          tags: devsecops-job-hub:ci
+          load: true
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Trivy image scan
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          image-ref: devsecops-job-hub:ci
+          format: sarif
+          output: trivy-results.sarif
+          # Only fail the job on HIGH or CRITICAL findings. MEDIUM/LOW
+          # appear in the dashboard but don't block CI.
+          severity: HIGH,CRITICAL
+          exit-code: "1"
+          ignore-unfixed: true
+
+      - name: Upload Trivy SARIF to Code Scanning
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: trivy-results.sarif
+          category: trivy-image-scan

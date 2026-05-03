@@ -26,13 +26,22 @@ class TestRoleFamily:
         assert classify_role_family("Sales Account Executive") is None
 
     def test_isso(self):
-        assert classify_role_family("Information Systems Security Officer (ISSO)") == RoleFamily.SECURITY_OFFICER
+        assert (
+            classify_role_family("Information Systems Security Officer (ISSO)")
+            == RoleFamily.SECURITY_OFFICER
+        )
 
     def test_issm(self):
-        assert classify_role_family("Information Systems Security Manager") == RoleFamily.SECURITY_OFFICER
+        assert (
+            classify_role_family("Information Systems Security Manager")
+            == RoleFamily.SECURITY_OFFICER
+        )
 
     def test_csso(self):
-        assert classify_role_family("Contractor Special Security Officer") == RoleFamily.SECURITY_OFFICER
+        assert (
+            classify_role_family("Contractor Special Security Officer")
+            == RoleFamily.SECURITY_OFFICER
+        )
 
     def test_cybersecurity_engineer(self):
         assert classify_role_family("Cybersecurity Engineer") == RoleFamily.SYS_SECURITY_ENG
@@ -93,9 +102,7 @@ class TestCareerStage:
 
     def test_description_minimum_seven_years_is_senior(self):
         assert (
-            classify_career_stage(
-                "Software Engineer", "Minimum 7 years of experience required."
-            )
+            classify_career_stage("Software Engineer", "Minimum 7 years of experience required.")
             == CareerStage.SENIOR
         )
 
@@ -149,9 +156,7 @@ class TestClearance:
 
     def test_clearance_in_description(self):
         assert (
-            classify_clearance(
-                "Cloud Engineer", "Active Secret clearance required at start date."
-            )
+            classify_clearance("Cloud Engineer", "Active Secret clearance required at start date.")
             == ClearanceLevel.SECRET
         )
 
