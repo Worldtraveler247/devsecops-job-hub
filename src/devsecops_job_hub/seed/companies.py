@@ -83,6 +83,46 @@ def _build_seed() -> list[Company]:
             primary_agencies=["DoD"],
             hq_location="Rosslyn, VA",
         ),
+        Company(
+            name="Rebellion Defense",
+            careers_url="https://rebelliondefense.com/careers",
+            ats_provider=ATSProvider.GREENHOUSE,
+            ats_company_slug="rebelliondefense",
+            primary_agencies=["DoD", "IC"],
+            hq_location="Washington, DC",
+        ),
+        Company(
+            name="Shield AI",
+            careers_url="https://shield.ai/careers",
+            ats_provider=ATSProvider.LEVER,
+            ats_company_slug="shieldai",
+            primary_agencies=["DoD"],
+            hq_location="San Diego, CA",
+        ),
+        Company(
+            name="Saildrone",
+            careers_url="https://www.saildrone.com/careers",
+            ats_provider=ATSProvider.GREENHOUSE,
+            ats_company_slug="saildroneinc",
+            primary_agencies=["DoD", "NOAA"],
+            hq_location="Alameda, CA",
+        ),
+        Company(
+            name="Epirus",
+            careers_url="https://www.epirusinc.com/careers",
+            ats_provider=ATSProvider.GREENHOUSE,
+            ats_company_slug="epirus",
+            primary_agencies=["DoD"],
+            hq_location="Torrance, CA",
+        ),
+        Company(
+            name="Sayari",
+            careers_url="https://sayari.com/careers/",
+            ats_provider=ATSProvider.GREENHOUSE,
+            ats_company_slug="sayari",
+            primary_agencies=["IC", "civilian"],
+            hq_location="Washington, DC",
+        ),
         # ── DevSecOps tooling vendors with significant govt business ──
         Company(
             name="Chainguard",
@@ -91,6 +131,14 @@ def _build_seed() -> list[Company]:
             ats_company_slug="chainguard",
             primary_agencies=["DoD", "civilian"],
             hq_location="Kirkland, WA",
+        ),
+        Company(
+            name="Wiz",
+            careers_url="https://www.wiz.io/careers",
+            ats_provider=ATSProvider.GREENHOUSE,
+            ats_company_slug="wizinc",
+            primary_agencies=["civilian", "DoD"],
+            hq_location="New York, NY",
         ),
         # ── Cloud + observability vendors with FedRAMP / DoD presence ──
         Company(
@@ -118,6 +166,24 @@ def _build_seed() -> list[Company]:
             ats_company_slug="databricks",
             primary_agencies=["civilian", "DoD"],
             hq_location="San Francisco, CA",
+        ),
+        Company(
+            name="Elastic",
+            ticker="ESTC",
+            careers_url="https://www.elastic.co/careers",
+            ats_provider=ATSProvider.GREENHOUSE,
+            ats_company_slug="elastic",
+            primary_agencies=["civilian", "DoD", "IC"],
+            hq_location="Mountain View, CA",
+        ),
+        Company(
+            name="Zscaler",
+            ticker="ZS",
+            careers_url="https://www.zscaler.com/careers",
+            ats_provider=ATSProvider.GREENHOUSE,
+            ats_company_slug="zscaler",
+            primary_agencies=["civilian", "DoD"],
+            hq_location="San Jose, CA",
         ),
     ]
 
