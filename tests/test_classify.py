@@ -63,25 +63,40 @@ class TestRoleFamily:
             == RoleFamily.CLOUD_SECURITY_ENG
         )
 
-    def test_role_falls_back_to_description(self):
-        # Title says "Engineer" — vague — but description names the role family.
+    def test_role_ignores_description_keywords(self):
+        # Description mentions "linux" and "cloud security" but the title is
+        # plainly an electrical-engineering role. Description fallback for
+        # role-family classification was removed because it caused too many
+        # false positives (Corporate FP&A Associate → cloud_security_eng;
+        # Electrical Engineer → linux_admin).
         assert (
             classify_role_family(
-                "Engineer, Platform",
-                "You'll lead our DevSecOps program covering CI/CD, supply-chain security, and SBOM tooling.",
+                "Electrical Engineer, Manufacturing Test",
+                "Our products run on Linux. Our team applies cloud security best practices.",
             )
-            == RoleFamily.DEVSECOPS_ENG
+            is None
         )
 
-    def test_title_role_wins_over_description(self):
-        # If title clearly classifies, ignore description.
-        assert (
-            classify_role_family(
-                "Application Security Engineer",
-                "You'll partner with the SRE team on incident response.",
-            )
-            == RoleFamily.APPSEC_ENG
-        )
+    def test_soc_variants_match(self):
+        # GSOC is global SOC — common at defense-tech orgs.
+        assert classify_role_family("GSOC Jr Operator") == RoleFamily.SOC_ANALYST
+        assert classify_role_family("Skillbridge GSOC Operator") == RoleFamily.SOC_ANALYST
+        assert classify_role_family("SOC Engineer III") == RoleFamily.SOC_ANALYST
+        assert classify_role_family("Security Operations Specialist") == RoleFamily.SOC_ANALYST
+        assert classify_role_family("Security Operations Center Analyst") == RoleFamily.SOC_ANALYST
+
+    def test_role_strict_linux_admin_proximity(self):
+        # New tighter pattern: "Linux Admin" / "Linux Sysadmin" /
+        # "Systems Administrator" / "Linux Systems Engineer" only.
+        assert classify_role_family("Linux Systems Administrator") == RoleFamily.LINUX_ADMIN
+        assert classify_role_family("Senior Linux Sysadmin") == RoleFamily.LINUX_ADMIN
+        assert classify_role_family("Systems Administrator") == RoleFamily.LINUX_ADMIN
+        # Bare "Engineer" titles don't match linux_admin anymore — the
+        # previous loose pattern flagged Anduril electrical / firmware /
+        # manufacturing roles when their descriptions mentioned Linux.
+        assert classify_role_family("Electrical Engineer") is None
+        assert classify_role_family("Firmware Engineer") is None
+        assert classify_role_family("Manufacturing Engineer") is None
 
 
 class TestCareerStage:

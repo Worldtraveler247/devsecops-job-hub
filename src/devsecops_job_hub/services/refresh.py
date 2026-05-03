@@ -53,19 +53,13 @@ async def refresh_company(company: Company, client: httpx.AsyncClient) -> int:
     if not fetched:
         return 0
 
-    # Audience filters (see module docstring):
-    #   1. Drop unclassified roles — Sales, Finance, Production etc. pollute
-    #      the hub. role_family=None means "we have no idea what kind of role
-    #      this is," and the hub's audience needs tech roles only.
-    #   2. Senior gets handled in two places: upsert proceeds (so existing
-    #      rows get re-classified with the latest classifier), then
-    #      _purge_senior() runs at the end of refresh_all() to hard-delete
-    #      anything classified senior. Filtering senior here would skip the
-    #      reclassification of stale rows.
-    fetched = [j for j in fetched if j.role_family is not None]
-    if not fetched:
-        return 0
-
+    # Both audience filters (role_family=None and career_stage=SENIOR) are
+    # applied AFTER upsert, in _purge_senior() at the end of refresh_all().
+    # Filtering here would prevent existing rows from being re-classified
+    # by the latest classifier — an old row tagged cloud_security_eng on
+    # a description-fallback heuristic that's since been removed would
+    # never be reclassified to None and never be purged. Always upsert,
+    # then purge.
     written = 0
     with Session(engine) as session:
         for incoming in fetched:

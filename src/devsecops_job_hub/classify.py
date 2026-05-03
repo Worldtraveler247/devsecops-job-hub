@@ -32,7 +32,18 @@ _ROLE_RULES: list[tuple[re.Pattern[str], RoleFamily]] = [
     ),
     (re.compile(r"\bdevops\b", re.I), RoleFamily.DEVOPS_ENG),
     (re.compile(r"\bsre\b|\bsite reliability\b", re.I), RoleFamily.SRE),
-    (re.compile(r"\bsoc analyst\b|\bsecurity operations center\b", re.I), RoleFamily.SOC_ANALYST),
+    # Match: "GSOC Operator", "GSOC Jr Operator", "SOC Analyst",
+    # "Skillbridge GSOC Operator", "Security Operations Center", etc.
+    # The non-greedy `[\s\w]*?` lets short modifiers like "Jr" / "Sr" /
+    # "Lead" sit between SOC and the role keyword.
+    (
+        re.compile(
+            r"\bg?soc\b[\s\w]{0,30}?\b(analyst|operator|engineer|specialist)\b|"
+            r"\bsecurity operations(?:\s+(center|analyst|engineer|specialist))?\b",
+            re.I,
+        ),
+        RoleFamily.SOC_ANALYST,
+    ),
     (re.compile(r"\bcloud engineer\b|\bcloud platform\b", re.I), RoleFamily.CLOUD_ENGINEER),
     (re.compile(r"\bcloud (ops|operations)\b", re.I), RoleFamily.CLOUD_OPS),
     (re.compile(r"\bcloud (admin|administrator)\b", re.I), RoleFamily.CLOUD_ADMIN),
@@ -48,7 +59,20 @@ _ROLE_RULES: list[tuple[re.Pattern[str], RoleFamily]] = [
         ),
         RoleFamily.SYS_SECURITY_ENG,
     ),
-    (re.compile(r"\blinux\b.*\b(admin\w*|engineer\w*|sysadmin)\b", re.I), RoleFamily.LINUX_ADMIN),
+    # Linux admin is title-proximity-only: "Linux Admin", "Linux Sysadmin",
+    # "Linux Systems Engineer", "Systems Administrator", or bare "sysadmin".
+    # The previous pattern `\blinux\b.*\bengineer\b` over-matched against
+    # any title containing "Engineer" plus a description that mentioned
+    # Linux — flagging Anduril electrical/firmware/manufacturing roles as
+    # linux_admin. Tight proximity fixes that.
+    (
+        re.compile(
+            r"\b(linux\s+(admin\w*|sysadmin|systems?\s+(engineer|administrator))|"
+            r"systems?\s+administrator|sysadmin)\b",
+            re.I,
+        ),
+        RoleFamily.LINUX_ADMIN,
+    ),
     # Catch-all for generic IT roles. Must stay LAST so all specialized
     # patterns above match first. Captures roles The Muse and similar
     # broad sources surface that don't fit a security-specific family.
@@ -115,15 +139,22 @@ _MID_DESC = re.compile(
 
 
 def classify_role_family(title: str, description: str | None = None) -> RoleFamily | None:
+    # Title-only by design. Earlier versions fell back to description text
+    # when the title was silent, but description is contaminated — every
+    # job at a security-conscious company mentions "cloud security",
+    # "Linux", "DevOps" somewhere, regardless of what the actual role is.
+    # That false-positive rate (Corporate FP&A → cloud_security_eng;
+    # Electrical Engineer → linux_admin) is worse than the false-negative
+    # rate of strict title matching.
+    #
+    # The `description` parameter stays in the signature for compatibility
+    # but is ignored. Career-stage and clearance classifiers still use
+    # description because "8+ years experience" and "Active Secret" are
+    # unambiguous statements; role-family signals in description are not.
+    del description  # explicitly unused
     for pattern, family in _ROLE_RULES:
         if pattern.search(title):
             return family
-    # Fall back to description scan if title was silent. Description matches are
-    # weaker — we only accept them for the most distinctive role families.
-    if description:
-        for pattern, family in _ROLE_RULES:
-            if pattern.search(description):
-                return family
     return None
 
 
