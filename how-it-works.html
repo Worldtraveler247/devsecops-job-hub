@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevSecOps Job Hub — How It's Built</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../how-it-works.css">
+</head>
+<body>
+  <a href="../index.html" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(10,10,20,0.85);backdrop-filter:blur(6px);color:#4af7ff;border:1px solid #4af7ff;border-radius:20px;padding:6px 14px;font-family:sans-serif;font-size:13px;text-decoration:none;font-weight:600;">&#8592; App Hub</a>
+  <div class="hiw-page">
+
+    <header class="hiw-header">
+      <div class="hiw-icon">&#x1F6E1;</div>
+      <h1>DevSecOps Job Hub &#x2014; How It&#x2019;s Built</h1>
+      <p class="hiw-tagline">A FastAPI + SQLModel job aggregator targeting early-career cleared cloud-security roles &#x2014; containerized with Podman for local and production runs.</p>
+    </header>
+
+    <section class="hiw-section">
+      <h2>Overview</h2>
+      <p>DevSecOps Job Hub is a Python web application that aggregates job postings for cleared cloud-security and DevSecOps roles at U.S. government contractors. The backend is FastAPI serving Jinja2 HTML templates, with SQLite as the database and SQLModel as the ORM layer that bridges FastAPI&#x2019;s Pydantic validation with SQLAlchemy&#x2019;s query engine. Jobs are seeded from curated companies, scraped from ATS APIs, and filtered to only show entry-level and mid-level postings &#x2014; senior roles are excluded at ingest. The entire stack runs locally with <code>uvicorn</code> and ships as a Podman container for deployment.</p>
+    </section>
+
+    <section class="hiw-section">
+      <h2>Tech Stack</h2>
+      <div class="hiw-badges">
+        <span class="hiw-badge">Python 3.12</span>
+        <span class="hiw-badge">FastAPI</span>
+        <span class="hiw-badge">SQLModel</span>
+        <span class="hiw-badge">SQLite</span>
+        <span class="hiw-badge">Podman</span>
+        <span class="hiw-badge">Jinja2</span>
+      </div>
+      <ul class="hiw-caption-list">
+        <li><strong>Python 3.12+</strong> &#x2014; full type hints throughout; the newer generic syntax (<code>list[dict]</code>, <code>int | None</code>) keeps models readable and mypy strict.</li>
+        <li><strong>FastAPI</strong> &#x2014; async-ready HTTP framework; route parameters are typed with Pydantic models, so bad query strings return a 422 automatically. The auto-generated <code>/docs</code> UI is the primary developer interface.</li>
+        <li><strong>SQLModel</strong> &#x2014; sits between Pydantic and SQLAlchemy; a single class definition doubles as an API schema and a database table, eliminating the usual ORM/schema duplication.</li>
+        <li><strong>SQLite</strong> &#x2014; one file (<code>jobs.db</code>); no server to manage. The engine is created once in <code>db.py</code> and injected into routes via FastAPI&#x2019;s <code>Depends()</code> pattern.</li>
+        <li><strong>Podman</strong> &#x2014; rootless container runtime used in place of Docker. The multi-stage Containerfile keeps the runtime image small by leaving build tooling in a throwaway builder stage.</li>
+        <li><strong>Jinja2</strong> &#x2014; templating engine for server-rendered HTML. Custom filters handle currency formatting and GS-grade inference directly in templates.</li>
+      </ul>
+    </section>
+
+    <section class="hiw-section">
+      <h2>How Each Part Works</h2>
+
+      <div class="hiw-file-block">
+        <h3><code>src/devsecops_job_hub/models.py</code> &#x2014; SQLModel data models</h3>
+        <p>SQLModel classes define both the database schema and the shape of data flowing through the app. Setting <code>table=True</code> tells SQLModel to create a real database table from this class. Enum fields like <code>ClearanceLevel</code> are stored as strings in SQLite and validated automatically by FastAPI when they appear in query parameters.</p>
+        <pre class="hiw-code">class Job(SQLModel, table=True):
+    id: int | None = Field(default=None, primary_key=True)
+    company_id: int = Field(foreign_key="company.id", index=True)
+    title: str
+    role_family: RoleFamily | None = Field(default=None, index=True)
+    career_stage: CareerStage | None = Field(default=None, index=True)
+    clearance_required: ClearanceLevel = Field(
+        default=ClearanceLevel.NONE, index=True
+    )
+    clearance_sponsorship_available: bool = False
+    remote_eligible: RemoteEligibility = Field(
+        default=RemoteEligibility.ONSITE, index=True
+    )
+    salary_min: int | None = None
+    salary_max: int | None = None
+    apply_url: str = Field(index=True)
+    posted_at: datetime | None = None
+    last_seen_at: datetime = Field(default_factory=_utcnow)
+    is_active: bool = Field(default=True, index=True)</pre>
+      </div>
+
+      <div class="hiw-file-block">
+        <h3><code>src/devsecops_job_hub/main.py</code> &#x2014; FastAPI GET route with filter chain</h3>
+        <p>The root route builds a SQLModel <code>select()</code> statement and chains <code>.where()</code> clauses based on which query parameters are present. FastAPI automatically parses and validates each parameter against its declared type; empty strings from HTML form submissions are coerced to <code>None</code> by a <code>BeforeValidator</code> so the route never 422s on an empty dropdown.</p>
+        <pre class="hiw-code">@app.get("/", response_class=HTMLResponse)
+def index(
+    request: Request,
+    session: Annotated[Session, Depends(get_session)],
+    role: list[RoleFamily] | None = Query(default=None),
+    stage: _OptStage = None,
+    clearance: _OptClearance = None,
+    remote: _OptRemote = None,
+    min_salary: _OptInt = None,
+    fit_only: bool = False,
+) -> HTMLResponse:
+    stmt = select(Job, Company).join(Company).where(Job.is_active)
+    if role:
+        stmt = stmt.where(Job.role_family.in_(role))
+    if stage:
+        stmt = stmt.where(Job.career_stage == stage)
+    if clearance:
+        stmt = stmt.where(Job.clearance_required == clearance)
+    if min_salary:
+        stmt = stmt.where(Job.salary_min >= min_salary)
+    db_rows = session.exec(stmt).all()
+    return templates.TemplateResponse(request, "jobs.html", {...})</pre>
+      </div>
+
+      <div class="hiw-file-block">
+        <h3><code>Containerfile</code> &#x2014; Multi-stage Podman build</h3>
+        <p>A two-stage build: the builder stage installs build tooling and pip-installs the package into <code>/install</code>; the runtime stage starts from a clean Python slim image, copies only <code>/install</code>, and runs as a non-root user. A <code>HEALTHCHECK</code> probes <code>/healthz</code> so an orchestrator knows when the app is ready.</p>
+        <pre class="hiw-code">FROM python:3.12-slim AS builder
+WORKDIR /build
+RUN apt-get update \
+ &amp;&amp; apt-get install -y --no-install-recommends build-essential \
+ &amp;&amp; rm -rf /var/lib/apt/lists/*
+COPY pyproject.toml ./
+COPY src ./src
+RUN pip install --no-cache-dir --prefix=/install .
+
+FROM python:3.12-slim AS runtime
+RUN groupadd -r app &amp;&amp; useradd -r -g app -m -s /sbin/nologin app
+COPY --from=builder /install /usr/local
+WORKDIR /app
+USER app
+EXPOSE 8000
+HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
+    CMD python -c "import urllib.request,sys; \
+        r=urllib.request.urlopen('http://localhost:8000/healthz',timeout=3); \
+        sys.exit(0 if r.status==200 else 1)"
+ENTRYPOINT ["uvicorn", "devsecops_job_hub.main:app", \
+            "--host", "0.0.0.0", "--port", "8000"]</pre>
+      </div>
+
+      <div class="hiw-file-block">
+        <h3><code>pyproject.toml</code> &#x2014; Project metadata and tooling config</h3>
+        <p>A single <code>pyproject.toml</code> replaces <code>setup.py</code> and tool-specific config files. It declares runtime dependencies (FastAPI, SQLModel, uvicorn, httpx, APScheduler, OpenTelemetry), dev dependencies (pytest, ruff, mypy, bandit), and the <code>setuptools.packages.find</code> entry pointing at the <code>src/</code> layout so the package installs cleanly in both editable and containerized modes.</p>
+      </div>
+    </section>
+
+    <section class="hiw-section">
+      <h2>File Map</h2>
+      <pre class="hiw-file-map">devsecops-job-hub/
+&#9500;&#9472;&#9472; pyproject.toml                          # Project metadata, deps, ruff/mypy config
+&#9500;&#9472;&#9472; Containerfile                           # Multi-stage Podman build (builder + runtime)
+&#9500;&#9472;&#9472; jobs.db                                 # SQLite database (gitignored in production)
+&#9500;&#9472;&#9472; src/
+&#9474;   &#9492;&#9472;&#9472; devsecops_job_hub/
+&#9474;       &#9500;&#9472;&#9472; main.py                         # FastAPI app, routes, lifespan
+&#9474;       &#9500;&#9472;&#9472; models.py                       # SQLModel: Job, Company, enums
+&#9474;       &#9500;&#9472;&#9472; db.py                           # Engine, session factory, init_db()
+&#9474;       &#9500;&#9472;&#9472; config.py                       # Pydantic Settings (env vars)
+&#9474;       &#9500;&#9472;&#9472; classify.py                     # Role-family / career-stage classifier
+&#9474;       &#9500;&#9472;&#9472; adapters/                       # ATS adapters (Greenhouse, Lever, etc.)
+&#9474;       &#9500;&#9472;&#9472; seed/
+&#9474;       &#9474;   &#9492;&#9472;&#9472; companies.py               # Curated company seed data
+&#9474;       &#9500;&#9472;&#9472; services/
+&#9474;       &#9474;   &#9500;&#9472;&#9472; fit.py                     # Fit scoring: skills vs job requirements
+&#9474;       &#9474;   &#9500;&#9472;&#9472; gs_scale.py                # GS pay grade inference from salary bands
+&#9474;       &#9474;   &#9500;&#9472;&#9472; refresh.py                 # Orchestrates all ATS adapter calls
+&#9474;       &#9474;   &#9492;&#9472;&#9472; telemetry.py               # OpenTelemetry setup
+&#9474;       &#9500;&#9472;&#9472; static/                         # CSS served by FastAPI StaticFiles
+&#9474;       &#9492;&#9472;&#9472; templates/
+&#9474;           &#9492;&#9472;&#9472; jobs.html                   # Jinja2: filter form + job table
+&#9492;&#9472;&#9472; tests/                                  # pytest + pytest-recording (VCR cassettes)</pre>
+    </section>
+
+    <section class="hiw-section">
+      <h2>Replicate It Yourself</h2>
+      <ol class="hiw-steps">
+        <li>Install the core stack: <code>pip install fastapi sqlmodel uvicorn[standard] jinja2</code></li>
+        <li>Define your SQLModel classes with <code>table=True</code>. Call <code>SQLModel.metadata.create_all(engine)</code> once on startup to create tables &#x2014; SQLModel infers column types from Python type annotations.</li>
+        <li>Create a database engine and session factory in <code>db.py</code>: <code>engine = create_engine("sqlite:///jobs.db")</code>. Use <code>Depends(get_session)</code> to inject a <code>Session</code> into each route &#x2014; FastAPI handles teardown automatically.</li>
+        <li>Write your GET route using <code>select(MyModel).where(...)</code> and chain <code>.where()</code> calls conditionally on the presence of each query parameter. Return a <code>TemplateResponse</code> with the results as template context.</li>
+        <li>Run locally: <code>uvicorn myapp.main:app --reload</code>. Visit <a href="http://localhost:8000/docs" target="_blank" rel="noopener">http://localhost:8000/docs</a> for the auto-generated API explorer.</li>
+        <li>Write a two-stage Containerfile: builder stage installs deps, runtime stage copies only the installed packages. Add a <code>HEALTHCHECK</code> on your <code>/healthz</code> route.</li>
+        <li>Build and run with Podman: <code>podman build -t myhub:dev .</code> then <code>podman run --rm -p 8000:8000 myhub:dev</code>. Rootless by default &#x2014; no root daemon required.</li>
+      </ol>
+    </section>
+
+  </div>
+</body>
+</html>
